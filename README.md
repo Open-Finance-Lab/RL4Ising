@@ -37,7 +37,7 @@ N/A
 ## BA Benchmark
 
 The following table represents the results for MaxCut on the syn_BA dataset.
-<div style="overflow-x:scroll">
+
 | Nodes | Graph ID | ECO-DQN | S2V-DQN | Gurobi | 
 | ----- | -------- | ------- | ------- | ------ |
 |100|0|285|277|285|
@@ -190,7 +190,6 @@ The following table represents the results for MaxCut on the syn_BA dataset.
 |500|27|1467|1370|1480|
 |500|28|1465|1386|1476|
 |500|29|1452|1377|1471|
-</div>
 
 ## ER Benchmark
 
