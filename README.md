@@ -1,7 +1,7 @@
 # RL4Ising: Reinforcement Learning for Ising Models. Datasets and Benchmarks
 
 ## Motivation
-Searching for the ground state of Ising models is a prominent problem in the field of physics today.  
+Finding the ground state of Ising models is a prominent problem in physics, invented by Wilhelm Lenz and Ersnt Ising in the 1920s. It provides a mathematical explanation of ferromagnetism in statistical mechanics: found by searching a configuration of spins that minimize energy. The Ising model helps analyze various physical properties, e.g., magnetism or phase transitions. In addition to its properties in physics, the Ising model serves as a framework for many NP-Hard problems, such as Maxcut. Currently, the Ising model in high dimensions remains unsolved and is an active research area. Our project seeks to utilize the recent advancements in deep neural networks and reinforcement learning to find the ground state of Ising models.
 
 
 ## Graph Distributions
@@ -17,9 +17,9 @@ Searching for the ground state of Ising models is a prominent problem in the fie
 
 | Datasets | Description |
 | -------- | ----------- |
-| syn_BA | Dataset of Barabasi-Albert graphs ranging from 100 to 2400 nodes | 
-| syn_ER | . |
-| syn_PL | . | 
+| syn_BA | Dataset of Barabasi-Albert graphs ranging from 100 to 3000 nodes | 
+| syn_ER | Dataset of Erdoes-Renyi graphs ranging from 100 to 3000 nodes |
+| syn_PL | Dataset of Power Law graphs ranging from 100 to 3000 nodes | 
 
 ## Ising Model Datasets
 
@@ -29,10 +29,10 @@ N/A
 
 | Solvers | Description |
 | ------- | ----------- |
-| Variational Classical Annealing | . |
-| S2V-DQN | . |
-| ECO-DQN | . |
-| Gurobi | . |
+| Variational Classical Annealing | VCA iteratively improves candidate solutions by minimizing a defined cost function. Leveraging variational principles, VCA explores the solution space aiming to find near-optimal or optimal solutions efficiently. |
+| S2V-DQN | S2V-DQN combines graph representation learning (Structure2Vec) and deep Q-learning to find solutions for combinatorial optimization problems. |
+| ECO-DQN | ECO-DQN leverages the ability of the agent to continuously improve the solution by learning to explore at test time. It also takes advantage of deep Q-learning and graph representation learning techniques. |
+| Gurobi | Upon defining an optimization model with decision variables, an objective function, and constraints, Gurobi applies algorithms usch as simplex or branch-and-bound to find an optimal solution efficiently.  |
 
 ## BA Benchmark
 
@@ -197,4 +197,153 @@ The following table represents the results for MaxCut on the syn_BA dataset.
 
 | Nodes | Graph ID | ECO-DQN | S2V-DQN | Gurobi | 
 | ----- | -------- | ------- | ------- | ------ |
-| N/A | N/A | N/A | N/A | N/A | 
+|100|0|520|484|.|
+|100|1|523|482|.|
+|100|2|530|488|.|
+|100|3|505|470|.|
+|100|4|506|468|.|
+|100|5|494|457|.|
+|100|6|499|468|.|
+|100|7|492|457|.|
+|100|8|509|477|.|
+|100|9|493|465|.|
+|100|10|519|477|.|
+|100|11|511|470|.|
+|100|12|472|440|.|
+|100|13|482|448|.|
+|100|14|488|462|.|
+|100|15|524|478|.|
+|100|16|507|473|.|
+|100|17|517|484|.|
+|100|18|503|469|.|
+|100|19|523|466|.|
+|100|20|493|461|.|
+|100|21|509|472|.|
+|100|22|511|473|.|
+|100|23|528|488|.|
+|100|24|484|437|.|
+|100|25|507|466|.|
+|100|26|525|489|.|
+|100|27|506|474|.|
+|100|28|557|525|.|
+|100|29|498|444|.|
+|200|0|1878|1771|.|
+|200|1|1850|1768|.|
+|200|2|1875|1783|.|
+|200|3|1867|1780|.|
+|200|4|1944|1849|.|
+|200|5|1869|1785|.|
+|200|6|1870|1769|.|
+|200|7|1850|1782|.|
+|200|8|1803|1727|.|
+|200|9|1889|1774|.|
+|200|10|1866|1769|.|
+|200|11|1814|1721|.|
+|200|12|1836|1723|.|
+|200|13|1815|1741|.|
+|200|14|1818|1743|.|
+|200|15|1868|1770|.|
+|200|16|1865|1767|.|
+|200|17|1874|1788|.|
+|200|18|1853|1768|.|
+|200|19|1817|1719|.|
+|200|20|1870|1766|.|
+|200|21|1874|1775|.|
+|200|22|1872|1764|.|
+|200|23|1857|1765|.|
+|200|24|1880|1790|.|
+|200|25|1829|1749|.|
+|200|26|1841|1755|.|
+|200|27|1864|1770|.|
+|200|28|1900|1822|.|
+|200|29|1846|1763|.|
+|300|0|3992|3872|.|
+|300|1|4154|4007|.|
+|300|2|4099|3985|.|
+|300|3|3998|3890|.|
+|300|4|4020|3857|.|
+|300|5|4079|3955|.|
+|300|6|4097|3954|.|
+|300|7|4000|3871|.|
+|300|8|4074|3938|.|
+|300|9|4096|3953|.|
+|300|10|4051|3950|.|
+|300|11|4067|3943|.|
+|300|12|4104|3969|.|
+|300|13|4070|3905|.|
+|300|14|4030|3927|.|
+|300|15|4050|3923|.|
+|300|16|4051|3930|.|
+|300|17|4075|3973|.|
+|300|18|4120|4038|.|
+|300|19|4080|3977|.|
+|300|20|4017|3890|.|
+|300|21|4088|3942|.|
+|300|22|4071|3941|.|
+|300|23|4096|3975|.|
+|300|24|3982|3857|.|
+|300|25|4035|3916|.|
+|300|26|4060|3929|.|
+|300|27|3973|3835|.|
+|300|28|4025|3885|.|
+|300|29|4155|4019|.|
+|400|0|7082|6905|.|
+|400|1|7003|6826|.|
+|400|2|6960|6798|.|
+|400|3|7019|6878|.|
+|400|4|7037|6838|.|
+|400|5|7018|6867|.|
+|400|6|7068|6906|.|
+|400|7|7115|6937|.|
+|400|8|6977|6770|.|
+|400|9|6959|6745|.|
+|400|10|7052|6872|.|
+|400|11|7048|6850|.|
+|400|12|7109|6956|.|
+|400|13|7015|6856|.|
+|400|14|7003|6811|.|
+|400|15|7081|6904|.|
+|400|16|7005|6815|.|
+|400|17|7023|6838|.|
+|400|18|7059|6910|.|
+|400|19|7005|6874|.|
+|400|20|7008|6825|.|
+|400|21|7078|6898|.|
+|400|22|6994|6820|.|
+|400|23|6913|6778|.|
+|400|24|7083|6845|.|
+|400|25|7097|6934|.|
+|400|26|7044|6876|.|
+|400|27|7041|6877|.|
+|400|28|7033|6886|.|
+|400|29|7026|6852|.|
+|500|0|10835|10612|.|
+|500|1|10866|10683|.|
+|500|2|10817|10605|.|
+|500|3|10729|10460|.|
+|500|4|10778|10568|.|
+|500|5|10900|10754|.|
+|500|6|10922|10739|.|
+|500|7|10862|10624|.|
+|500|8|10833|10629|.|
+|500|9|10845|10695|.|
+|500|10|10760|10543|.|
+|500|11|10899|10717|.|
+|500|12|10871|10664|.|
+|500|13|10760|10557|.|
+|500|14|10904|10727|.|
+|500|15|10904|10705|.|
+|500|16|10904|10756|.|
+|500|17|10842|10694|.|
+|500|18|10912|10754|.|
+|500|19|10850|10587|.|
+|500|20|10713|10493|.|
+|500|21|10894|10730|.|
+|500|22|10801|10565|.|
+|500|23|10742|10538|.|
+|500|24|10902|10765|.|
+|500|25|10877|10667|.|
+|500|26|10820|10606|.|
+|500|27|10813|10648|.|
+|500|28|10824|10634|.|
+|500|29|10844|10599|.|
