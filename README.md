@@ -1,8 +1,6 @@
 # RL4Ising: Reinforcement Learning for Ising Models. Datasets and Benchmarks
-
 ## Motivation
 Finding the ground state of Ising models is a prominent problem in physics, invented by Wilhelm Lenz and Ersnt Ising in the 1920s. It provides a mathematical explanation of ferromagnetism in statistical mechanics: found by searching a configuration of spins that minimize energy. The Ising model helps analyze various physical properties, e.g., magnetism or phase transitions. In addition to its properties in physics, the Ising model serves as a framework for many NP-Hard problems, such as Maxcut. Currently, the Ising model in high dimensions remains unsolved and is an active research area. Our project seeks to utilize the recent advancements in deep neural networks and reinforcement learning to find the ground state of Ising models.
-
 
 ## Graph Distributions
 
@@ -29,9 +27,9 @@ N/A
 
 | Solvers | Description |
 | ------- | ----------- |
-| Variational Classical Annealing | VCA iteratively improves candidate solutions by minimizing a defined cost function. Leveraging variational principles, VCA explores the solution space aiming to find near-optimal or optimal solutions efficiently. |
-| S2V-DQN | S2V-DQN combines graph representation learning (Structure2Vec) and deep Q-learning to find solutions for combinatorial optimization problems. |
-| ECO-DQN | ECO-DQN solves for the MaxCut problem through the use of an Deep Q-Network and their unique, "learning to explore at test time" approach. This exploratory combinatorial optimization approach improves on the pre-existing S2V-DQN algorithm, allowing the agent to add and remove vertices from the solution subset. Key features of the algorithm include: allowing the agent to flip a vertex more than once (reversible action); continually re-evaluating Q-values to explore the solution space at test time; and providing intermediate rewards when reaching locally optimal solutions during the search process. |
+| [Variational Classical Annealing](https://github.com/RNN-VCA-CO/RNN-VCA-CO/tree/main) | VCA iteratively improves candidate solutions by minimizing a defined cost function. Leveraging variational principles, VCA explores the solution space aiming to find near-optimal or optimal solutions efficiently. |
+| [S2V-DQN](https://github.com/Hanjun-Dai/graph_comb_opt) | S2V-DQN combines graph representation learning (Structure2Vec) and deep Q-learning to find solutions for combinatorial optimization problems. |
+| [ECO-DQN](https://github.com/tomdbar/eco-dqn) | ECO-DQN solves for the MaxCut problem through the use of an Deep Q-Network and their unique, "learning to explore at test time" approach. This exploratory combinatorial optimization approach improves on the pre-existing S2V-DQN algorithm, allowing the agent to add and remove vertices from the solution subset. Key features of the algorithm include: allowing the agent to flip a vertex more than once (reversible action); continually re-evaluating Q-values to explore the solution space at test time; and providing intermediate rewards when reaching locally optimal solutions during the search process.  |
 | Gurobi | Upon defining an optimization model with decision variables, an objective function, and constraints, Gurobi applies algorithms usch as simplex or branch-and-bound to find an optimal solution efficiently.  |
 
 ## BA Benchmark
