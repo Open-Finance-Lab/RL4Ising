@@ -31,7 +31,7 @@ N/A
 | ------- | ----------- |
 | Variational Classical Annealing | VCA iteratively improves candidate solutions by minimizing a defined cost function. Leveraging variational principles, VCA explores the solution space aiming to find near-optimal or optimal solutions efficiently. |
 | S2V-DQN | S2V-DQN combines graph representation learning (Structure2Vec) and deep Q-learning to find solutions for combinatorial optimization problems. |
-| ECO-DQN | ECO-DQN leverages the ability of the agent to continuously improve the solution by learning to explore at test time. It also takes advantage of deep Q-learning and graph representation learning techniques. |
+| ECO-DQN | ECO-DQN solves for the MaxCut problem through the use of an Deep Q-Network and their unique, "learning to explore at test time" approach. This exploratory combinatorial optimization approach improves on the pre-existing S2V-DQN algorithm, allowing the agent to add and remove vertices from the solution subset. Key features of the algorithm include: allowing the agent to flip a vertex more than once (reversible action); continually re-evaluating Q-values to explore the solution space at test time; and providing intermediate rewards when reaching locally optimal solutions during the search process. |
 | Gurobi | Upon defining an optimization model with decision variables, an objective function, and constraints, Gurobi applies algorithms usch as simplex or branch-and-bound to find an optimal solution efficiently.  |
 
 ## BA Benchmark
