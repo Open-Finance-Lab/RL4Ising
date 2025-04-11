@@ -39,6 +39,8 @@ exclude_patterns = []
 numfig = True
 math_numfig = True
 
+language = 'en'
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 html_theme = "sphinx_rtd_theme"
@@ -50,7 +52,7 @@ html_css_files = [
 
 html_context = {
     "display_github": True, # Integrate GitHub
-    "github_user": "YangletLiu", # Username
+    "github_user": "Open-Finance-Lab", # Username
     "github_repo": "RL4Ising", # Repo name
     "github_version": "main", # Version
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
