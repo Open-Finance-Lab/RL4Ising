@@ -22,9 +22,9 @@ User Guide
    user/user_introduction
    user/usage
    instances/instance_introduction
-   instances/ferromagnetism
    instances/spin_glass
    instances/spin_ice
+   instances/ferromagnetism
 
 
 

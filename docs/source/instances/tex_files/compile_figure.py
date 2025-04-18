@@ -4,7 +4,7 @@ from pdf2image import convert_from_path
 import shutil
 
 # Paths to files and directories
-tex_file = 'spin_ice_figure.tex'  # Your LaTeX file
+tex_file = 'instances_dim_figure.tex'  # Your LaTeX file
 output_pdf = tex_file.split('.')[0]+".pdf"  # Output PDF file name
 static_dir = '../../_static/'  # Path to the _static directory in your Sphinx project
 
