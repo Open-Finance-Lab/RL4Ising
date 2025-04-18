@@ -26,9 +26,12 @@ extensions = [
     "sphinx.ext.githubpages",
     "sphinx.ext.mathjax",
     "sphinx_rtd_theme",
+    "sphinxcontrib.tikz",
     "nbsphinx",
     "nbsphinx_link",
 ]
+
+graphviz_output_format='svg'
 
 templates_path = ['_templates']
 
@@ -58,11 +61,14 @@ html_context = {
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
 }
 
+latex_enginer = "xelatex"
+
 latex_elements = {
     'preamble': r'''
     \usepackage{amsmath}
     \usepackage{braket}
     \usepackage{algorithm}
     \usepackage{algorithmic}
+    \usepackage{tikz}
     '''
 }

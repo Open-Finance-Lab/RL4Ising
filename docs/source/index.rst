@@ -4,23 +4,27 @@
    contain the root `toctree` directive.
 
 Reinforcement Learning for Ising Problem Documentation
-==================================================
+======================================================
 
 .. Add your content using ``reStructuredText`` syntax. See the
    `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
    documentation for details.
 
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+Welcome to the documentation for the Reinforcement Learning for Ising Problem project.
+
+User Guide
+----------
 
 .. toctree::
    :maxdepth: 2
-   :caption: User
 
-   user/introduction
+   user/user_introduction
    user/usage
+   instances/instance_introduction
+   instances/ferromagnetism
+   instances/spin_glass
+   instances/spin_ice
 
 
 

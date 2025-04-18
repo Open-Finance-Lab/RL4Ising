@@ -21,7 +21,7 @@ cd RL4Ising/docs
 # Install dependencies
 conda env create --name test --file environment.yml
 
-# Activate environment
+# Activate environment  
 conda activate test
 
 # Build the documentation
