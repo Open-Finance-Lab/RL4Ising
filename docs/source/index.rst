@@ -30,9 +30,11 @@ User Guide
    :caption: Instances of Ising Models
 
    instances/instance_introduction
+   instances/geometry
    instances/spin_glass
    instances/spin_ice
-   instances/ferromagnetism
+   instances/ferromagnetic
+   instances/anti_ferromagnetic
 
 .. toctree::
    :maxdepth: 2
@@ -51,5 +53,11 @@ User Guide
    :caption: Tutorials
 
    tutorials/placeholder
+
+.. toctree::
+   :maxdepth: 2
+   :caption: References
+
+   references/references
 
 

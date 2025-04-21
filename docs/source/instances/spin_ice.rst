@@ -1,5 +1,5 @@
 ==================
-Spin Ice Instances
+Spin-Ice Instances
 ==================
 
 Description

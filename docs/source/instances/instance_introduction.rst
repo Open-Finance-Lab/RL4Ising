@@ -2,8 +2,6 @@
 Instances of Ising Models Introduction
 ======================================
 
-Description
-===========
 Our dataset collection spans a diverse set of spin systems that are central to both statistical physics and combinatorial optimization. These instances serve as benchmarks for algorithms tackling complex energy landscapes. Below is a high-level introduction to the core instance types and how we organize our datasets.
 
 Categories of Ising Models
@@ -15,7 +13,7 @@ Spin glass systems are characterized by disorder and frustration. These models a
 :doc:`Spin Ice <spin_ice>`:
 Inspired by the arrangement of protons in ice, spin ice models mimic "ice rules" in spin configurations, leading to emergent quasiparticle behavior and exotic magnetic monopole excitations. These models are of great interest in condensed matter physics and have recently gained traction in programmable quantum simulators and artificial materials.
 
-:doc:`Ferromagnetic Ising Models <ferromagnetism>`:
+:doc:`Ferromagnetic Ising Models <ferromagnetic>`:
 These instances represent one of the simplest yet most fundamental systems in statistical mechanics. In ferromagnetic configurations, all spins prefer to align in the same direction, minimizing the system's energy. They exhibit critical behavior such as phase transitions and are widely used in benchmarking due to their well-understood structure.
 
 Dataset Categorization
