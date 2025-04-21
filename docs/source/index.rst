@@ -18,13 +18,38 @@ User Guide
 
 .. toctree::
    :maxdepth: 2
+   :caption: Overview
 
-   user/user_introduction
-   user/usage
+   overview/user_introduction
+   overview/usage
+   overview/significance
+   overview/goals
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Instances of Ising Models
+
    instances/instance_introduction
    instances/spin_glass
    instances/spin_ice
    instances/ferromagnetism
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Compared methods
+
+   methods/placeholder
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Experimental Results
+
+   results/placeholder
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   tutorials/placeholder
 
 

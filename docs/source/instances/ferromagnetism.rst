@@ -2,9 +2,6 @@
 Ferromagnetism Instances
 ========================
 
-.. contents:: Table of Contents
-   :local:
-
 Instances
 =========
 

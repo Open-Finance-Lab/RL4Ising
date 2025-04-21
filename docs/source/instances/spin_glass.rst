@@ -2,9 +2,6 @@
 Spin Glass Instances
 ====================
 
-.. contents:: Table of Contents
-   :local:
-
 Description
 ===========
 

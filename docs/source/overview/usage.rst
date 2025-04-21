@@ -1,8 +1,6 @@
+==========
 How to Use
 ==========
-
-.. contents:: Table of Contents
-   :local:
 
 This script can be run locally by downloading the Jupyter notebooks from the `GitHub <https://github.com/YangletLiu/RL4Ising>`_.
 

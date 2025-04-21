@@ -1,9 +1,6 @@
-==================================
-Instances of Ising Models Overview
-==================================
-
-.. contents:: Table of Contents
-   :local:
+======================================
+Instances of Ising Models Introduction
+======================================
 
 Description
 ===========
@@ -13,7 +10,7 @@ Categories of Ising Models
 ==========================
 
 :doc:`Spin Glasses <spin_glass>`:
-Spin glass systems are characterized by disorder and frustration — a scenario in which spins interact with conflicting constraints that cannot all be simultaneously satisfied. These models are difficult to optimize due to their intricate energy landscapes, making them ideal benchmarks for advanced optimization algorithms such as reinforcement learning, quantum annealing, and simulated annealing.
+Spin glass systems are characterized by disorder and frustration. These models are difficult to optimize due to their intricate energy landscapes, making them ideal benchmarks for advanced optimization algorithms such as reinforcement learning, quantum annealing, and simulated annealing.
 
 :doc:`Spin Ice <spin_ice>`:
 Inspired by the arrangement of protons in ice, spin ice models mimic "ice rules" in spin configurations, leading to emergent quasiparticle behavior and exotic magnetic monopole excitations. These models are of great interest in condensed matter physics and have recently gained traction in programmable quantum simulators and artificial materials.

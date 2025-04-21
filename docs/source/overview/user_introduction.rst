@@ -2,9 +2,6 @@
 Website Overview
 ================
 
-.. contents:: Table of Contents
-   :local:
-
 Description
 ===========
 Welcome to `Reinforcement Learning for Ising Problem <https://github.com/YangletLiu/RL4Ising>`_! 

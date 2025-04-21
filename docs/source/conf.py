@@ -25,7 +25,6 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
     "sphinx.ext.mathjax",
-    "sphinx_rtd_theme",
     "sphinxcontrib.tikz",
     "nbsphinx",
     "nbsphinx_link",

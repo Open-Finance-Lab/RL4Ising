@@ -2,9 +2,6 @@
 Spin Ice Instances
 ==================
 
-.. contents:: Table of Contents
-   :local:
-
 Description
 ===========
 
