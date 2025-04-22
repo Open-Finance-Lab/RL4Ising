@@ -1,5 +1,0 @@
-===================
-Methods Placeholder
-===================
-
-Compared Methods
