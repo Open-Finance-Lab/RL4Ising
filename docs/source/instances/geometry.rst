@@ -37,7 +37,7 @@ Below is an image depicting a 24-node cylindrical graph.
 Diamond
 =======
 
-The diamond configuration refers to a repeating arrangment where each node typically connects to four others. It is commonly associated with lattice models in condensed matter physics.
+The diamond configuration refers to a repeating arrangement where each node typically connects to four others. It is commonly associated with lattice models in condensed matter physics.
 
 Below is an image depicting the 4-node diamond pattern.
 
@@ -99,7 +99,7 @@ Toroidal
 
 A toroidal Ising model contains a lattice with periodic boundary conditions. The criterion for the boundary conditions are as follows:
 
-1) The left edge is adjcaent to the right edge.
+1) The left edge is adjacent to the right edge.
 
 2) The top edge is adjacent to the bottom edge.
 

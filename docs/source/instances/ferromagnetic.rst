@@ -5,7 +5,7 @@ Ferromagnetic Instances
 Description of Ising Model Type
 ===============================
 
-In a ferromagnetic Ising model, neighboring spins want to align. In other words, they want to point in the same direction to minimize the system's energy. Uniformity, whether it be in the form off all spins pointing up or down, is a key trait of the ferromagnetic instance.
+In a ferromagnetic Ising model, neighboring spins want to align. In other words, they want to point in the same direction to minimize the system's energy. Uniformity, whether it be in the form of all spins pointing up or down, is a key trait of the ferromagnetic instance.
 The energy configuration of this model can be given by
 
 .. math::

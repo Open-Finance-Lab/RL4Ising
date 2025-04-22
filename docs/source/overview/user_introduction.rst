@@ -6,7 +6,7 @@ Description
 ===========
 Welcome to `Reinforcement Learning for Ising Problem <https://github.com/YangletLiu/RL4Ising>`_! 
 
-This project showcases a variety of appraoches designed to find solutions to the Ising model problem. While our methodology focuses on the integration of reinforcement learning (RL), we provide
+This project showcases a variety of approaches designed to find solutions to the Ising model problem. While our methodology focuses on the integration of reinforcement learning (RL), we provide
 a range of alternative methods that can be used for comparison and evaluation. The goal is to explore innovative RL techniques to improve the efficiency and accuracy of Ising model solutions
 while providing a comprehensive dataset to compare and reproduce results.
 

@@ -5,7 +5,7 @@ Spin Glass Instances
 Description of Ising Model Type
 ===============================
 
-A spin glass Ising mode is characterized by frustrated interactions, meaning some neighboring spins prefer to align while others prefer to oppose. Theses conflicting orientations prevent the system from reaching a uniformly ordered state.
+A spin glass Ising model is characterized by frustrated interactions, meaning some neighboring spins prefer to align while others prefer to oppose. These conflicting orientations prevent the system from reaching a uniformly ordered state.
 The energy configuration of this model can be given by
 
 .. math::
