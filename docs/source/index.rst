@@ -21,7 +21,6 @@ User Guide
    :caption: Overview
 
    overview/user_introduction
-   overview/usage
    overview/significance
    overview/goals
 

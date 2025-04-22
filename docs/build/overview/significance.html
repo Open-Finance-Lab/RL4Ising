@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Goals" href="goals.html" />
-    <link rel="prev" title="How to Use" href="usage.html" /> 
+    <link rel="prev" title="Website Overview" href="user_introduction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,8 +47,11 @@
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="user_introduction.html">Website Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">How to Use</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Significance</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Significance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reinforcement-learning-overview">Reinforcement Learning Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-role-of-rl-in-finding-ising-model-solutions">The Role of RL in finding Ising Model Solutions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="goals.html">Goals</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Instances of Ising Models</span></p>
@@ -103,14 +106,41 @@
              
   <section id="significance">
 <h1>Significance<a class="headerlink" href="#significance" title="Link to this heading"></a></h1>
-<p>We are working to apply RL to Ising model in physics.</p>
+<p>The Ising model, a mathematical model in statistical mechanics, has been a cornerstone in modeling a variety of physics-based systems. The model involves a lattice of spins, each of which
+are in one of two states, with interactions dependent on neighboring spins. Finding solutions to the Ising model is critical in effectively simulating and understanding physical
+phenomena. Further, the Ising model problem can be abstracted to various other fields, such as computer science, social science, and biology. Developing an efficient solver to this problem
+would enable advancements in fields broader than solely physics.</p>
+<p>Traditionally, the Ising model has been approached with techniques like Monte Carlo simulation. While this method provides high-quality results, it can be computationally expensive,
+especially in high-dimensional systems. Moreover, obtaining high-quality solutions in complex systems is difficult due to the nonconvex, large solution space. Recently, reinforcement
+learning paradigms have been able to efficiently learn NP-hard problems such as the Ising model, and can find high-quality solutions.</p>
+<section id="reinforcement-learning-overview">
+<h2>Reinforcement Learning Overview<a class="headerlink" href="#reinforcement-learning-overview" title="Link to this heading"></a></h2>
+<p>Reinforcement Learning is a type of machine learning where an agent learns to make decisions by interacting with an environment and receiving feedback in the form of rewards and penalties.
+Through repetitive trials, the agent learns to perform actions that maximize a long-term reward. This type of feedback system can be applied to the Ising model where rewards can be given
+as the agent arranges the spins more closely to a ground state configuration.</p>
+</section>
+<section id="the-role-of-rl-in-finding-ising-model-solutions">
+<h2>The Role of RL in finding Ising Model Solutions<a class="headerlink" href="#the-role-of-rl-in-finding-ising-model-solutions" title="Link to this heading"></a></h2>
+<p>We will now highlight some of the benefits of RL, and how they apply to the Ising model.</p>
+<ol class="arabic simple">
+<li><p><strong>Efficient Exploration of Solution space:</strong> One of the largest constraints when solving the Ising model is the vast number of configurations. Traditional methods may use techniques
+such as random sampling to find potential solutions to the problem. This becomes extremely inefficient for large systems and encourages the use of alternative solvers that employ
+stochastic methods of finding solutions. RL, however, can guide the exploration of the spin configurations more effectively. By training an agent to explore the solution space, it
+can learn the most promising regions of the graph to focus on, thus speeding up convergence to high-quality solutions.</p></li>
+<li><p><strong>Improving Quality of Solutions:</strong> By using RL to optimize the configurations of spins, the agent can minimize the energy of a system more efficiently than traditional methods. This
+translates to solutions being found that are closer to the optimal solution. This improvement is beneficial in large systems or systems with complex interactions.</p></li>
+<li><p><strong>Real-time Adaptation:</strong> Another advantage of RL is its ability to adapt in real-time. In the context of the Ising model, this mean that the RL agent can adjust its strategy as it explores the environment.</p></li>
+</ol>
+<p>The integration of RL as a solver for the Ising model holds great promise for improving efficiency and accuracy. In particular, by leveraging RL’s capabilities for dynamic adaptation,
+efficient exploration, and quality optimization, an RL-enabled solver can outperform traditional methods.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="usage.html" class="btn btn-neutral float-left" title="How to Use" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="user_introduction.html" class="btn btn-neutral float-left" title="Website Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="goals.html" class="btn btn-neutral float-right" title="Goals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

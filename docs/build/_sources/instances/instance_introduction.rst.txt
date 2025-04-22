@@ -16,6 +16,9 @@ Inspired by the arrangement of protons in ice, spin ice models mimic "ice rules"
 :doc:`Ferromagnetic Ising Models <ferromagnetic>`:
 These instances represent one of the simplest yet most fundamental systems in statistical mechanics. In ferromagnetic configurations, all spins prefer to align in the same direction, minimizing the system's energy. They exhibit critical behavior such as phase transitions and are widely used in benchmarking due to their well-understood structure.
 
+:doc:`Anti-Ferromagnetic Ising Models <anti_ferromagnetic>`:
+Conversely to ferromagnetic models, the spins of anti-ferromagnetic configurations prefer to align opposite of each other to minimize the energy.
+
 Dataset Categorization
 ======================
 
