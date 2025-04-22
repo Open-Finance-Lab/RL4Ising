@@ -7,7 +7,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reinforcement Learning for Ising Problem Documentation &mdash; Reinforcement Learning for Ising Problem  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
 
@@ -18,6 +18,8 @@
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -53,9 +55,11 @@
 <p class="caption" role="heading"><span class="caption-text">Instances of Ising Models</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instances/instance_introduction.html">Instances of Ising Models Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instances/geometry.html">Graph Geometry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="instances/spin_glass.html">Spin Glass Instances</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_ice.html">Spin Ice Instances</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instances/ferromagnetism.html">Ferromagnetism Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instances/spin_ice.html">Spin-Ice Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instances/ferromagnetic.html">Ferromagnetic Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instances/anti_ferromagnetic.html">Anti-Ferromagnetic Instances</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Compared methods</span></p>
 <ul>
@@ -68,6 +72,10 @@
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/placeholder.html">Tutorial Placeholder</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references/references.html">References</a></li>
 </ul>
 
         </div>
@@ -116,23 +124,43 @@
 <p class="caption" role="heading"><span class="caption-text">Instances of Ising Models</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instances/instance_introduction.html">Instances of Ising Models Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#categories-of-ising-models">Categories of Ising Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#dataset-categorization">Dataset Categorization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#instances-of-ising-models-by-ising-model">Instances of Ising Models (By Ising Model)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#instances-of-ising-by-dimension">Instances of Ising  (By Dimension)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_glass.html">Spin Glass Instances</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/spin_glass.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instances/geometry.html">Graph Geometry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#bi-clique">Bi-Clique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#cubic">Cubic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#cylindrical">Cylindrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#diamond">Diamond</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#edwards-anderson-ea">Edwards-Anderson (EA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#full">Full</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#hopfield">Hopfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#line">Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#sherrington-kirkpatrick-sk">Sherrington-Kirkpatrick (SK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#toroidal">Toroidal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/geometry.html#wishart-planted-ensemble-wpe">Wishart Planted Ensemble (WPE)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_ice.html">Spin Ice Instances</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="instances/spin_glass.html">Spin Glass Instances</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instances/spin_glass.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/spin_glass.html#instances">Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="instances/spin_ice.html">Spin-Ice Instances</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="instances/spin_ice.html#description">Description</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="instances/ferromagnetism.html">Ferromagnetism Instances</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/ferromagnetism.html#instances">Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instances/ferromagnetic.html">Ferromagnetic Instances</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instances/ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/ferromagnetic.html#instances">Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="instances/anti_ferromagnetic.html">Anti-Ferromagnetic Instances</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="instances/anti_ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="instances/anti_ferromagnetic.html#instances">Instances</a></li>
 </ul>
 </li>
 </ul>
@@ -153,6 +181,12 @@
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/placeholder.html">Tutorial Placeholder</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references/references.html">References</a></li>
 </ul>
 </div>
 </section>
