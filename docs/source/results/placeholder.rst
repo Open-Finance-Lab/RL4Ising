@@ -1,5 +1,0 @@
-===================
-Results Placeholder
-===================
-
-Experimental Results

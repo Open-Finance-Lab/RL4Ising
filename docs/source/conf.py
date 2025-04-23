@@ -12,9 +12,9 @@ sys.path.insert(0, os.path.abspath('../..'))
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Reinforcement Learning for Ising Problem'
-copyright = '2025, Reinforcement Learning for Ising Problem'
-author = 'Reinforcement Learning for Ising Problem'
+project = 'Reinforcement Learning for Ising Model'
+copyright = '2025, Reinforcement Learning for Ising Model'
+author = 'Reinforcement Learning for Ising Model'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

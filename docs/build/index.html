@@ -6,8 +6,8 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reinforcement Learning for Ising Problem Documentation &mdash; Reinforcement Learning for Ising Problem  documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+  <title>Reinforcement Learning for Ising Model Documentation &mdash; Reinforcement Learning for Ising Model  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
 
@@ -18,10 +18,12 @@
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Website Overview" href="overview/user_introduction.html" /> 
+    <link rel="next" title="Project Overview" href="overview/project_overview.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -33,7 +35,7 @@
           
           
           <a href="#" class="icon icon-home">
-            Reinforcement Learning for Ising Problem
+            Reinforcement Learning for Ising Model
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -45,29 +47,45 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview/user_introduction.html">Website Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview/usage.html">How to Use</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview/significance.html">Significance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/project_overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/significance.html">Significance of Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/reinforcement_learning.html">Introduction to Reinforcement Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="overview/goals.html">Goals</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Instances of Ising Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ising Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="instances/instance_introduction.html">Instances of Ising Models Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_glass.html">Spin Glass Instances</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_ice.html">Spin Ice Instances</a></li>
-<li class="toctree-l1"><a class="reference internal" href="instances/ferromagnetism.html">Ferromagnetism Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ising_models/description.html">Types of Ising Models</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Compared methods</span></p>
+<p class="caption" role="heading"><span class="caption-text">Datasets of Ising Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="methods/placeholder.html">Methods Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/datasets.html">Dataset Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/spin_glass.html">Spin Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/spin_ice.html">Spin-Ice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/ferromagnetic.html">Ferromagnetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
+<p class="caption" role="heading"><span class="caption-text">Basics and Set-up</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="results/placeholder.html">Results Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/install_cuda.html">Install CUDA</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/placeholder.html">Tutorial Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_mcpg.html">Benchmark MCPG on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_eco.html">Benchmark ECO on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_vca.html">Benchmark VCA on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_reinforce.html">Benchmark REINFORCE on Ising Model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="results/results.html">Benchmark Comparison</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resources/geometry.html">Graph Geometry</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references/external_sources.html">External Sources</a></li>
 </ul>
 
         </div>
@@ -76,7 +94,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Reinforcement Learning for Ising Problem</a>
+          <a href="#">Reinforcement Learning for Ising Model</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -84,7 +102,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Reinforcement Learning for Ising Problem Documentation</li>
+      <li class="breadcrumb-item active">Reinforcement Learning for Ising Model Documentation</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -94,65 +112,106 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="reinforcement-learning-for-ising-problem-documentation">
-<h1>Reinforcement Learning for Ising Problem Documentation<a class="headerlink" href="#reinforcement-learning-for-ising-problem-documentation" title="Link to this heading"></a></h1>
-<p>Welcome to the documentation for the Reinforcement Learning for Ising Problem project.</p>
+  <section id="reinforcement-learning-for-ising-model-documentation">
+<h1>Reinforcement Learning for Ising Model Documentation<a class="headerlink" href="#reinforcement-learning-for-ising-model-documentation" title="Link to this heading"></a></h1>
+<p>Welcome to the documentation for the Reinforcement Learning for Ising Model project.</p>
 <section id="user-guide">
 <h2>User Guide<a class="headerlink" href="#user-guide" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="overview/user_introduction.html">Website Overview</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="overview/user_introduction.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="overview/user_introduction.html#motivation">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/project_overview.html">Project Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/project_overview.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/project_overview.html#motivation">Motivation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="overview/usage.html">How to Use</a></li>
-<li class="toctree-l1"><a class="reference internal" href="overview/significance.html">Significance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/significance.html">Significance of Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/reinforcement_learning.html">Introduction to Reinforcement Learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/reinforcement_learning.html#the-role-of-rl-in-finding-ising-model-solutions">The Role of RL in finding Ising Model Solutions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="overview/goals.html">Goals</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Instances of Ising Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Ising Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="instances/instance_introduction.html">Instances of Ising Models Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#categories-of-ising-models">Categories of Ising Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#dataset-categorization">Dataset Categorization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#instances-of-ising-models-by-ising-model">Instances of Ising Models (By Ising Model)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="instances/instance_introduction.html#instances-of-ising-by-dimension">Instances of Ising  (By Dimension)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ising_models/description.html">Types of Ising Models</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Datasets of Ising Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="datasets/datasets.html">Dataset Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets/datasets.html#dataset-categorization">Dataset Categorization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/datasets.html#instances-of-ising-models-by-ising-model">Instances of Ising Models (By Ising Model)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_glass.html">Spin Glass Instances</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/spin_glass.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/spin_glass.html">Spin Glass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets/spin_glass.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/spin_glass.html#instances">Instances</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="instances/spin_ice.html">Spin Ice Instances</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/spin_ice.html#description">Description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/spin_ice.html">Spin-Ice</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets/spin_ice.html#description">Description</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="instances/ferromagnetism.html">Ferromagnetism Instances</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="instances/ferromagnetism.html#instances">Instances</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/ferromagnetic.html">Ferromagnetic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ferromagnetic.html#instances">Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="datasets/anti_ferromagnetic.html">Anti-Ferromagnetic</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="datasets/anti_ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/anti_ferromagnetic.html#instances">Instances</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Compared methods</span></p>
+<p class="caption" role="heading"><span class="caption-text">Basics and Set-up</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="methods/placeholder.html">Methods Placeholder</a></li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="results/placeholder.html">Results Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics/install_cuda.html">Install CUDA</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tutorials/placeholder.html">Tutorial Placeholder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_mcpg.html">Benchmark MCPG on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_eco.html">Benchmark ECO on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_vca.html">Benchmark VCA on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/benchmark_reinforce.html">Benchmark REINFORCE on Ising Model</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="results/results.html">Benchmark Comparison</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="resources/geometry.html">Graph Geometry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#bi-clique">Bi-Clique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#cubic">Cubic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#cylindrical">Cylindrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#diamond">Diamond</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#edwards-anderson-ea">Edwards-Anderson (EA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#full">Full</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#hopfield">Hopfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#line">Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#sherrington-kirkpatrick-sk">Sherrington-Kirkpatrick (SK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#toroidal">Toroidal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources/geometry.html#wishart-planted-ensemble-wpe">Wishart Planted Ensemble (WPE)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="references/external_sources.html">External Sources</a></li>
 </ul>
 </div>
 </section>
@@ -162,13 +221,13 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="overview/user_introduction.html" class="btn btn-neutral float-right" title="Website Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="overview/project_overview.html" class="btn btn-neutral float-right" title="Project Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Problem.</p>
+    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

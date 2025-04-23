@@ -25,7 +25,7 @@ conda env create --name test --file environment.yml
 conda activate test
 
 # Build the documentation
-sphinx-build -b html source/ _build/
+sphinx-build -b html -n -W source/ _build/
 ```
 
 The output HTML files will be located in the `_build/` directory.

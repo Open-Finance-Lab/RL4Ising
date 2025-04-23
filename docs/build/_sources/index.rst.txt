@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Reinforcement Learning for Ising Problem Documentation
+Reinforcement Learning for Ising Model Documentation
 ======================================================
 
 .. Add your content using ``reStructuredText`` syntax. See the
@@ -11,7 +11,7 @@ Reinforcement Learning for Ising Problem Documentation
    documentation for details.
 
 
-Welcome to the documentation for the Reinforcement Learning for Ising Problem project.
+Welcome to the documentation for the Reinforcement Learning for Ising Model project.
 
 User Guide
 ----------
@@ -20,36 +20,58 @@ User Guide
    :maxdepth: 2
    :caption: Overview
 
-   overview/user_introduction
-   overview/usage
+   overview/project_overview
    overview/significance
+   overview/reinforcement_learning
    overview/goals
 
 .. toctree::
    :maxdepth: 2
-   :caption: Instances of Ising Models
-
-   instances/instance_introduction
-   instances/spin_glass
-   instances/spin_ice
-   instances/ferromagnetism
+   :caption: Ising Models
+   
+   ising_models/description
 
 .. toctree::
    :maxdepth: 2
-   :caption: Compared methods
+   :caption: Datasets of Ising Models
 
-   methods/placeholder
+   datasets/datasets
+   datasets/spin_glass
+   datasets/spin_ice
+   datasets/ferromagnetic
+   datasets/anti_ferromagnetic
 
 .. toctree::
    :maxdepth: 2
-   :caption: Experimental Results
+   :caption: Basics and Set-up
 
-   results/placeholder
+   basics/install_cuda
 
 .. toctree::
    :maxdepth: 2
    :caption: Tutorials
 
-   tutorials/placeholder
+   tutorials/benchmark_mcpg
+   tutorials/benchmark_eco
+   tutorials/benchmark_vca
+   tutorials/benchmark_reinforce
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Experimental Results
+
+   results/results
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Additional Resources
+
+   resources/geometry
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference
+
+   references/external_sources
 
 

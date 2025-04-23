@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graph Geometry &mdash; Reinforcement Learning for Ising Model  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="External Sources" href="../references/external_sources.html" />
+    <link rel="prev" title="Benchmark Comparison" href="../results/results.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Reinforcement Learning for Ising Model
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/significance.html">Significance of Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/reinforcement_learning.html">Introduction to Reinforcement Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/goals.html">Goals</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ising Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ising_models/description.html">Types of Ising Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets of Ising Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/datasets.html">Dataset Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basics and Set-up</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/install_cuda.html">Install CUDA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_mcpg.html">Benchmark MCPG on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_eco.html">Benchmark ECO on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_vca.html">Benchmark VCA on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_reinforce.html">Benchmark REINFORCE on Ising Model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../results/results.html">Benchmark Comparison</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Graph Geometry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bi-clique">Bi-Clique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cubic">Cubic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cylindrical">Cylindrical</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#diamond">Diamond</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edwards-anderson-ea">Edwards-Anderson (EA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#full">Full</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hopfield">Hopfield</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#line">Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sherrington-kirkpatrick-sk">Sherrington-Kirkpatrick (SK)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toroidal">Toroidal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wishart-planted-ensemble-wpe">Wishart Planted Ensemble (WPE)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/external_sources.html">External Sources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Reinforcement Learning for Ising Model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Graph Geometry</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/resources/geometry.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="graph-geometry">
+<h1>Graph Geometry<a class="headerlink" href="#graph-geometry" title="Link to this heading"></a></h1>
+<p>In this subpage we will explore the different graph geometries that may be present as Ising models. Note that all figures representing their designated graph geometry are arbitrary and for visualization purposes only.</p>
+<section id="bi-clique">
+<h2>Bi-Clique<a class="headerlink" href="#bi-clique" title="Link to this heading"></a></h2>
+<p>A bi-clique is a complete bipartite graph, i.e., it consists of two disjoint sets of nodes where each node in one set is connected to every node in the other set. This structure is useful for modeling systems whose interactions are between two groups and not within their own groups.</p>
+<p>Below is an image depicting a 6-node bi-clique graph.</p>
+<img alt="../_images/bi-clique_instance_graph.png" class="align-center" src="../_images/bi-clique_instance_graph.png" />
+</section>
+<section id="cubic">
+<h2>Cubic<a class="headerlink" href="#cubic" title="Link to this heading"></a></h2>
+<p>A cubic graph - or 3-regular graph - is one where each node has three neighbors. These graphs are prevalent in 3D Ising models and are useful for simulating certain spin-glass systems.</p>
+<p>Below is an image depicting a 27-node cubic graph.</p>
+<img alt="../_images/cubic_instance_graph.png" class="align-center" src="../_images/cubic_instance_graph.png" />
+</section>
+<section id="cylindrical">
+<h2>Cylindrical<a class="headerlink" href="#cylindrical" title="Link to this heading"></a></h2>
+<p>A cylindrical graph can be visualized as a 2D lattice that is wrapped around one axis, forming a cylinder. Periodic boundary conditions are applied along one axis, while the other axis has open boundaries.</p>
+<p>Below is an image depicting a 24-node cylindrical graph.</p>
+<img alt="../_images/cylinder_instance_graph.png" class="align-center" src="../_images/cylinder_instance_graph.png" />
+</section>
+<section id="diamond">
+<h2>Diamond<a class="headerlink" href="#diamond" title="Link to this heading"></a></h2>
+<p>The diamond configuration refers to a repeating arrangement where each node typically connects to four others. It is commonly associated with lattice models in condensed matter physics.</p>
+<p>Below is an image depicting the 4-node diamond pattern.</p>
+<img alt="../_images/diamond_instance_graph.png" class="align-center" src="../_images/diamond_instance_graph.png" />
+</section>
+<section id="edwards-anderson-ea">
+<h2>Edwards-Anderson (EA)<a class="headerlink" href="#edwards-anderson-ea" title="Link to this heading"></a></h2>
+<p>The EA model consists of a lattice (most commonly as 2D or 3D) with random coupling strengths between nearest neighbors. This model is essential in spin-glass theory and incorporates disorder and frustration, making it ideal to observe complex energy landscapes.</p>
+<p>Below is an image depicting a 9-node Edwards-Anderson graph.</p>
+<img alt="../_images/edwards-anderson_instance_graph.png" class="align-center" src="../_images/edwards-anderson_instance_graph.png" />
+</section>
+<section id="full">
+<h2>Full<a class="headerlink" href="#full" title="Link to this heading"></a></h2>
+<p>The fully connected Ising model consists of a lattice where each node has a connection to every other node. For the purposes of our dataset, we have removed all edges that are reflexive, i.e., a node points to itself.</p>
+<p>Below is an image depicting a 6-node fully connected Ising model instance.</p>
+<img alt="../_images/full_instance_graph.png" class="align-center" src="../_images/full_instance_graph.png" />
+</section>
+<section id="hopfield">
+<h2>Hopfield<a class="headerlink" href="#hopfield" title="Link to this heading"></a></h2>
+<p>The Hopfield Ising model corresponds to a fully connected, symmetric graph. Each node is connected to every other node through weighted edges whose weights are typically determined using a predefined binary pattern. This graph is equivalent in structure to the fully connected Ising model, but differs in the weight assignment.</p>
+<p>Below is an image depicting a 6-node Hopfield graph.</p>
+<img alt="../_images/hopfield_instance_graph.png" class="align-center" src="../_images/hopfield_instance_graph.png" />
+</section>
+<section id="line">
+<h2>Line<a class="headerlink" href="#line" title="Link to this heading"></a></h2>
+<p>The line Ising model allows at most two neighbors to each node. As a result, the Ising model chain can be graphically represented by a line of connected nodes.</p>
+<p>Below is an image depicting a 5-node line-connected Ising model instance.</p>
+<img alt="../_images/line_instance_graph.png" class="align-center" src="../_images/line_instance_graph.png" />
+</section>
+<section id="sherrington-kirkpatrick-sk">
+<h2>Sherrington-Kirkpatrick (SK)<a class="headerlink" href="#sherrington-kirkpatrick-sk" title="Link to this heading"></a></h2>
+<p>The SK model is a fully connected Ising model where the coupling strengths between spins are chosen randomly (often from a Gaussian distribution). This model is essential in spin-glass theory and exhibits complex behavior.</p>
+<p>Below is an image depicting a 6-node Sherrington-Kirkpatrick graph.</p>
+<img alt="../_images/sherrington-kirkpatrick_instance_graph.png" class="align-center" src="../_images/sherrington-kirkpatrick_instance_graph.png" />
+</section>
+<section id="toroidal">
+<h2>Toroidal<a class="headerlink" href="#toroidal" title="Link to this heading"></a></h2>
+<p>A toroidal Ising model contains a lattice with periodic boundary conditions. The criterion for the boundary conditions are as follows:</p>
+<ol class="arabic simple">
+<li><p>The left edge is adjacent to the right edge.</p></li>
+<li><p>The top edge is adjacent to the bottom edge.</p></li>
+</ol>
+<p>These conditions create a surface that has no boundaries. In other words, it ensures every spin has the same number of neighors.</p>
+<p>Below is an image depicting a 4-dimensional toroidal graph.</p>
+<img alt="../_images/toroidal_instance_graph.png" class="align-center" src="../_images/toroidal_instance_graph.png" />
+</section>
+<section id="wishart-planted-ensemble-wpe">
+<h2>Wishart Planted Ensemble (WPE)<a class="headerlink" href="#wishart-planted-ensemble-wpe" title="Link to this heading"></a></h2>
+<p>The WPE is a graph-based model whose structure is derived from a random Wishart matrix with a planted solution. This solution is known by the graph’s creator and is useful in controlled experiments.</p>
+<p>Below is an image depicting a 6-node Wishart Planted Ensemble.</p>
+<img alt="../_images/wishart_planted_ensemble_instance_graph.png" class="align-center" src="../_images/wishart_planted_ensemble_instance_graph.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../results/results.html" class="btn btn-neutral float-left" title="Benchmark Comparison" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../references/external_sources.html" class="btn btn-neutral float-right" title="External Sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
