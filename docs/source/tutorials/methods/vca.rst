@@ -8,7 +8,7 @@ Hibat-Allah, M., Inack, E. M., Wiersema, R., Melko, R. G., & Carrasquilla, J. (2
 
 Overview
 --------
-VCA is a variational framework that applies neural sampling techniques—particularly autoregressive models—to approximate Boltzmann-like distributions and perform combinatorial optimization via annealing dynamics.
+VCA is a variational framework that applies neural sampling techniques—particularly autoregressive models—to approximate the Boltzmann distribution and perform combinatorial optimization via annealing dynamics.
 
 Strengths
 ---------
