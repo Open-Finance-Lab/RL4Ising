@@ -66,8 +66,10 @@ def main():
 
     for file in os.listdir(SCRIPT_DIR):
         if file.endswith('.tex'):
+            file = f"{SCRIPT_DIR}/{file}"
             base_name = os.path.splitext(file)[0]
             pdf_file = os.path.join(SCRIPT_DIR, f"{base_name}.pdf")
+            print(file)
 
             compile_latex(file)
             convert_pdf_to_png(pdf_file, STATIC_DIR)

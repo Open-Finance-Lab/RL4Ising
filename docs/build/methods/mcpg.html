@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monte Carlo Policy Gradient with Local Search (MCPG) &mdash; Reinforcement Learning for Ising Model  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Reinforcement Learning for Ising Model
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Project Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/significance.html">Significance of Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/reinforcement_learning.html">Introduction to Reinforcement Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/goals.html">Goals</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Ising Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ising_models/description.html">Types of Ising Models</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets of Ising Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/datasets.html">Dataset Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basics and Set-up</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basics/install_cuda.html">Install CUDA</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_mcpg.html">Benchmark MCPG on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_eco.html">Benchmark ECO on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_vca.html">Benchmark VCA on Ising Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_reinforce.html">Benchmark REINFORCE on Ising Model</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../results/results.html">Benchmark Comparison</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../resources/geometry.html">Graph Geometry</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/external_sources.html">External Sources</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Reinforcement Learning for Ising Model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Monte Carlo Policy Gradient with Local Search (MCPG)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/methods/mcpg.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="monte-carlo-policy-gradient-with-local-search-mcpg">
+<span id="mcpg"></span><h1>Monte Carlo Policy Gradient with Local Search (MCPG)<a class="headerlink" href="#monte-carlo-policy-gradient-with-local-search-mcpg" title="Link to this heading"></a></h1>
+<p><strong>Citation:</strong>
+Chen, C., Chen, R., Li, T., Ao, R., &amp; Wen, Z. (2023). <em>A Monte Carlo Policy Gradient Method with Local Search for Binary Optimization</em>. arXiv:2307.00783.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>MCPG combines Monte Carlo policy gradient methods with local search techniques to address binary combinatorial optimization problems. It incorporates MCMC-based sampling and a theoretically justified convergence mechanism.</p>
+</section>
+<section id="strengths">
+<h2>Strengths<a class="headerlink" href="#strengths" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Efficient, Diverse Exploration</strong>:
+Parallel MCMC sampling introduces both diversity and coherence in exploring the discrete solution space. This results in low-variance gradient estimates and fast convergence to high-quality solutions.</p></li>
+<li><p><strong>Theoretical Convergence Guarantee</strong>:
+MCPG minimizes KL divergence to the Gibbs distribution and employs MCMC concentration inequalities, ensuring provable convergence in expectation to a stationary policy.</p></li>
+</ul>
+</section>
+<section id="weaknesses">
+<h2>Weaknesses<a class="headerlink" href="#weaknesses" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Ambiguous Stopping Criterion</strong>:
+Similar to ECO-DQN, MCPG continues to explore during inference. Determining when additional sampling no longer improves results remains a practical challenge.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

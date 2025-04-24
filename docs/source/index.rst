@@ -18,60 +18,17 @@ User Guide
 
 .. toctree::
    :maxdepth: 2
-   :caption: Overview
+   :caption: Contents:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: RL For Ising Model Documentation
 
    overview/project_overview
-   overview/significance
-   overview/reinforcement_learning
-   overview/goals
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Ising Models
-   
-   ising_models/description
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Datasets of Ising Models
-
+   ising_models/ising_model_description
    datasets/datasets
-   datasets/spin_glass
-   datasets/spin_ice
-   datasets/ferromagnetic
-   datasets/anti_ferromagnetic
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Basics and Set-up
-
-   basics/install_cuda
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tutorials
-
-   tutorials/benchmark_mcpg
-   tutorials/benchmark_eco
-   tutorials/benchmark_vca
-   tutorials/benchmark_reinforce
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Experimental Results
-
-   results/results
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Additional Resources
-
-   resources/geometry
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Reference
-
-   references/external_sources
+   tutorials/index
+   benchmark/results
+   references/dataset_references
 
 

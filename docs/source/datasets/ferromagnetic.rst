@@ -18,6 +18,8 @@ Instances
 
 The instances we are providing for the ferromagnetic Ising model type consist of weighted edges. Note that there are only positive weights present for these instances. The complexity of an instance is determined by its size (# of nodes).
 
-.. image:: /_static/ferromagnetism_figure.png
+2D
+-----------
+.. image:: /_static/ferromagnetism_2D.png
     :align: center
 

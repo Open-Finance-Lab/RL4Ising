@@ -1,10 +1,10 @@
 ================
-Dataset Overview
+Datasets
 ================
 
 Our dataset collection spans a diverse set of spin systems that are central to both statistical physics and combinatorial optimization. These instances serve as benchmarks for algorithms tackling complex energy landscapes. Below is a high-level introduction to the core instance types and how we organize our datasets.
 
-Dataset Categorization
+Dataset Introduction
 ======================
 
 To facilitate benchmarking across different complexity levels and problem types, we partition each Ising model type into **three subcategories**:
@@ -18,10 +18,21 @@ To facilitate benchmarking across different complexity levels and problem types,
 - **Complex**  
   Instances with 1024 spins or more. These often represent high-dimensional spin glasses or large-scale simulations of physical systems. They pose significant challenges for both classical and quantum solvers, making them important benchmarks for state-of-the-art techniques in physics and optimization.
 
-Instances of Ising Models (By Ising Model)
-==========================================
+Instances of Ising Models
+-----------------------------
 
 .. image:: /_static/instances_model_figure.png
     :align: center
 
 Note that there is additional information about the graph configurations present in our datasets in our Additional Resources section.
+
+Datasets
+============
+
+.. toctree::
+   :maxdepth: 2
+
+   spin_glass
+   spin_ice
+   ferromagnetic
+   anti_ferromagnetic
