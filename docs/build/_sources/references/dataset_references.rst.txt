@@ -40,8 +40,8 @@ A dataset for QUBO and Max-Cut instances curated for the development of a QUBO a
 
 This paper searches for the ground state of 3D spin-glass instances using annealing methods on the D-Wave quantum annealer. To demostrate the NP-hard complexity of 3D spin-glass instances, they performed testing on 3D instances ranging from 3558 to 5627 spins.
 
-[13] Solving Statistical Mechanics Using Variational Autoregressive Networks 
+[13] A high-bias, low-variance introduction to Machine Learning for physicists
 
-[14] A high-bias, low-variance introduction to Machine Learning for physicists
+[14] Solving Statistical Mechanics Using Variational Autoregressive Networks 
 
 https://arxiv.org/abs/1809.10606
