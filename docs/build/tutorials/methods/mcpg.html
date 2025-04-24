@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monte Carlo Policy Gradient with Local Search (MCPG) &mdash; Reinforcement Learning for Ising Model  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Revisiting Sampling for Combinatorial Optimization (iSCO)" href="isco.html" />
+    <link rel="prev" title="Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)" href="eco_dqn.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Reinforcement Learning for Ising Model
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">RL For Ising Model Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../overview/project_overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ising_models/ising_model_description.html">Types of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../datasets/datasets.html">Datasets</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Ising Model Ground State Methods</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="eco_dqn.html">Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Monte Carlo Policy Gradient with Local Search (MCPG)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#strengths">Strengths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weaknesses">Weaknesses</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="isco.html">Revisiting Sampling for Combinatorial Optimization (iSCO)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gurobi.html">Gurobi Solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vca.html">Variational Neural Annealing (VCA)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qaoa.html">Resource-Efficient QAOA for Max-Cut</a></li>
+<li class="toctree-l3"><a class="reference internal" href="reinforce.html">REINFORCE Algorithm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../eco.html">ECO-DQN Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mcpg.html">MCPG Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../isco.html">iSCO Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gurobi.html">Gurobi Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vca.html">VCA Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../qaoa.html">QAOA Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reinforce.html">REINFORCE Tutorial</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../benchmark/results.html">Benchmark Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../references/dataset_references.html">Dataset References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Reinforcement Learning for Ising Model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Ising Model Ground State Methods</a></li>
+      <li class="breadcrumb-item active">Monte Carlo Policy Gradient with Local Search (MCPG)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/tutorials/methods/mcpg.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="monte-carlo-policy-gradient-with-local-search-mcpg">
+<span id="mcpg"></span><h1>Monte Carlo Policy Gradient with Local Search (MCPG)<a class="headerlink" href="#monte-carlo-policy-gradient-with-local-search-mcpg" title="Link to this heading"></a></h1>
+<p><strong>Citation:</strong>
+Chen, C., Chen, R., Li, T., Ao, R., &amp; Wen, Z. (2023). <em>A Monte Carlo Policy Gradient Method with Local Search for Binary Optimization</em>. arXiv:2307.00783.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>MCPG combines Monte Carlo policy gradient methods with local search techniques to address binary combinatorial optimization problems. It incorporates MCMC-based sampling and a theoretically justified convergence mechanism.</p>
+</section>
+<section id="strengths">
+<h2>Strengths<a class="headerlink" href="#strengths" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Efficient, Diverse Exploration</strong>:
+Parallel MCMC sampling introduces both diversity and coherence in exploring the discrete solution space. This results in low-variance gradient estimates and fast convergence to high-quality solutions.</p></li>
+<li><p><strong>Theoretical Convergence Guarantee</strong>:
+MCPG minimizes KL divergence to the Gibbs distribution and employs MCMC concentration inequalities, ensuring provable convergence in expectation to a stationary policy.</p></li>
+</ul>
+</section>
+<section id="weaknesses">
+<h2>Weaknesses<a class="headerlink" href="#weaknesses" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Ambiguous Stopping Criterion</strong>:
+Similar to ECO-DQN, MCPG continues to explore during inference. Determining when additional sampling no longer improves results remains a practical challenge.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="eco_dqn.html" class="btn btn-neutral float-left" title="Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="isco.html" class="btn btn-neutral float-right" title="Revisiting Sampling for Combinatorial Optimization (iSCO)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
