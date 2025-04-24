@@ -18,19 +18,44 @@ Instances
 
 The instances we are providing for the spin glass Ising model type consist of weighted edges. Note that there are both positive and negative edge weights. The complexity of an instance is determined not only by the size, but also the pattern of interactions and frustration.
 
-.. image:: /_static/spin_glass_figure_simple.png
+1D
+------
+.. image:: /_static/spin_glass_1D.png
     :align: center
+    :alt: 1D
 
 .. raw:: html
 
     <div style="height: 40px;"></div>
 
-.. image:: /_static/spin_glass_figure_intermediate.png
+2D
+------
+.. image:: /_static/spin_glass_2D.png
     :align: center
 
 .. raw:: html
-
+    
     <div style="height: 40px;"></div>
 
-.. image:: /_static/spin_glass_figure_complex.png
+3D
+------
+.. image:: /_static/spin_glass_3D.png
+    :align: center
+
+.. raw:: html
+    
+    <div style="height: 40px;"></div>
+
+4D
+------
+.. image:: /_static/spin_glass_4D.png
+    :align: center
+
+.. raw:: html
+    
+    <div style="height: 40px;"></div>
+
+Mean-Field
+------------
+.. image:: /_static/spin_glass_MF.png
     :align: center

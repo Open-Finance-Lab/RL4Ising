@@ -18,6 +18,8 @@ Instances
 
 The instances we are providing for the anti-ferromagnetic Ising model type consist of weighted edges. Note that there are only negative weights present for these instances. The complexity of an instance is determined by its size (# of nodes).
 
-.. image:: /_static/anti-ferromagnetism_figure.png
+2D
+-----------
+.. image:: /_static/anti-ferromagnetism_2D.png
     :align: center
 
