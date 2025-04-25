@@ -1,6 +1,6 @@
-=============
-Ferromagnetic
-=============
+===============================
+Ferromagnetic Dataset
+===============================
 
 Description of Ising Model Type
 ===============================

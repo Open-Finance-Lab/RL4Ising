@@ -50,8 +50,10 @@
 <li class="toctree-l1"><a class="reference internal" href="overview/project_overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ising_models/ising_model_description.html">Types of Ising Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasets/datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="methods/index.html">Reinforcement Algorithm/Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="benchmark/results.html">Benchmark Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers/index.html">Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark/results.html">Performance Benchmark</a></li>
 <li class="toctree-l1"><a class="reference internal" href="references/dataset_references.html">Dataset References</a></li>
 </ul>
 
@@ -103,25 +105,47 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="datasets/datasets.html">Datasets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="datasets/datasets.html#dataset-introduction">Dataset Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="datasets/datasets.html#id1">Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="methods/index.html">Reinforcement Algorithm/Methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="methods/index.html#exploratory-combinatorial-optimization-with-reinforcement-learning-eco-dqn">Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods/index.html#monte-carlo-policy-gradient-with-local-search-mcpg">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods/index.html#revisiting-sampling-for-combinatorial-optimization-isco">Revisiting Sampling for Combinatorial Optimization (iSCO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods/index.html#variational-neural-annealing-vca">Variational Neural Annealing (VCA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="methods/index.html#reinforce-algorithm">REINFORCE Algorithm</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials/index.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/eco.html">ECO-DQN Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/mcpg.html">MCPG Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/isco.html">iSCO Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/gurobi.html">Gurobi Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/vca.html">VCA Tutorial</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials/qaoa.html">QAOA Tutorial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials/reinforce.html">REINFORCE Tutorial</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="benchmark/results.html">Benchmark Comparison</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#spin-glass-benchmark">Spin Glass Benchmark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#spin-ice-benchmark">Spin Ice Benchmark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#ferromagnetic-benchmark">Ferromagnetic Benchmark</a></li>
-<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#anti-ferromagnetic-benchmark">Anti-Ferromagnetic Benchmark</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solvers/index.html">Solvers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#gurobi-solver">Gurobi Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#ibm-cplex-solver">IBM CPLEX Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#mosek-solver">Mosek Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#copt-solver">COPT Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#ecole-solver">Ecole Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#scip-solver">SCIP Solver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="solvers/index.html#rl4co-solver">RL4CO Solver</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="benchmark/results.html">Performance Benchmark</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#spin-glass-rl-benchmark">Spin Glass RL Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#spin-ice-rl-benchmark">Spin Ice RL Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#ferromagnetic-rl-benchmark">Ferromagnetic RL Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#anti-ferromagnetic-rl-benchmark">Anti-Ferromagnetic RL Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#spin-glass-solver-benchmark">Spin Glass Solver Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#spin-ice-solver-benchmark">Spin Ice Solver Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#ferromagnetic-solver-benchmark">Ferromagnetic Solver Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark/results.html#anti-ferromagnetic-solver-benchmark">Anti-Ferromagnetic Solver Benchmark</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="references/dataset_references.html">Dataset References</a></li>

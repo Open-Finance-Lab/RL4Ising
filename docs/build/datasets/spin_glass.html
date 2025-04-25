@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spin Glass &mdash; Reinforcement Learning for Ising Model  documentation</title>
+  <title>Spin Glass Dataset &mdash; Reinforcement Learning for Ising Model  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Spin-Ice" href="spin_ice.html" />
+    <link rel="next" title="Description" href="spin_ice.html" />
     <link rel="prev" title="Datasets" href="datasets.html" /> 
 </head>
 
@@ -51,21 +51,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="datasets.html">Datasets</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="datasets.html#dataset-introduction">Dataset Introduction</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="datasets.html#id1">Datasets</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Spin Glass</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#instances">Instances</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Spin Glass Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instances">Instances</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d">1D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">4D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mean-field">Mean-Field</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="spin_ice.html">Spin-Ice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#instances">Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Algorithm/Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Comparison</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
 </ul>
@@ -85,7 +91,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="datasets.html">Datasets</a></li>
-      <li class="breadcrumb-item active">Spin Glass</li>
+      <li class="breadcrumb-item active">Spin Glass Dataset</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/datasets/spin_glass.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -95,8 +101,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="spin-glass">
-<h1>Spin Glass<a class="headerlink" href="#spin-glass" title="Link to this heading"></a></h1>
+  <section id="spin-glass-dataset">
+<h1>Spin Glass Dataset<a class="headerlink" href="#spin-glass-dataset" title="Link to this heading"></a></h1>
 <section id="description-of-ising-model-type">
 <h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading"></a></h2>
 <p>A spin glass Ising model is characterized by frustrated interactions, meaning some neighboring spins prefer to align while others prefer to oppose. These conflicting orientations prevent the system from reaching a uniformly ordered state.
@@ -136,7 +142,7 @@ The energy configuration of this model can be given by</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="datasets.html" class="btn btn-neutral float-left" title="Datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="spin_ice.html" class="btn btn-neutral float-right" title="Spin-Ice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spin_ice.html" class="btn btn-neutral float-right" title="Description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

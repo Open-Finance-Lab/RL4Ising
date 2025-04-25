@@ -9,8 +9,6 @@ Tutorials
    eco
    mcpg
    isco
-   gurobi
    vca
-   qaoa
    reinforce
    
