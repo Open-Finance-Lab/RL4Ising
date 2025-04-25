@@ -1,5 +1,7 @@
-.. _gurobi:
-
+=================================
+Solvers
+=================================
+   
 Gurobi Solver
 =============
 
@@ -27,3 +29,21 @@ Weaknesses
 
 - **Scalability Limits on Large Instances**:
   On large-scale benchmarks (e.g., G70 with \|V\| = 10,000), Gurobi may take substantial time to close the optimality gap. While it found a cut of 9490 in 0.5h and 9506 in 1h, these results highlight potential bottlenecks under time constraints.
+
+IBM CPLEX Solver
+======================
+
+Mosek Solver
+===================
+
+COPT Solver
+===============
+
+Ecole Solver
+======================
+
+SCIP Solver 
+======================
+
+RL4CO Solver
+=====================

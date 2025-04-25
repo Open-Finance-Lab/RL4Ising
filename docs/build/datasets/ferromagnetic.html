@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ferromagnetic &mdash; Reinforcement Learning for Ising Model  documentation</title>
+  <title>Ferromagnetic Dataset &mdash; Reinforcement Learning for Ising Model  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Anti-Ferromagnetic" href="anti_ferromagnetic.html" />
-    <link rel="prev" title="Spin-Ice" href="spin_ice.html" /> 
+    <link rel="next" title="Anti-Ferromagnetic Dataset" href="anti_ferromagnetic.html" />
+    <link rel="prev" title="Spin-Ice Dataset" href="spin_ice.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,21 +51,22 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="datasets.html">Datasets</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="datasets.html#dataset-introduction">Dataset Introduction</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="datasets.html#id1">Datasets</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="spin_glass.html">Spin Glass</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spin_ice.html">Spin-Ice</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Ferromagnetic</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#instances">Instances</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Ferromagnetic Dataset</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#instances">Instances</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#d">2D</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Algorithm/Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Comparison</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
 </ul>
@@ -85,7 +86,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="datasets.html">Datasets</a></li>
-      <li class="breadcrumb-item active">Ferromagnetic</li>
+      <li class="breadcrumb-item active">Ferromagnetic Dataset</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/datasets/ferromagnetic.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -95,8 +96,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ferromagnetic">
-<h1>Ferromagnetic<a class="headerlink" href="#ferromagnetic" title="Link to this heading"></a></h1>
+  <section id="ferromagnetic-dataset">
+<h1>Ferromagnetic Dataset<a class="headerlink" href="#ferromagnetic-dataset" title="Link to this heading"></a></h1>
 <section id="description-of-ising-model-type">
 <h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading"></a></h2>
 <p>In a ferromagnetic Ising model, neighboring spins want to align. In other words, they want to point in the same direction to minimize the system’s energy. Uniformity, whether it be in the form of all spins pointing up or down, is a key trait of the ferromagnetic instance.
@@ -119,8 +120,8 @@ The energy configuration of this model can be given by</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="spin_ice.html" class="btn btn-neutral float-left" title="Spin-Ice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="anti_ferromagnetic.html" class="btn btn-neutral float-right" title="Anti-Ferromagnetic" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spin_ice.html" class="btn btn-neutral float-left" title="Spin-Ice Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="anti_ferromagnetic.html" class="btn btn-neutral float-right" title="Anti-Ferromagnetic Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

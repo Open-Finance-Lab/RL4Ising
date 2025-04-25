@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Spin Glass" href="spin_glass.html" />
+    <link rel="next" title="Spin Glass Dataset" href="spin_glass.html" />
     <link rel="prev" title="Types of Ising Models" href="../ising_models/ising_model_description.html" /> 
 </head>
 
@@ -51,20 +51,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Datasets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#dataset-introduction">Dataset Introduction</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#instances-of-ising-models">Instances of Ising Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">Datasets</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="spin_glass.html">Spin Glass</a></li>
-<li class="toctree-l3"><a class="reference internal" href="spin_ice.html">Spin-Ice</a></li>
-<li class="toctree-l3"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic</a></li>
-<li class="toctree-l3"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Algorithm/Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Comparison</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
 </ul>
@@ -96,8 +91,7 @@
   <section id="datasets">
 <h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h1>
 <p>Our dataset collection spans a diverse set of spin systems that are central to both statistical physics and combinatorial optimization. These instances serve as benchmarks for algorithms tackling complex energy landscapes. Below is a high-level introduction to the core instance types and how we organize our datasets.</p>
-<section id="dataset-introduction">
-<h2>Dataset Introduction<a class="headerlink" href="#dataset-introduction" title="Link to this heading"></a></h2>
+<p><strong>Dataset Introduction</strong></p>
 <p>To facilitate benchmarking across different complexity levels and problem types, we partition each Ising model type into <strong>three subcategories</strong>:</p>
 <ul class="simple">
 <li><p><strong>Simple</strong>
@@ -107,31 +101,26 @@ Instances with between 256 and 1023 spins. These are more challenging due to inc
 <li><p><strong>Complex</strong>
 Instances with 1024 spins or more. These often represent high-dimensional spin glasses or large-scale simulations of physical systems. They pose significant challenges for both classical and quantum solvers, making them important benchmarks for state-of-the-art techniques in physics and optimization.</p></li>
 </ul>
-<section id="instances-of-ising-models">
-<h3>Instances of Ising Models<a class="headerlink" href="#instances-of-ising-models" title="Link to this heading"></a></h3>
+<p><strong>Instances of Ising Models</strong></p>
 <img alt="../_images/instances_model_figure.png" class="align-center" src="../_images/instances_model_figure.png" />
 <p>Note that there is additional information about the graph configurations present in our datasets in our Additional Resources section.</p>
-</section>
-</section>
-<section id="id1">
-<h2>Datasets<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="spin_glass.html">Spin Glass</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spin_glass.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="spin_glass.html#instances">Instances</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="spin_ice.html">Spin-Ice</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spin_ice.html#description">Description</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#instances">Instances</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html#instances">Instances</a></li>
 </ul>
@@ -139,14 +128,13 @@ Instances with 1024 spins or more. These often represent high-dimensional spin g
 </ul>
 </div>
 </section>
-</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../ising_models/ising_model_description.html" class="btn btn-neutral float-left" title="Types of Ising Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="spin_glass.html" class="btn btn-neutral float-right" title="Spin Glass" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spin_glass.html" class="btn btn-neutral float-right" title="Spin Glass Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

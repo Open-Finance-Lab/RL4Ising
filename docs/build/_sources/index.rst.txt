@@ -27,7 +27,9 @@ User Guide
    overview/project_overview
    ising_models/ising_model_description
    datasets/datasets
+   methods/index
    tutorials/index
+   solvers/index
    benchmark/results
    references/dataset_references
 
