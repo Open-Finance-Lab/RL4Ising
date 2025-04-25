@@ -1,6 +1,6 @@
 .. _eco_dqn:
 
-Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)
+Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)11
 ==================================================================================
 
 **Citation:**
