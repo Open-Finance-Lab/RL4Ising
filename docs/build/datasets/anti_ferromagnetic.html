@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Reinforcement Algorithm/Methods" href="../methods/index.html" />
-    <link rel="prev" title="Description of Ising Model Type" href="ferromagnetic.html" /> 
+    <link rel="next" title="Reinforcement Learning Methods" href="../methods/index.html" />
+    <link rel="prev" title="Ferromagnetic Dataset" href="ferromagnetic.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -52,24 +52,27 @@
 <li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="datasets.html">Datasets</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Description of Ising Model Type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#instances">Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Anti-Ferromagnetic Dataset</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#instances">Instances</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#d">2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#d-instances">2D Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset-references">Dataset References</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning">[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#a-high-bias-low-variance-introduction-to-machine-learning-for-physicists">[13] A high-bias, low-variance introduction to Machine Learning for physicists</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Algorithm/Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Learning Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Comparison</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Performance Benchmark</a></li>
 </ul>
 
         </div>
@@ -110,9 +113,25 @@ The energy configuration of this model can be given by</p>
 <section id="instances">
 <h2>Instances<a class="headerlink" href="#instances" title="Link to this heading"></a></h2>
 <p>The instances we are providing for the anti-ferromagnetic Ising model type consist of weighted edges. Note that there are only negative weights present for these instances. The complexity of an instance is determined by its size (# of nodes).</p>
-<section id="d">
-<h3>2D<a class="headerlink" href="#d" title="Link to this heading"></a></h3>
+<section id="d-instances">
+<h3>2D Instances<a class="headerlink" href="#d-instances" title="Link to this heading"></a></h3>
 <img alt="../_images/anti-ferromagnetism_2D.png" class="align-center" src="../_images/anti-ferromagnetism_2D.png" />
+<div style="height: 40px;"></div></section>
+</section>
+<section id="dataset-references">
+<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Link to this heading"></a></h2>
+<p>Below contain the references to the datasets we gathered on this website.</p>
+<section id="finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning">
+<h3>[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning<a class="headerlink" href="#finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Mills, K., Ronagh, P. &amp; Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). <a class="reference external" href="https://doi.org/10.1038/s42256-020-0226-x">https://doi.org/10.1038/s42256-020-0226-x</a></p>
+<p>This paper demonstrates that an RL agent is able to surpass the performance of standard heuristic temperature schedule for two classes of Hamiltonians. They show the performance of their implementation by training on weak-strong clusters (bipartite graph with two fully connected clusters) and nearest-neighbor square spin glasses.</p>
+</section>
+<section id="a-high-bias-low-variance-introduction-to-machine-learning-for-physicists">
+<h3>[13] A high-bias, low-variance introduction to Machine Learning for physicists<a class="headerlink" href="#a-high-bias-low-variance-introduction-to-machine-learning-for-physicists" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+P. Mehta, M. Bukov, C.-H. Wang, A.G. Day, C. Richardson, C.K. Fisher, D.J. Schwab. A high-bias, low-variance introduction to machine learning for physicists. Physics Reports, 810 (2019), pp. 1-124, 10.1016/j.physrep.2019.03.001</p>
+<p>This textbook introduces Machine Learning and its applications towards physics problems and research. Within the textbook, contains an Ising model dataset of locally-connected 2D Ising models.</p>
 </section>
 </section>
 </section>
@@ -121,8 +140,8 @@ The energy configuration of this model can be given by</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ferromagnetic.html" class="btn btn-neutral float-left" title="Description of Ising Model Type" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../methods/index.html" class="btn btn-neutral float-right" title="Reinforcement Algorithm/Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="ferromagnetic.html" class="btn btn-neutral float-left" title="Ferromagnetic Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../methods/index.html" class="btn btn-neutral float-right" title="Reinforcement Learning Methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

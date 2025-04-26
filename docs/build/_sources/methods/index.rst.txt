@@ -1,13 +1,16 @@
 ===================================
-Reinforcement Algorithm/Methods
+Reinforcement Learning Methods
 ===================================
 
 .. contents:: Table of Contents
    :local:
 
 
-Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)
+ECO-DQN
 ==================================================================================
+
+Exploratory Combinatorial Optimization with Reinforcement Learning 
+-------------------------------------------------------------------
 
 **Citation:**
 Barrett, T. D., Clements, W. R., Foerster, J. N., & Lvovsky, A. I. (2019). *Exploratory Combinatorial Optimization with Reinforcement Learning*. In Proc. of the Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20). DOI: `10.1609/aaai.v34i04.5723 <https://doi.org/10.1609/aaai.v34i04.5723>`_
@@ -40,8 +43,11 @@ Weaknesses
 
 
 
-Monte Carlo Policy Gradient with Local Search (MCPG)
+MCPG
 =====================================================
+
+Monte Carlo Policy Gradient with Local Search 
+-----------------------------------------------
 
 **Citation:**
 Chen, C., Chen, R., Li, T., Ao, R., & Wen, Z. (2023). *A Monte Carlo Policy Gradient Method with Local Search for Binary Optimization*. arXiv:2307.00783.
@@ -67,8 +73,11 @@ Weaknesses
 
 
 
-Revisiting Sampling for Combinatorial Optimization (iSCO)
+iSCO
 ==========================================================
+
+Revisiting Sampling for Combinatorial Optimization 
+------------------------------------------------------------
 
 **Citation:**
 Sun, H., Goshvadi, K., Nova, A., Schuurmans, D., & Dai, H. (2023). *Revisiting Sampling for Combinatorial Optimization*. In Proceedings of the 40th International Conference on Machine Learning (PMLR 202:32859–32874).
@@ -96,8 +105,11 @@ Weaknesses
 
 
 
-Variational Neural Annealing (VCA)
+VCA
 ===================================
+
+Variational Neural Annealing 
+---------------------------------
 
 **Citation:**
 Hibat-Allah, M., Inack, E. M., Wiersema, R., Melko, R. G., & Carrasquilla, J. (2021). *Variational neural annealing*. Nature Machine Intelligence, 3(11), 952-961.
@@ -121,7 +133,7 @@ Weaknesses
 
 
 
-REINFORCE Algorithm 
+REINFORCE 
 ====================================
 
 Overview

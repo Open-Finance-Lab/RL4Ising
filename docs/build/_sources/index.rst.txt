@@ -31,6 +31,5 @@ User Guide
    tutorials/index
    solvers/index
    benchmark/results
-   references/dataset_references
 
 

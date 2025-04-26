@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Description" href="spin_ice.html" />
+    <link rel="next" title="Spin-Ice Dataset" href="spin_ice.html" />
     <link rel="prev" title="Datasets" href="datasets.html" /> 
 </head>
 
@@ -61,19 +61,30 @@
 <li class="toctree-l4"><a class="reference internal" href="#mean-field">Mean-Field</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#dataset-references">Dataset References</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#variational-neural-annealing">[1] Variational Neural Annealing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#searching-for-spin-glass-ground-states-through-deep-reinforcement-learning">[2] Searching for Spin Glass Ground States Through Deep Reinforcement Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning">[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quantum-enhanced-markov-chain-monte-carlo">[4] Quantum-enhanced Markov Chain Monte Carlo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wavelength-division-multiplexing-optical-ising-simulator">[5] Wavelength-Division Multiplexing Optical Ising Simulator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beyond-classical-computation-in-quantum-simulation">[8] Beyond-classical computation in quantum simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quantum-enhanced-greedy-combinatorial-optimization-solver">[9] Quantum-enhanced greedy combinatorial optimization solver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#biq-mac-library">[11] Biq Mac Library</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#on-computational-complexity-of-3d-ising-spin-glass-lessons-from-d-wave-annealer">[12] On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#solving-statistical-mechanics-using-variational-autoregressive-networks">[14] Solving Statistical Mechanics Using Variational Autoregressive Networks</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Description of Ising Model Type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#instances">Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Algorithm/Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Learning Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Comparison</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Performance Benchmark</a></li>
 </ul>
 
         </div>
@@ -133,6 +144,69 @@ The energy configuration of this model can be given by</p>
 <section id="mean-field">
 <h3>Mean-Field<a class="headerlink" href="#mean-field" title="Link to this heading"></a></h3>
 <img alt="../_images/spin_glass_MF.png" class="align-center" src="../_images/spin_glass_MF.png" />
+<div style="height: 40px;"></div></section>
+</section>
+<section id="dataset-references">
+<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Link to this heading"></a></h2>
+<p>Below contain the references to the datasets we gathered on this website.</p>
+<section id="variational-neural-annealing">
+<h3>[1] Variational Neural Annealing<a class="headerlink" href="#variational-neural-annealing" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Hibat-Allah, M., Inack, E. M., Wiersema, R., Melko, R. G., &amp; Carrasquilla, J. (2021). Variational neural annealing. Nature Machine Intelligence, 3(11), 952–961. <a class="reference external" href="https://doi.org/10.1038/s42256-021-00401-3">https://doi.org/10.1038/s42256-021-00401-3</a></p>
+<p>VNA proposes a parameterized annealing model to stochastically search for ground states of the Ising model. It features fully connected spin glass instances, as well as Edwards-Anderson (EA) and Wishart Planted Ensemble (WPE) graph instances of the Ising model.</p>
+</section>
+<section id="searching-for-spin-glass-ground-states-through-deep-reinforcement-learning">
+<h3>[2] Searching for Spin Glass Ground States Through Deep Reinforcement Learning<a class="headerlink" href="#searching-for-spin-glass-ground-states-through-deep-reinforcement-learning" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023).</p>
+<p>This paper introduces DIRAC, a deep reinforcement learning framework that can be trained on small-scale spin glass instances and applied to arbitrarily large ones. DIRAC has found success in scalability compared to other methods and has been tested on 2D, 3D, and 4D EA spin-glass instances.</p>
+</section>
+<section id="finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning">
+<h3>[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning<a class="headerlink" href="#finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Mills, K., Ronagh, P. &amp; Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020).</p>
+<p>This paper demonstrates that an RL agent is able to surpass the performance of standard heuristic temperature schedule for two classes of Hamiltonians. They show the performance of their implementation by training on weak-strong clusters (bipartite graph with two fully connected clusters) and nearest-neighbor square spin glasses.</p>
+</section>
+<section id="quantum-enhanced-markov-chain-monte-carlo">
+<h3>[4] Quantum-enhanced Markov Chain Monte Carlo<a class="headerlink" href="#quantum-enhanced-markov-chain-monte-carlo" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Layden, D., Mazzola, G., Mishmash, R.V. et al. Quantum-enhanced Markov chain Monte Carlo. Nature 619, 282–287 (2023). <a class="reference external" href="https://doi.org/10.1038/s41586-023-06095-4">https://doi.org/10.1038/s41586-023-06095-4</a></p>
+<p>This paper provides an algorithm that leverages MCMC to sample from the Boltzmann distribution of classical Ising models. It performs testing analysis on spin-glass Ising models ranging from 3 to 10 spins, and each set of spins featuring both a fully connected and line connected configuration.</p>
+</section>
+<section id="wavelength-division-multiplexing-optical-ising-simulator">
+<h3>[5] Wavelength-Division Multiplexing Optical Ising Simulator<a class="headerlink" href="#wavelength-division-multiplexing-optical-ising-simulator" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Li Luo et al., Wavelength-division multiplexing optical Ising simulator enabling fully programmable spin couplings and external magnetic fields. Sci. Adv. 9, eadg6238 (2023). DOI: 10.1126/sciadv.adg6238</p>
+<p>This paper uses a spatial photonic Ising machine to compute Ising Hamiltonians of programmable Ising models. To demonstrate the programming capabilities, testing is performed on $pm$ J models, Sherrington-Kirkpatrick (SK) models, and locally connected $J_1-J_2$ models</p>
+</section>
+<section id="beyond-classical-computation-in-quantum-simulation">
+<h3>[8] Beyond-classical computation in quantum simulation<a class="headerlink" href="#beyond-classical-computation-in-quantum-simulation" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Andrew D. King et al., Beyond-classical computation in quantum simulation. Science 388, 199-204 (2025). DOI:10.1126/science.ado6285</p>
+<p>This paper uses seeks to establish quantum computing’s capability of handling complex computational problems, within the field of quantum simulation. With the problem scope focusing on the Ising model, they compare their QPU’s results against classical algorithms (Schrodinger equation dependent) on various spin-glass models. Specifically, testing was performed on 2D cylindrical spin-glass, 3D cubic spin-glass, 3D diamond spin-glass, and bi-clique spin-glass instances.</p>
+</section>
+<section id="quantum-enhanced-greedy-combinatorial-optimization-solver">
+<h3>[9] Quantum-enhanced greedy combinatorial optimization solver<a class="headerlink" href="#quantum-enhanced-greedy-combinatorial-optimization-solver" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Maxime Dupont et al., Quantum-enhanced greedy combinatorial optimization solver. Sci. Adv. 9, eadi0487 (2023). DOI:10.1126/sciadv.adi0487</p>
+<p>This paper introduces a quantum heuristic optimization algorithm for combinatorial optimization problems. Attempting to overcome noise constraints by reducing the problem to a classical greedy problem. Specifically, this heuristic algorithm is tested on Sherrington-Kirkpatrick spin-glass problems.</p>
+</section>
+<section id="biq-mac-library">
+<h3>[11] Biq Mac Library<a class="headerlink" href="#biq-mac-library" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+<a class="reference external" href="https://biqmac.aau.at/biqmaclib.html">https://biqmac.aau.at/biqmaclib.html</a></p>
+<p>A dataset for QUBO and Max-Cut instances curated for the development of a QUBO and Max-Cut solver (Biq Mac). Within this dataset contains Ising model instances, specifically, Toroidal grid graphs and Ising chain instances.</p>
+</section>
+<section id="on-computational-complexity-of-3d-ising-spin-glass-lessons-from-d-wave-annealer">
+<h3>[12] On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer<a class="headerlink" href="#on-computational-complexity-of-3d-ising-spin-glass-lessons-from-d-wave-annealer" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+<a class="reference external" href="https://doi.org/10.48550/arXiv.2501.01107">https://doi.org/10.48550/arXiv.2501.01107</a></p>
+<p>This paper searches for the ground state of 3D spin-glass instances using annealing methods on the D-Wave quantum annealer. To demostrate the NP-hard complexity of 3D spin-glass instances, they performed testing on 3D instances ranging from 3558 to 5627 spins.</p>
+</section>
+<section id="solving-statistical-mechanics-using-variational-autoregressive-networks">
+<h3>[14] Solving Statistical Mechanics Using Variational Autoregressive Networks<a class="headerlink" href="#solving-statistical-mechanics-using-variational-autoregressive-networks" title="Link to this heading"></a></h3>
+<p><strong>Citation:</strong>
+Wu, Dian &amp; Wang, Lei &amp; Zhang, Pan. (2019). Solving Statistical Mechanics Using Variational Autoregressive Networks. Physical Review Letters. 122. 10.1103/PhysRevLett.122.080602.</p>
 </section>
 </section>
 </section>
@@ -142,7 +216,7 @@ The energy configuration of this model can be given by</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="datasets.html" class="btn btn-neutral float-left" title="Datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="spin_ice.html" class="btn btn-neutral float-right" title="Description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="spin_ice.html" class="btn btn-neutral float-right" title="Spin-Ice Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

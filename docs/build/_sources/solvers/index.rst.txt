@@ -33,17 +33,35 @@ Weaknesses
 IBM CPLEX Solver
 ======================
 
+**Citation:**
+Cplex, I. I. (2009). V12. 1: User’s Manual for CPLEX. International Business Machines Corporation, 46(53), 157.
+
 Mosek Solver
 ===================
+
+**Citation:**
+https://docs.mosek.com/latest/pythonfusion/index.html
 
 COPT Solver
 ===============
 
+**Citation:**
+https://doi.org/10.48550/arXiv.2208.14314
+
 Ecole Solver
 ======================
+
+**Citation:**
+https://doi.org/10.48550/arXiv.2104.02828
 
 SCIP Solver 
 ======================
 
+**Citation:**
+https://doi.org/10.48550/arXiv.2402.17702
+
 RL4CO Solver
 =====================
+
+**Citation:**
+https://doi.org/10.48550/arXiv.2306.17100
