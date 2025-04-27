@@ -52,13 +52,13 @@ Ecole Solver
 ======================
 
 **Citation:**
-https://doi.org/10.48550/arXiv.2104.02828
+Antoine Prouvost, Justin Dumouchelle, Lara Scavuzzo, Maxime Gasse, Didier Chetelat, & Andrea Lodi (2020). Ecole: A Gym-like Library for Machine Learning in Combinatorial Optimization Solvers. In Learning Meets Combinatorial Algorithms at NeurIPS2020.
 
 SCIP Solver 
 ======================
 
 **Citation:**
-https://doi.org/10.48550/arXiv.2402.17702
+Suresh Bolusani, Mathieu Besançon, Ksenia Bestuzheva, Antonia Chmiela, João Dionísio, Tim Donkiewicz, Jasper van Doornmalen, Leon Eifler, Mohammed Ghannam, Ambros Gleixner, Christoph Graczyk, Katrin Halbig, Ivo Hedtke, Alexander Hoen, Christopher Hojny, Rolf van der Hulst, Dominik Kamp, Thorsten Koch, Kevin Kofler, Jurgen Lentz, Julian Manns, Gioni Mexi, Erik~Mühmer, Marc E. Pfetsch, Franziska Schlosser, Felipe Serrano, Yuji Shinano, Mark Turner, Stefan Vigerske, Dieter Weninger, & Lixing Xu (2024). The SCIP Optimization Suite 9.0 [White paper]. Optimization Online.
 
 RL4CO Solver
 =====================
