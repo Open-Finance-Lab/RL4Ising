@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Spin-Ice Dataset" href="spin_ice.html" />
-    <link rel="prev" title="Datasets" href="datasets.html" /> 
+    <link rel="prev" title="Classification of Ising Models" href="classification.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,45 +46,73 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">RL For Ising Model Documentation</span></p>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Key Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="datasets.html">Datasets</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Spin Glass Dataset</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#instances">Instances</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#d">1D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">2D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">3D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">4D</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#mean-field">Mean-Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="classification.html">Classification of Ising Models</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Spin Glass Dataset</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#instances">Instances</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#d">1D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mean-field">Mean-Field</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#dataset-references">Dataset References</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#variational-neural-annealing">[1] Variational Neural Annealing</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#searching-for-spin-glass-ground-states-through-deep-reinforcement-learning">[2] Searching for Spin Glass Ground States Through Deep Reinforcement Learning</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning">[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#quantum-enhanced-markov-chain-monte-carlo">[4] Quantum-enhanced Markov Chain Monte Carlo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wavelength-division-multiplexing-optical-ising-simulator">[5] Wavelength-Division Multiplexing Optical Ising Simulator</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#beyond-classical-computation-in-quantum-simulation">[8] Beyond-classical computation in quantum simulation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#quantum-enhanced-greedy-combinatorial-optimization-solver">[9] Quantum-enhanced greedy combinatorial optimization solver</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#biq-mac-library">[11] Biq Mac Library</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#on-computational-complexity-of-3d-ising-spin-glass-lessons-from-d-wave-annealer">[12] On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#solving-statistical-mechanics-using-variational-autoregressive-networks">[14] Solving Statistical Mechanics Using Variational Autoregressive Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dataset-references">Dataset References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#variational-neural-annealing">[1] Variational Neural Annealing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#searching-for-spin-glass-ground-states-through-deep-reinforcement-learning">[2] Searching for Spin Glass Ground States Through Deep Reinforcement Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#finding-the-ground-state-of-spin-hamiltonians-with-reinforcement-learning">[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quantum-enhanced-markov-chain-monte-carlo">[4] Quantum-enhanced Markov Chain Monte Carlo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wavelength-division-multiplexing-optical-ising-simulator">[5] Wavelength-Division Multiplexing Optical Ising Simulator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#beyond-classical-computation-in-quantum-simulation">[8] Beyond-classical computation in quantum simulation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quantum-enhanced-greedy-combinatorial-optimization-solver">[9] Quantum-enhanced greedy combinatorial optimization solver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#biq-mac-library">[11] Biq Mac Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#on-computational-complexity-of-3d-ising-spin-glass-lessons-from-d-wave-annealer">[12] On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#solving-statistical-mechanics-using-variational-autoregressive-networks">[14] Solving Statistical Mechanics Using Variational Autoregressive Networks</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Learning Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Performance</a></li>
+<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/gurobi.html">Gurobi Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/cplex.html">IBM ILOG CPLEX Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/copt.html">COPT Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/scip.html">SCIP Solver</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods/s2v.html">S2V-DQN Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/vca.html">Variational Neural Annealing (VCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/reinforce.html">REINFORCE Algorithm</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
 </ul>
 
         </div>
@@ -101,7 +129,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="datasets.html">Datasets</a></li>
       <li class="breadcrumb-item active">Spin Glass Dataset</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/datasets/spin_glass.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -215,7 +242,7 @@ Wu, Dian &amp; Wang, Lei &amp; Zhang, Pan. (2019). Solving Statistical Mechanics
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="datasets.html" class="btn btn-neutral float-left" title="Datasets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classification.html" class="btn btn-neutral float-left" title="Classification of Ising Models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="spin_ice.html" class="btn btn-neutral float-right" title="Spin-Ice Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

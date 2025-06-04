@@ -5,23 +5,6 @@ Overview
 .. contents:: Table of Contents
    :local:
 
-Introduction
-===============================
-Welcome to `Reinforcement Learning for Ising Model <https://github.com/YangletLiu/RL4Ising>`_! 
-
-This project showcases a variety of approaches designed to find the ground state of Ising models. While our methodology focuses on the application of reinforcement learning (RL), we provide
-a range of alternative methods that can be used for benchmarking and evaluation. The goal is to explore innovative RL techniques to improve the efficiency and accuracy of Ising model solutions
-while providing a comprehensive dataset to compare and reproduce results.
-
-Our Project offers:
-
-- **Comprehensive Dataset**: Detailed collection of synthetic and real Ising model instances
-- **Tutorials**: Step-by-step analysis and code for various SOTA Ising model solvers
-- **Benchmarks**: Evaulate performance of various SOTA Ising model solvers
-
-.. This repository includes a series of notebooks with code to execute and evaluate a transformer-based algorithm for solving the Ising model. A notable feature of our implementation is the
-.. use of **curriculum learning**, which is designed to progressively enhance the performance of our model, leading to more efficient and accurate solutions. 
-
 Motivation
 ==========
 

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Benchmark Performance &mdash; Reinforcement Learning for Ising Model  documentation</title>
+  <title>Benchmark Results &mdash; Reinforcement Learning for Ising Model  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
@@ -21,7 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Solvers" href="../solvers/index.html" /> 
+    <link rel="next" title="Task 1: RL4MaxCut" href="../competition/rl4maxcut.html" />
+    <link rel="prev" title="REINFORCE Algorithm" href="../methods/reinforce.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,15 +44,40 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">RL For Ising Model Documentation</span></p>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Key Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/classification.html">Classification of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/gurobi.html">Gurobi Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/cplex.html">IBM ILOG CPLEX Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/copt.html">COPT Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/scip.html">SCIP Solver</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods/s2v.html">S2V-DQN Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/vca.html">Variational Neural Annealing (VCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/reinforce.html">REINFORCE Algorithm</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/datasets.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Learning Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Benchmark Performance</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Benchmark Results</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#solver-benchmarks">Solver Benchmarks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#spin-glass-solver-benchmark">Spin Glass Solver Benchmark</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#spin-ice-solver-benchmark">Spin Ice Solver Benchmark</a></li>
@@ -76,6 +102,15 @@
 </ul>
 </li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
+</ul>
 
         </div>
       </div>
@@ -91,7 +126,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Benchmark Performance</li>
+      <li class="breadcrumb-item active">Benchmark Results</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/benchmark/results.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -101,8 +136,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="benchmark-performance">
-<h1>Benchmark Performance<a class="headerlink" href="#benchmark-performance" title="Link to this heading"></a></h1>
+  <section id="benchmark-results">
+<h1>Benchmark Results<a class="headerlink" href="#benchmark-results" title="Link to this heading"></a></h1>
 <section id="solver-benchmarks">
 <h2>Solver Benchmarks<a class="headerlink" href="#solver-benchmarks" title="Link to this heading"></a></h2>
 <p>These benchmarks were run on a [computer specifications].</p>
@@ -183,7 +218,8 @@ The following physics methods were tested:<br><br>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../solvers/index.html" class="btn btn-neutral float-left" title="Solvers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../methods/reinforce.html" class="btn btn-neutral float-left" title="REINFORCE Algorithm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../competition/rl4maxcut.html" class="btn btn-neutral float-right" title="Task 1: RL4MaxCut" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

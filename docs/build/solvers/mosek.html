@@ -20,9 +20,7 @@
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="copt.html" />
-    <link rel="prev" title="&lt;no title&gt;" href="ibm_cplex.html" /> 
+    <link rel="search" title="Search" href="../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,15 +42,48 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">RL For Ising Model Documentation</span></p>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../ising_models/ising_model_description.html">Types of Ising Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/datasets.html">Datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/index.html">Reinforcement Algorithm/Methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">Tutorials</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">Solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Key Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/classification.html">Classification of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="gurobi.html">Gurobi Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cplex.html">IBM ILOG CPLEX Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copt.html">COPT Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scip.html">SCIP Solver</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods/s2v.html">S2V-DQN Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/vca.html">Variational Neural Annealing (VCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/reinforce.html">REINFORCE Algorithm</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
 </ul>
 
@@ -70,7 +101,6 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Solvers</a></li>
       <li class="breadcrumb-item active">&lt;no title&gt;</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/solvers/mosek.rst" class="fa fa-github"> Edit on GitHub</a>
@@ -85,10 +115,7 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ibm_cplex.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="copt.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

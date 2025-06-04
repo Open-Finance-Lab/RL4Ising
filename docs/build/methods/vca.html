@@ -20,7 +20,9 @@
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" /> 
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Monte Carlo Policy Gradient with Local Search (MCPG)" href="mcpg.html" />
+    <link rel="prev" title="S2V-DQN Algorithm" href="s2v.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,47 +44,54 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../overview/project_overview.html">Project Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/significance.html">Significance of Ising Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/reinforcement_learning.html">Introduction to Reinforcement Learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/goals.html">Goals</a></li>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Ising Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../ising_models/description.html">Types of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Key Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Datasets of Ising Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/datasets.html">Dataset Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/classification.html">Classification of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Basics and Set-up</span></p>
+<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../basics/install_cuda.html">Install CUDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/gurobi.html">Gurobi Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/cplex.html">IBM ILOG CPLEX Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/copt.html">COPT Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/scip.html">SCIP Solver</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_mcpg.html">Benchmark MCPG on Ising Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_eco.html">Benchmark ECO on Ising Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_vca.html">Benchmark VCA on Ising Model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../tutorials/benchmark_reinforce.html">Benchmark REINFORCE on Ising Model</a></li>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="s2v.html">S2V-DQN Algorithm</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variational Neural Annealing (VCA)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strengths">Strengths</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#weaknesses">Weaknesses</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Experimental Results</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../results/results.html">Benchmark Comparison</a></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reinforce.html">REINFORCE Algorithm</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
+<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../resources/geometry.html">Graph Geometry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../references/external_sources.html">External Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
 </ul>
 
         </div>
@@ -110,7 +119,7 @@
            <div itemprop="articleBody">
              
   <section id="variational-neural-annealing-vca">
-<span id="vca"></span><h1>Variational Neural Annealing (VCA)<a class="headerlink" href="#variational-neural-annealing-vca" title="Link to this heading"></a></h1>
+<h1>Variational Neural Annealing (VCA)<a class="headerlink" href="#variational-neural-annealing-vca" title="Link to this heading"></a></h1>
 <p><strong>Citation:</strong>
 Hibat-Allah, M., Inack, E. M., Wiersema, R., Melko, R. G., &amp; Carrasquilla, J. (2021). <em>Variational neural annealing</em>. Nature Machine Intelligence, 3(11), 952-961.</p>
 <section id="overview">
@@ -136,7 +145,10 @@ By focusing on approximating the Boltzmann distribution, VCA imposes a strong mo
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="s2v.html" class="btn btn-neutral float-left" title="S2V-DQN Algorithm" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mcpg.html" class="btn btn-neutral float-right" title="Monte Carlo Policy Gradient with Local Search (MCPG)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
