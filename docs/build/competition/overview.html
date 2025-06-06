@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spin-Ice Dataset &mdash; Reinforcement Learning for Ising Model  documentation</title>
+  <title>Overview &mdash; Reinforcement Learning for Ising Model  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Ferromagnetic Dataset" href="ferromagnetic.html" />
-    <link rel="prev" title="Spin Glass Dataset" href="spin_glass.html" /> 
+    <link rel="next" title="Task 1: RL4MaxCut" href="rl4maxcut.html" />
+    <link rel="prev" title="Benchmark Results" href="../benchmark/results.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,17 +54,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="classification.html">Classification of Ising Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Spin-Ice Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instances">Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dataset-references">Dataset References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/classification.html">Classification of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
 <ul>
@@ -85,10 +80,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../competition/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#tasks">Tasks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rl4maxcut.html">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl4ising.html">Task 2: RL4Ising</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -109,9 +107,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Spin-Ice Dataset</li>
+      <li class="breadcrumb-item active">Overview</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/datasets/spin_ice.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/competition/overview.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -119,19 +117,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="spin-ice-dataset">
-<h1>Spin-Ice Dataset<a class="headerlink" href="#spin-ice-dataset" title="Link to this heading"></a></h1>
-<section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Link to this heading"></a></h2>
-<p>…</p>
-</section>
-<section id="instances">
-<h2>Instances<a class="headerlink" href="#instances" title="Link to this heading"></a></h2>
-<img alt="../_images/spin_ice_figure.png" class="align-center" src="../_images/spin_ice_figure.png" />
-<div style="height: 40px;"></div></section>
-<section id="dataset-references">
-<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Link to this heading"></a></h2>
-<p>Below contain the references to the datasets we gathered on this website.</p>
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
+<p><cite>Starter Kit &lt;&gt;</cite></p>
+<p>RL4Ising applies reinforcement learning algorithms to the task of finding the ground state of the Ising model. Recent advances in RL allow for more efficient searching of huge discrete spaces and the growth of community support in problems of combinatorial optimization.</p>
+<section id="tasks">
+<h2>Tasks<a class="headerlink" href="#tasks" title="Link to this heading"></a></h2>
+<p>We organize two tasks to promote the Ising model:</p>
+<ol class="arabic simple">
+<li><dl class="simple">
+<dt><strong>RL4MaxCut</strong>.</dt><dd><p>Develop RL algorithms to solve the MaxCut problem using provided graphs.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>RL4Ising</strong></dt><dd><p>Develop RL algorithms to find ground states of Ising models using provided instances.</p>
+</dd>
+</dl>
+</li>
+</ol>
+<p><strong>References</strong></p>
 </section>
 </section>
 
@@ -139,8 +144,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="spin_glass.html" class="btn btn-neutral float-left" title="Spin Glass Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="ferromagnetic.html" class="btn btn-neutral float-right" title="Ferromagnetic Dataset" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../benchmark/results.html" class="btn btn-neutral float-left" title="Benchmark Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rl4maxcut.html" class="btn btn-neutral float-right" title="Task 1: RL4MaxCut" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

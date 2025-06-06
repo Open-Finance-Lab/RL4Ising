@@ -74,6 +74,7 @@ Reinforcement Learning for Ising model provides a **collective dataset**, **solv
    :maxdepth: 1
    :caption: RL4Ising Competition 2025
 
+   competition/overview
    competition/rl4maxcut
    competition/rl4ising
 
