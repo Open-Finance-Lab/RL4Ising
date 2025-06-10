@@ -7,40 +7,167 @@ Your mission: trains agents to effectively navigate the huge discrete space of S
 This task builds upon RL4Maxcut --- an integration of Physics and RL designed for real-world scientific applications.
 
 Task Overview
-======================
+-----------------------
 
 In this task, participants are invited to develop ground state agents capable of obtaining high quality solutions and feature improved scalbility or performance than industry-level solvers. 
 Participants can explore a variety of avenues, including but not limited to:
 
-- Improve Boltzmann Distribution sampling ; upgrade sampling speed for high quality samples or upgrade memory constraints from high dimensionality 
-- Explore alternative RL algorithms, such as, 
+- Improve Boltzmann Distribution sampling ; upgrade sampling speed for high quality samples or upgrade memory constraints for high dimensionality 
+- Apply filter functions, such as, Local Search or Simulated Annealing.
+- Explore and innovate RL algorithms, such as, MCPG, VCA, ECO-DQN.
+- Design a Curriculm Learning schedule for more efficient exploration and faster convergance.
 
 Participants are encouraged to propose creative improvements and extensions that further advance the search for the ground state.
 
 Why this Matters
-======================
+----------------------
+
+Spin Glass instances are a 
 
 Modern RL models fall victim to the huge solution space and optimization plateau. They tend to have trouble efficiently exploring the discrete space and improving the quality of their solutions.
 
-RL4Ising introduces a curriculum learning solution with:
-
-- Masked Transformers: Learn an attend to increasing sized portions of the Ising model.
-
 
 Datasets
-=======================
+----------------------------
 
-Spin Glass Dataset
------------------------
+1D Spin Glass Dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: 
+   :widths: 25 25 25 75 25
+   :header-rows: 1
 
-...
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Url
+     - Reference
+   * - Chain
+     - 6
+     - 300
+     - 
+     - [4]
+   * - Chain
+     - 6
+     - 250
+     - 
+     - [4]
+   * - Chain
+     - 6
+     - 200
+     - 
+     - [4]
+   * - Chain
+     - 6
+     - 150
+     - 
+     - [4]
+   * - Chain
+     - 6
+     - 100
+     - 
+     - [4]
 
+2D Spin Glass Dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: 
+   :widths: 25 25 25 75 25
+   :header-rows: 1
 
-Starter Kit: Training & Environments
-======================================
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Url
+     - Reference
+   * - EA
+     - 3
+     - 1,600
+     - 
+     - [1]
+   * - EA
+     - 3
+     - 900
+     - 
+     - [2]
+   * - Spin-Glass
+     - 3
+     - 256
+     - 
+     - [3]
+
+3D Spin Glass Dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: 
+   :widths: 25 25 25 75 25
+   :header-rows: 1
+
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Url
+     - Reference
+   * - EA
+     - 1
+     - 4,644
+     - 
+     - [5]
+   * - EA
+     - 1
+     - 4,312
+     - 
+     - [5]
+   * - EA
+     - 3
+     - 1,000
+     - 
+     - [2]
+   * - EA
+     - 3
+     - 512
+     - 
+     - [2]
+
+4D Spin Glass Dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. list-table:: 
+   :widths: 25 25 25 75 25
+   :header-rows: 1
+
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Url
+     - Reference
+   * - EA
+     - 3
+     - 4,096
+     - 
+     - [2]
+   * - EA
+     - 3
+     - 2,041
+     - 
+     - [2]
+   * - EA
+     - 3
+     - 1,296
+     - 
+     - [2]
+   * - EA
+     - 3
+     - 625
+     - 
+     - [2]
+
+Starter Kit 
+----------------------------------------
 
 This starter kit includes training script and environments for  
 
 
-Baseline Benchmark
-==============================
+**References**
+
+.. [1] Hibat-Allah, M., Inack, E.M., Wiersema, R. et al. Variational neural annealing. Nat Mach Intell 3, 952–961 (2021). https://doi.org/10.1038/s42256-021-00401-3
+.. [2] Mills, K., Ronagh, P. & Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). https://doi.org/10.1038/s42256-020-0226-x
+.. [3] Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023). https://doi.org/10.1038/s41467-023-36363-w
+.. [4] Liers, Frauke (2004). Contributions to Determining Exact Ground-States of Ising Spin-Glasses and to their Physics. PhD thesis, Universität zu Köln.
+.. [5] Zhang, H., and Kamenev, A. 2025. On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer. arXiv e-prints, p.arXiv:2501.01107.

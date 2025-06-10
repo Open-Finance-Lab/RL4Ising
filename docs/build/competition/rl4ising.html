@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Dataset References" href="../references/dataset_references.html" />
+    <link rel="next" title="Task 2: RL4Ising Baseline Benchmark" href="rl4ising_benchmark.html" />
     <link rel="prev" title="Task 1: RL4MaxCut" href="rl4maxcut.html" /> 
 </head>
 
@@ -84,13 +84,16 @@
 <li class="toctree-l2"><a class="reference internal" href="#task-overview">Task Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-this-matters">Why this Matters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#spin-glass-dataset">Spin Glass Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-spin-glass-dataset">1D Spin Glass Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2D Spin Glass Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3D Spin Glass Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">4D Spin Glass Dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#starter-kit-training-environments">Starter Kit: Training &amp; Environments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#baseline-benchmark">Baseline Benchmark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starter-kit">Starter Kit</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="rl4ising_benchmark.html">Task 2: RL4Ising Baseline Benchmark</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -131,32 +134,231 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <p>In this task, participants are invited to develop ground state agents capable of obtaining high quality solutions and feature improved scalbility or performance than industry-level solvers.
 Participants can explore a variety of avenues, including but not limited to:</p>
 <ul class="simple">
-<li><p>Improve Boltzmann Distribution sampling ; upgrade sampling speed for high quality samples or upgrade memory constraints from high dimensionality</p></li>
-<li><p>Explore alternative RL algorithms, such as,</p></li>
+<li><p>Improve Boltzmann Distribution sampling ; upgrade sampling speed for high quality samples or upgrade memory constraints for high dimensionality</p></li>
+<li><p>Apply filter functions, such as, Local Search or Simulated Annealing.</p></li>
+<li><p>Explore and innovate RL algorithms, such as, MCPG, VCA, ECO-DQN.</p></li>
+<li><p>Design a Curriculm Learning schedule for more efficient exploration and faster convergance.</p></li>
 </ul>
 <p>Participants are encouraged to propose creative improvements and extensions that further advance the search for the ground state.</p>
 </section>
 <section id="why-this-matters">
 <h2>Why this Matters<a class="headerlink" href="#why-this-matters" title="Link to this heading"></a></h2>
+<p>Spin Glass instances are a</p>
 <p>Modern RL models fall victim to the huge solution space and optimization plateau. They tend to have trouble efficiently exploring the discrete space and improving the quality of their solutions.</p>
-<p>RL4Ising introduces a curriculum learning solution with:</p>
-<ul class="simple">
-<li><p>Masked Transformers: Learn an attend to increasing sized portions of the Ising model.</p></li>
-</ul>
 </section>
 <section id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h2>
-<section id="spin-glass-dataset">
-<h3>Spin Glass Dataset<a class="headerlink" href="#spin-glass-dataset" title="Link to this heading"></a></h3>
-<p>…</p>
+<section id="d-spin-glass-dataset">
+<h3>1D Spin Glass Dataset<a class="headerlink" href="#d-spin-glass-dataset" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 42.9%" />
+<col style="width: 14.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Url</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Chain</p></td>
+<td><p>6</p></td>
+<td><p>300</p></td>
+<td></td>
+<td><p>[4]</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chain</p></td>
+<td><p>6</p></td>
+<td><p>250</p></td>
+<td></td>
+<td><p>[4]</p></td>
+</tr>
+<tr class="row-even"><td><p>Chain</p></td>
+<td><p>6</p></td>
+<td><p>200</p></td>
+<td></td>
+<td><p>[4]</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chain</p></td>
+<td><p>6</p></td>
+<td><p>150</p></td>
+<td></td>
+<td><p>[4]</p></td>
+</tr>
+<tr class="row-even"><td><p>Chain</p></td>
+<td><p>6</p></td>
+<td><p>100</p></td>
+<td></td>
+<td><p>[4]</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id1">
+<h3>2D Spin Glass Dataset<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 42.9%" />
+<col style="width: 14.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Url</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>1,600</p></td>
+<td></td>
+<td><p>[1]</p></td>
+</tr>
+<tr class="row-odd"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>900</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+<tr class="row-even"><td><p>Spin-Glass</p></td>
+<td><p>3</p></td>
+<td><p>256</p></td>
+<td></td>
+<td><p>[3]</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h3>3D Spin Glass Dataset<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 42.9%" />
+<col style="width: 14.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Url</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EA</p></td>
+<td><p>1</p></td>
+<td><p>4,644</p></td>
+<td></td>
+<td><p>[5]</p></td>
+</tr>
+<tr class="row-odd"><td><p>EA</p></td>
+<td><p>1</p></td>
+<td><p>4,312</p></td>
+<td></td>
+<td><p>[5]</p></td>
+</tr>
+<tr class="row-even"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>1,000</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+<tr class="row-odd"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>512</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h3>4D Spin Glass Dataset<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 14.3%" />
+<col style="width: 42.9%" />
+<col style="width: 14.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Url</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>4,096</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+<tr class="row-odd"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>2,041</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+<tr class="row-even"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>1,296</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+<tr class="row-odd"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>625</p></td>
+<td></td>
+<td><p>[2]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
-<section id="starter-kit-training-environments">
-<h2>Starter Kit: Training &amp; Environments<a class="headerlink" href="#starter-kit-training-environments" title="Link to this heading"></a></h2>
+<section id="starter-kit">
+<h2>Starter Kit<a class="headerlink" href="#starter-kit" title="Link to this heading"></a></h2>
 <p>This starter kit includes training script and environments for</p>
-</section>
-<section id="baseline-benchmark">
-<h2>Baseline Benchmark<a class="headerlink" href="#baseline-benchmark" title="Link to this heading"></a></h2>
+<p><strong>References</strong></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p>Hibat-Allah, M., Inack, E.M., Wiersema, R. et al. Variational neural annealing. Nat Mach Intell 3, 952–961 (2021). <a class="reference external" href="https://doi.org/10.1038/s42256-021-00401-3">https://doi.org/10.1038/s42256-021-00401-3</a></p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<p>Mills, K., Ronagh, P. &amp; Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). <a class="reference external" href="https://doi.org/10.1038/s42256-020-0226-x">https://doi.org/10.1038/s42256-020-0226-x</a></p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<p>Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023). <a class="reference external" href="https://doi.org/10.1038/s41467-023-36363-w">https://doi.org/10.1038/s41467-023-36363-w</a></p>
+</aside>
+<aside class="footnote brackets" id="id7" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<p>Liers, Frauke (2004). Contributions to Determining Exact Ground-States of Ising Spin-Glasses and to their Physics. PhD thesis, Universität zu Köln.</p>
+</aside>
+<aside class="footnote brackets" id="id8" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<p>Zhang, H., and Kamenev, A. 2025. On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer. arXiv e-prints, p.arXiv:2501.01107.</p>
+</aside>
+</aside>
 </section>
 </section>
 
@@ -165,7 +367,7 @@ Participants can explore a variety of avenues, including but not limited to:</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="rl4maxcut.html" class="btn btn-neutral float-left" title="Task 1: RL4MaxCut" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../references/dataset_references.html" class="btn btn-neutral float-right" title="Dataset References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rl4ising_benchmark.html" class="btn btn-neutral float-right" title="Task 2: RL4Ising Baseline Benchmark" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
