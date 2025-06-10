@@ -20,22 +20,79 @@ The instances we are providing for the ferromagnetic Ising model type consist of
 
 2D
 -----------
-.. image:: /_static/ferromagnetism_2D.png
-    :align: center
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. raw:: html
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Compexity
+     - Graph Geometry
+     - Reference
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
 
-    <div style="height: 40px;"></div>
 
 Dataset References
 ===================
 
 Below contain the references to the datasets we gathered on this website.
 
-[13] A high-bias, low-variance introduction to Machine Learning for physicists
-----------------------------------------------------------------------------------
-**Citation:**
-P. Mehta, M. Bukov, C.-H. Wang, A.G. Day, C. Richardson, C.K. Fisher, D.J. Schwab. A high-bias, low-variance introduction to machine learning for physicists. Physics Reports, 810 (2019), pp. 1-124, 10.1016/j.physrep.2019.03.001
+.. [13] P. Mehta, M. Bukov, C.-H. Wang, A.G. Day, C. Richardson, C.K. Fisher, D.J. Schwab. A high-bias, low-variance introduction to machine learning for physicists. Physics Reports, 810 (2019), pp. 1-124, 10.1016/j.physrep.2019.03.001
+
 
 This textbook introduces Machine Learning and its applications towards physics problems and research. Within the textbook, contains an Ising model dataset of locally-connected 2D Ising models.
 
