@@ -7,10 +7,6 @@
 Welcome to `Reinforcement Learning for Ising Model <https://github.com/YangletLiu/RL4Ising>`_!
 ==============================================================================================
 
-.. Add your content using ``reStructuredText`` syntax. See the
-   `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-   documentation for details.
-
 `Reinforcement Learning for Ising Model <https://github.com/YangletLiu/RL4Ising>`_ is an open-source dataset of Ising models and benchmark of SOTA ground state Reinforcement Learning methods. 
 Our goal is to document the progress of current and future RL methods at searching for the ground state of Ising model in different scale, dimensionality, and Ising model classifications
 
@@ -21,16 +17,9 @@ Reinforcement Learning for Ising model provides a **collective dataset**, **solv
    - **SOTA RL Tutorials**: ...
    - **RL Benchmark**: ... 
 
-
 .. toctree::
    :maxdepth: 1
-   :hidden:
-
-   Home <self>
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Overview
+   :caption: Introduction
 
    overview/key_concepts
    overview/motivation
