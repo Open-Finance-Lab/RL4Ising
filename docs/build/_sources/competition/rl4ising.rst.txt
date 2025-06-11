@@ -19,14 +19,6 @@ Participants can explore a variety of avenues, including but not limited to:
 
 Participants are encouraged to propose creative improvements and extensions that further advance the search for the ground state.
 
-Why this Matters
-----------------------
-
-Spin Glass instances are a 
-
-Modern RL models fall victim to the huge solution space and optimization plateau. They tend to have trouble efficiently exploring the discrete space and improving the quality of their solutions.
-
-
 Datasets
 ----------------------------
 
@@ -44,27 +36,27 @@ Datasets
    * - Chain
      - 6
      - 300
-     - 
+     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_
      - [4]
    * - Chain
      - 6
      - 250
-     - 
+     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_
      - [4]
    * - Chain
      - 6
      - 200
-     - 
+     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_ 
      - [4]
    * - Chain
      - 6
      - 150
-     - 
+     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_ 
      - [4]
    * - Chain
      - 6
      - 100
-     - 
+     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_ 
      - [4]
 
 2D Spin Glass Dataset
@@ -81,17 +73,17 @@ Datasets
    * - EA
      - 3
      - 1,600
-     - 
+     - `https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file <https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file>`_
      - [1]
    * - EA
      - 3
      - 900
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
    * - Spin-Glass
      - 3
      - 256
-     - 
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [3]
 
 3D Spin Glass Dataset
@@ -108,22 +100,22 @@ Datasets
    * - EA
      - 1
      - 4,644
-     - 
+     - `https://zenodo.org/records/14578166 <https://zenodo.org/records/14578166>`_
      - [5]
    * - EA
      - 1
      - 4,312
-     - 
+     - `https://zenodo.org/records/14578166 <https://zenodo.org/records/14578166>`_
      - [5]
    * - EA
      - 3
      - 1,000
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
    * - EA
      - 3
      - 512
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
 
 4D Spin Glass Dataset
@@ -140,34 +132,58 @@ Datasets
    * - EA
      - 3
      - 4,096
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
    * - EA
      - 3
      - 2,041
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
    * - EA
      - 3
      - 1,296
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
    * - EA
      - 3
      - 625
-     - 
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [2]
 
 Starter Kit 
 ----------------------------------------
 
-This starter kit includes training script and environments for  
+This `starter kit <https://github.com/HMacEntee/RL4Ising_Contest_2025>`_ includes training scripts and environment files for the Ising model. Follow the instructions below to get started.
 
+Commands
+--------
 
+To run the various methods, follow the commands listed below:
+
+.. list-table::
+   :widths: 25 25 25
+   :header-rows: 1
+
+   * - Method
+     - Description
+     - Command
+   * - MCPG
+     - Monte Carlo Policy Gradient
+     - N/A
+   * - ECO-DQN
+     - Exploratory Combinatorial Optimization Deep Q-Network
+     - N/A
+   * - VCA
+     - Variational Classical Annealing
+     - N/A
+   * - Gurobi
+     - Mixed Integer Programming
+     - N/A
+     
 **References**
 
 .. [1] Hibat-Allah, M., Inack, E.M., Wiersema, R. et al. Variational neural annealing. Nat Mach Intell 3, 952–961 (2021). https://doi.org/10.1038/s42256-021-00401-3
 .. [2] Mills, K., Ronagh, P. & Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). https://doi.org/10.1038/s42256-020-0226-x
 .. [3] Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023). https://doi.org/10.1038/s41467-023-36363-w
-.. [4] Liers, Frauke (2004). Contributions to Determining Exact Ground-States of Ising Spin-Glasses and to their Physics. PhD thesis, Universität zu Köln.
+.. [4] Rendl, F., Rinaldi, G., & Wiegele, A. (2010). Solving Max-Cut to optimality by intersecting semidefinite and polyhedral relaxations. Mathematical Programming, 121(2), 307.
 .. [5] Zhang, H., and Kamenev, A. 2025. On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer. arXiv e-prints, p.arXiv:2501.01107.
