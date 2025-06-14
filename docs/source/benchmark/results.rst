@@ -20,44 +20,79 @@ The recorded values under each solver represent the best objective score found.
 
 Spin Glass Solver Benchmark
 ---------------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/spin_glass_solver.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - Gurobi
+     - CPLEX
+     - Mosek
+     - SCIP
+     - COPT
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Spin Ice Solver Benchmark
 -------------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/spin_ice_solver.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - Gurobi
+     - CPLEX
+     - Mosek
+     - SCIP
+     - COPT
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Ferromagnetic Solver Benchmark
 ------------------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/ferromagnetic_solver.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - Gurobi
+     - CPLEX
+     - Mosek
+     - SCIP
+     - COPT
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Anti-Ferromagnetic Solver Benchmark
 -----------------------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/anti-ferromagnetic_solver.png
-    :align: center
-
-
-.. raw:: html
-
-    <br><br>
+   * - Instance
+     - Gurobi
+     - CPLEX
+     - Mosek
+     - SCIP
+     - COPT
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 RL Benchmarks
 =============
@@ -77,43 +112,79 @@ The recorded values under each RL method represent the best objective score foun
 
 Spin Glass RL Benchmark
 -----------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/spin_glass_rl.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - MCPG
+     - REINFORCE
+     - ECO-DQN
+     - S2C-DQN
+     - iSCO
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Spin Ice RL Benchmark
 ---------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/spin_ice_rl.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - MCPG
+     - REINFORCE
+     - ECO-DQN
+     - S2C-DQN
+     - iSCO
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Ferromagnetic RL Benchmark
 --------------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/ferromagnetic_rl.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - MCPG
+     - REINFORCE
+     - ECO-DQN
+     - S2C-DQN
+     - iSCO
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Anti-Ferromagnetic RL Benchmark
 -------------------------------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. image:: /_static/anti-ferromagnetic_rl.png
-    :align: center
-
-.. raw:: html
-
-    <br><br>
+   * - Instance
+     - MCPG
+     - REINFORCE
+     - ECO-DQN
+     - S2C-DQN
+     - iSCO
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Physics Benchmarks
 ==================
@@ -129,40 +200,44 @@ The recorded values under each physics method represent the best objective score
 
 Spin Glass Physics Benchmark
 ----------------------------
+.. list-table::
+   :widths: 25 25 
+   :header-rows: 1
 
-.. image:: /_static/spin_glass_physics.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - VCA
+   * - 
+     - 
 
 Spin Ice Physics Benchmark
 --------------------------
+.. list-table::
+   :widths: 25 25 
+   :header-rows: 1
 
-.. image:: /_static/spin_ice_physics.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - VCA
+   * - 
+     - 
 
 Ferromagnetic Physics Benchmark
 -------------------------------
+.. list-table::
+   :widths: 25 25 
+   :header-rows: 1
 
-.. image:: /_static/ferromagnetic_physics.png
-    :align: center
-
-.. raw:: html
-
-    <br>
+   * - Instance
+     - VCA
+   * - 
+     - 
 
 Anti-Ferromagnetic Physics Benchmark
 ------------------------------------
+.. list-table::
+   :widths: 25 25
+   :header-rows: 1
 
-.. image:: /_static/anti-ferromagnetic_physics.png
-    :align: center
-
-.. raw:: html
-
-    <br><br>
+   * - Instance
+     - VCA
+   * - 
+     - 
