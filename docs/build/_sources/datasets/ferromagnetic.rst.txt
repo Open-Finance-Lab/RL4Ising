@@ -27,7 +27,7 @@ The instances we are providing for the ferromagnetic Ising model type consist of
    * - Instance
      - \# of Instances
      - \# of Spins
-     - Compexity
+     - Complexity
      - Graph Geometry
      - Reference
    * - Ferromagnetic

@@ -18,21 +18,121 @@ Instances
 
 The instances we are providing for the anti-ferromagnetic Ising model type consist of weighted edges. Note that there are only negative weights present for these instances. The complexity of an instance is determined by its size (# of nodes).
 
-2D Instances
-------------
-.. image:: /_static/anti-ferromagnetism_2D.png
-    :align: center
+2D
+-----------
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. raw:: html
-
-    <div style="height: 40px;"></div>
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Complexity
+     - Graph Geometry
+     - Reference
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 10,000
+     - 1,600
+     - Complex
+     - Metropolis
+     - [13]_
+   * - Anti-Ferromagnetic
+     - 1
+     - 256
+     - Intermediate
+     - ...
+     - [3]_
+   * - Anti-Ferromagnetic
+     - 1
+     - 196
+     - Intermediate
+     - ...
+     - [3]_
+   * - Anti-Ferromagnetic
+     - 1
+     - 144
+     - Intermediate
+     - ...
+     - [3]_
+   * - Anti-Ferromagnetic
+     - 1
+     - 100
+     - Intermediate
+     - ...
+     - [3]_ 
+   * - Anti-Ferromagnetic
+     - 1
+     - 64
+     - Intermediate
+     - ...
+     - [3]_
+   * - Anti-Ferromagnetic
+     - 1
+     - 36
+     - Intermediate
+     - ...
+     - [3]_
+   * - Anti-Ferromagnetic
+     - 1
+     - 16
+     - Intermediate
+     - ...
+     - [3]_ 
 
 Dataset References
 ===================
 
 Below contain the references to the datasets we gathered on this website.
 
-[3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning
+.. [3] Finding the Ground State of Spin Hamiltonians with Reinforcement Learning
 -------------------------------------------------------------------------------
 
 **Citation:**
@@ -40,7 +140,7 @@ Mills, K., Ronagh, P. & Tamblyn, I. Finding the ground state of spin Hamiltonian
   
 This paper demonstrates that an RL agent is able to surpass the performance of standard heuristic temperature schedule for two classes of Hamiltonians. They show the performance of their implementation by training on weak-strong clusters (bipartite graph with two fully connected clusters) and nearest-neighbor square spin glasses.
 
-[13] A high-bias, low-variance introduction to Machine Learning for physicists
+.. [13] A high-bias, low-variance introduction to Machine Learning for physicists
 ----------------------------------------------------------------------------------
 **Citation:**
 P. Mehta, M. Bukov, C.-H. Wang, A.G. Day, C. Richardson, C.K. Fisher, D.J. Schwab. A high-bias, low-variance introduction to machine learning for physicists. Physics Reports, 810 (2019), pp. 1-124, 10.1016/j.physrep.2019.03.001

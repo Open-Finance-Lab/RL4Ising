@@ -132,6 +132,7 @@ Task 2: RL4Ising Baseline Benchmark
      - 100
      - 5
      - ?
+    
 2D Spin Glass Baseline Benchmark
 ----------------------------------------
 

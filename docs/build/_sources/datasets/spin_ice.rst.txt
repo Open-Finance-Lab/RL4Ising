@@ -9,12 +9,22 @@ Description
 Instances
 =========
 
-.. image:: /_static/spin_ice_figure.png
-    :align: center  
+.. list-table::
+   :widths: 25 25 25 25 25 25
+   :header-rows: 1
 
-.. raw:: html
-
-    <div style="height: 40px;"></div>
+   * - Instance
+     - \# of Instances
+     - \# of Spins
+     - Complexity
+     - Graph Geometry
+     - Reference
+   * - 
+     - 
+     - 
+     - 
+     - 
+     - 
 
 Dataset References
 ===================
