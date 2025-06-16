@@ -15,7 +15,7 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -127,14 +127,15 @@
   <section id="task-2-rl4ising">
 <h1>Task 2: RL4Ising<a class="headerlink" href="#task-2-rl4ising" title="Link to this heading"></a></h1>
 <p>RL4Ising is a task that challenges you to build agents designed to search for the ground state of Ising models and surpass industry-level MIP solvers.
-Your mission: trains agents to effectively navigate the huge discrete space of Spin-Glass Ising models to search for the ground state, while overcoming complexities from scale and dimensionality.
+Your mission: trains agents to effectively navigate the huge discrete space of Spin-Glass Ising models and to search for the ground state.
 This task builds upon RL4Maxcut — an integration of Physics and RL designed for real-world scientific applications.</p>
 <section id="task-overview">
 <h2>Task Overview<a class="headerlink" href="#task-overview" title="Link to this heading"></a></h2>
-<p>In this task, participants are invited to develop ground state agents capable of obtaining high quality solutions and feature improved scalbility or performance than industry-level solvers.
+<p>In this task, participants are invited to develop ground state agents to obtain high quality solutions and improve the scalbility or performance of RL algorithms.
+We provide a solver baseline, inviting participants to surpass or match the baseline results.
 Participants can explore a variety of avenues, including but not limited to:</p>
 <ul class="simple">
-<li><p>Improve Boltzmann Distribution sampling ; upgrade sampling speed for high quality samples or upgrade memory constraints for high dimensionality</p></li>
+<li><p>Improve Boltzmann Distribution sampling ; upgrade sampling speed or overcoming memory constraints</p></li>
 <li><p>Apply filter functions, such as, Local Search or Simulated Annealing.</p></li>
 <li><p>Explore and innovate RL algorithms, such as, MCPG, VCA, ECO-DQN.</p></li>
 <li><p>Design a Curriculm Learning schedule for more efficient exploration and faster convergance.</p></li>
@@ -143,7 +144,13 @@ Participants can explore a variety of avenues, including but not limited to:</p>
 </section>
 <section id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h2>
-<p>Our Spin Glass dataset consists of complex instances across four dimensions.</p>
+<p>Here we curate a <strong>challenging</strong> Spin Glass dataset featuring frustration, large edge weights, large scale, and high dimensionality.</p>
+<ul class="simple">
+<li><p><strong>Frustration</strong>:</p></li>
+<li><p><strong>large edge weights</strong></p></li>
+<li><p><strong>large scale</strong></p></li>
+<li><p><strong>high dimensionality</strong></p></li>
+</ul>
 <section id="d-spin-glass-dataset">
 <h3>1D Spin Glass Dataset<a class="headerlink" href="#d-spin-glass-dataset" title="Link to this heading"></a></h3>
 <table class="docutils align-default">

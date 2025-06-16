@@ -3,16 +3,17 @@ Task 2: RL4Ising
 =============================
 
 RL4Ising is a task that challenges you to build agents designed to search for the ground state of Ising models and surpass industry-level MIP solvers. 
-Your mission: trains agents to effectively navigate the huge discrete space of Spin-Glass Ising models to search for the ground state, while overcoming complexities from scale and dimensionality. 
+Your mission: trains agents to effectively navigate the huge discrete space of Spin-Glass Ising models and to search for the ground state. 
 This task builds upon RL4Maxcut --- an integration of Physics and RL designed for real-world scientific applications.
 
 Task Overview
 -----------------------
 
-In this task, participants are invited to develop ground state agents capable of obtaining high quality solutions and feature improved scalbility or performance than industry-level solvers. 
+In this task, participants are invited to develop ground state agents to obtain high quality solutions and improve the scalbility or performance of RL algorithms.
+We provide a solver baseline, inviting participants to surpass or match the baseline results. 
 Participants can explore a variety of avenues, including but not limited to:
 
-- Improve Boltzmann Distribution sampling ; upgrade sampling speed for high quality samples or upgrade memory constraints for high dimensionality 
+- Improve Boltzmann Distribution sampling ; upgrade sampling speed or overcoming memory constraints
 - Apply filter functions, such as, Local Search or Simulated Annealing.
 - Explore and innovate RL algorithms, such as, MCPG, VCA, ECO-DQN.
 - Design a Curriculm Learning schedule for more efficient exploration and faster convergance.
@@ -22,8 +23,12 @@ Participants are encouraged to propose creative improvements and extensions that
 Datasets
 ----------------------------
 
-Our Spin Glass dataset consists of complex instances across four dimensions. 
+Here we curate a **challenging** Spin Glass dataset featuring frustration, large edge weights, large scale, and high dimensionality.
 
+- **Frustration**:
+- **large edge weights**
+- **large scale**
+- **high dimensionality**
 
 1D Spin Glass Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
