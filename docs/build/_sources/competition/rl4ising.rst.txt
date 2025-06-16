@@ -9,9 +9,7 @@ This task builds upon RL4Maxcut --- an integration of Physics and RL designed fo
 Task Overview
 -----------------------
 
-In this task, participants are invited to develop ground state agents to obtain high quality solutions and improve the scalbility or performance of RL algorithms.
-We provide a solver baseline, inviting participants to surpass or match the baseline results. 
-Participants can explore a variety of avenues, including but not limited to:
+In this task, participants are invited to develop ground state agents to obtain high quality solutions and improve the scalability or performance of RL algorithms. We provide a solver baseline, inviting participants to beat or match the baseline results. Participants can explore a variety of avenues, including but not limited to:
 
 - Improve Boltzmann Distribution sampling ; upgrade sampling speed or overcoming memory constraints
 - Apply filter functions, such as, Local Search or Simulated Annealing.
@@ -23,12 +21,12 @@ Participants are encouraged to propose creative improvements and extensions that
 Datasets
 ----------------------------
 
-Here we curate a **challenging** Spin Glass dataset featuring frustration, large edge weights, large scale, and high dimensionality.
+Here we curate a **challenging** Spin Glass dataset featuring goemetric frustration, large edge weights, large scale, and high dimensionality.
 
-- **Frustration**:
-- **large edge weights**
-- **large scale**
-- **high dimensionality**
+- **Geometric frustration**: Not all interactions can exist in their lowest energy state (There may be several orientations that reach the same energy level).
+- **Large edge weights**: The numerical value of edge weightings can reach several hundred thousand.
+- **Large scale**: Graphs containing hundreds or thousands of nodes and tens of thousands of edges.
+- **High dimensionality**: Each node has many features associated with it. 
 
 1D Spin Glass Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

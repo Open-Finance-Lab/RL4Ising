@@ -131,9 +131,7 @@ Your mission: trains agents to effectively navigate the huge discrete space of S
 This task builds upon RL4Maxcut — an integration of Physics and RL designed for real-world scientific applications.</p>
 <section id="task-overview">
 <h2>Task Overview<a class="headerlink" href="#task-overview" title="Link to this heading"></a></h2>
-<p>In this task, participants are invited to develop ground state agents to obtain high quality solutions and improve the scalbility or performance of RL algorithms.
-We provide a solver baseline, inviting participants to surpass or match the baseline results.
-Participants can explore a variety of avenues, including but not limited to:</p>
+<p>In this task, participants are invited to develop ground state agents to obtain high quality solutions and improve the scalability or performance of RL algorithms. We provide a solver baseline, inviting participants to beat or match the baseline results. Participants can explore a variety of avenues, including but not limited to:</p>
 <ul class="simple">
 <li><p>Improve Boltzmann Distribution sampling ; upgrade sampling speed or overcoming memory constraints</p></li>
 <li><p>Apply filter functions, such as, Local Search or Simulated Annealing.</p></li>
@@ -144,12 +142,12 @@ Participants can explore a variety of avenues, including but not limited to:</p>
 </section>
 <section id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h2>
-<p>Here we curate a <strong>challenging</strong> Spin Glass dataset featuring frustration, large edge weights, large scale, and high dimensionality.</p>
+<p>Here we curate a <strong>challenging</strong> Spin Glass dataset featuring goemetric frustration, large edge weights, large scale, and high dimensionality.</p>
 <ul class="simple">
-<li><p><strong>Frustration</strong>:</p></li>
-<li><p><strong>large edge weights</strong></p></li>
-<li><p><strong>large scale</strong></p></li>
-<li><p><strong>high dimensionality</strong></p></li>
+<li><p><strong>Geometric frustration</strong>: Not all interactions can exist in their lowest energy state (There may be several orientations that reach the same energy level).</p></li>
+<li><p><strong>Large edge weights</strong>: The numerical value of edge weightings can reach several hundred thousand.</p></li>
+<li><p><strong>Large scale</strong>: Graphs containing hundreds or thousands of nodes and tens of thousands of edges.</p></li>
+<li><p><strong>High dimensionality</strong>: Each node has many features associated with it.</p></li>
 </ul>
 <section id="d-spin-glass-dataset">
 <h3>1D Spin Glass Dataset<a class="headerlink" href="#d-spin-glass-dataset" title="Link to this heading"></a></h3>
