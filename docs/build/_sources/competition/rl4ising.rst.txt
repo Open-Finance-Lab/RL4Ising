@@ -93,13 +93,13 @@ Here we curate a **challenging** Spin Glass dataset featuring goemetric frustrat
      - 3
      - 900
      - -3.768221414584132 --- 3.146263619470661
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
    * - Spin-Glass
      - 3
      - 256
      - -4.108692623805201 --- 2.79308500014654
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
+     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
      - [3]_
 
 3D Spin Glass Dataset
@@ -130,13 +130,13 @@ Here we curate a **challenging** Spin Glass dataset featuring goemetric frustrat
      - 3
      - 1,000
      - -4.324181919314443 --- 3.473301731916228
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
    * - EA
      - 3
      - 512
      - -3.8221474911073994 --- 3.699167050468019
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
 
 4D Spin Glass Dataset
@@ -155,25 +155,25 @@ Here we curate a **challenging** Spin Glass dataset featuring goemetric frustrat
      - 3
      - 4,096
      - -3.974500095603923 --- 4.07455276849542
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
    * - EA
      - 3
      - 2,041
      - -4.570368670534508 --- 3.942823083195053
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
    * - EA
      - 3
      - 1,296
      - -5.094655883484119 --- 3.8885579774279107
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
    * - EA
      - 3
      - 625
      - -3.824305097349775 --- 3.525499579857149
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
+     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
      - [2]_
 
 Starter Kit 
