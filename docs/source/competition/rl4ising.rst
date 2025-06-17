@@ -205,7 +205,17 @@ To run the various methods, follow the commands listed below:
    * - Gurobi
      - Mixed Integer Programming
      - N/A
-     
+
+Benchmark
+-----------------------
+
+Baseline Solvers:
+- Gurobi
+- cuLoRADS
+
+RL Methods:
+- MCPG
+
 **References**
 
 .. [1] Hibat-Allah, M., Inack, E.M., Wiersema, R. et al. Variational neural annealing. Nat Mach Intell 3, 952–961 (2021). https://doi.org/10.1038/s42256-021-00401-3
