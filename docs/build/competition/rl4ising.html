@@ -15,7 +15,7 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -86,11 +86,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#d-spin-glass-dataset">1D Spin Glass Dataset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id10">2D Spin Glass Dataset</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id14">3D Spin Glass Dataset</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id22">4D Spin Glass Dataset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">4D Spin Glass Dataset</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#starter-kit">Starter Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benchmark">Benchmark</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rl4ising_benchmark.html">Task 2: RL4Ising Baseline Benchmark</a></li>
@@ -142,7 +143,7 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 </section>
 <section id="datasets">
 <h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h2>
-<p>Here we curate a <strong>challenging</strong> Spin Glass dataset featuring goemetric frustration, large edge weights, large scale, and high dimensionality.</p>
+<p>Here we curate a <strong>challenging</strong> Spin Glass dataset featuring geometric frustration, large edge weights, large scale, and high dimensionality.</p>
 <ul class="simple">
 <li><p><strong>Geometric frustration</strong>: Not all interactions can exist in their lowest energy state (There may be several orientations that reach the same energy level).</p></li>
 <li><p><strong>Large edge weights</strong>: The numerical value of edge weightings can reach several hundred thousand.</p></li>
@@ -153,17 +154,19 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <h3>1D Spin Glass Dataset<a class="headerlink" href="#d-spin-glass-dataset" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 20.5%" />
-<col style="width: 34.1%" />
-<col style="width: 11.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 28.3%" />
+<col style="width: 9.4%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Instance</p></th>
 <th class="head"><p># of Instances</p></th>
 <th class="head"><p># of Spins</p></th>
+<th class="head"><p># of Couplings</p></th>
 <th class="head"><p>Coupling Strength</p></th>
 <th class="head"><p>Url</p></th>
 <th class="head"><p>Reference</p></th>
@@ -173,37 +176,42 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <tr class="row-even"><td><p>Chain</p></td>
 <td><p>6</p></td>
 <td><p>300</p></td>
+<td><p>44,850</p></td>
 <td><p>-244104.0 — 210331.0</p></td>
 <td><p><a class="reference external" href="https://biqmac.aau.at/library/mac/ising/">https://biqmac.aau.at/library/mac/ising/</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id35" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id37" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Chain</p></td>
 <td><p>6</p></td>
 <td><p>250</p></td>
+<td><p>31,125</p></td>
 <td><p>-193801.0 — 277406.0</p></td>
 <td><p><a class="reference external" href="https://biqmac.aau.at/library/mac/ising/">https://biqmac.aau.at/library/mac/ising/</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id35" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id37" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>Chain</p></td>
 <td><p>6</p></td>
 <td><p>200</p></td>
+<td><p>19,900</p></td>
 <td><p>-231636.0 — 239764.0</p></td>
 <td><p><a class="reference external" href="https://biqmac.aau.at/library/mac/ising/">https://biqmac.aau.at/library/mac/ising/</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id35" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id37" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>Chain</p></td>
 <td><p>6</p></td>
 <td><p>150</p></td>
+<td><p>11,175</p></td>
 <td><p>-219729.0 — 182372.0</p></td>
 <td><p><a class="reference external" href="https://biqmac.aau.at/library/mac/ising/">https://biqmac.aau.at/library/mac/ising/</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id35" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id37" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>Chain</p></td>
 <td><p>6</p></td>
 <td><p>100</p></td>
+<td><p>4,950</p></td>
 <td><p>-212231.0 — 239752.0</p></td>
 <td><p><a class="reference external" href="https://biqmac.aau.at/library/mac/ising/">https://biqmac.aau.at/library/mac/ising/</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id35" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id37" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -212,17 +220,19 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <h3>2D Spin Glass Dataset<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 20.5%" />
-<col style="width: 34.1%" />
-<col style="width: 11.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 28.3%" />
+<col style="width: 9.4%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Instance</p></th>
 <th class="head"><p># of Instances</p></th>
 <th class="head"><p># of Spins</p></th>
+<th class="head"><p># of Couplings</p></th>
 <th class="head"><p>Coupling Strength</p></th>
 <th class="head"><p>Url</p></th>
 <th class="head"><p>Reference</p></th>
@@ -232,23 +242,26 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <tr class="row-even"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>1,600</p></td>
+<td><p>3120</p></td>
 <td><p>-0.9997712503653102 — 0.9997515751485249</p></td>
 <td><p><a class="reference external" href="https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file">https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id32" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id34" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>900</p></td>
+<td><p>1,800</p></td>
 <td><p>-3.768221414584132 — 3.146263619470661</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>Spin-Glass</p></td>
 <td><p>3</p></td>
 <td><p>256</p></td>
+<td><p>512</p></td>
 <td><p>-4.108692623805201 — 2.79308500014654</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/3897413">https://zenodo.org/records/3897413</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id34" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id36" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -257,17 +270,19 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <h3>3D Spin Glass Dataset<a class="headerlink" href="#id14" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 20.5%" />
-<col style="width: 34.1%" />
-<col style="width: 11.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 28.3%" />
+<col style="width: 9.4%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Instance</p></th>
 <th class="head"><p># of Instances</p></th>
 <th class="head"><p># of Spins</p></th>
+<th class="head"><p># of Couplings</p></th>
 <th class="head"><p>Coupling Strength</p></th>
 <th class="head"><p>Url</p></th>
 <th class="head"><p>Reference</p></th>
@@ -275,51 +290,65 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 </thead>
 <tbody>
 <tr class="row-even"><td><p>EA</p></td>
-<td><p>1</p></td>
-<td><p>4,644</p></td>
-<td><p>-0.9998457617927303 — 0.9997514748439584</p></td>
-<td><p><a class="reference external" href="https://zenodo.org/records/14578166">https://zenodo.org/records/14578166</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id36" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
+<td><p>3</p></td>
+<td><p>8,000</p></td>
+<td><p>24,000</p></td>
+<td><p>-3.7393814023844407 — 4.35465860153889</p></td>
+<td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>EA</p></td>
 <td><p>1</p></td>
-<td><p>4,312</p></td>
-<td><p>-0.9999327124518298 — 0.9997497212906203</p></td>
+<td><p>5,730</p></td>
+<td><p>40,279</p></td>
+<td><p>-0.9999756464799796 — 0.9999029159721005</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/14578166">https://zenodo.org/records/14578166</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id36" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id38" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>EA</p></td>
+<td><p>1</p></td>
+<td><p>4,644</p></td>
+<td><p>14,503</p></td>
+<td><p>-0.9998457617927303 — 0.9997514748439584</p></td>
+<td><p><a class="reference external" href="https://zenodo.org/records/14578166">https://zenodo.org/records/14578166</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id38" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>EA</p></td>
+<td><p>3</p></td>
+<td><p>3,375</p></td>
+<td><p>10,125</p></td>
+<td><p>-3.785011625763501 — 4.119680031623885</p></td>
+<td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>1,000</p></td>
+<td><p>3,000</p></td>
 <td><p>-4.324181919314443 — 3.473301731916228</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>EA</p></td>
-<td><p>3</p></td>
-<td><p>512</p></td>
-<td><p>-3.8221474911073994 — 3.699167050468019</p></td>
-<td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="id22">
-<h3>4D Spin Glass Dataset<a class="headerlink" href="#id22" title="Link to this heading"></a></h3>
+<section id="id24">
+<h3>4D Spin Glass Dataset<a class="headerlink" href="#id24" title="Link to this heading"></a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 11.4%" />
-<col style="width: 20.5%" />
-<col style="width: 34.1%" />
-<col style="width: 11.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 9.4%" />
+<col style="width: 17.0%" />
+<col style="width: 17.0%" />
+<col style="width: 28.3%" />
+<col style="width: 9.4%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Instance</p></th>
 <th class="head"><p># of Instances</p></th>
 <th class="head"><p># of Spins</p></th>
+<th class="head"><p># of Couplings</p></th>
 <th class="head"><p>Coupling Strength</p></th>
 <th class="head"><p>Url</p></th>
 <th class="head"><p>Reference</p></th>
@@ -329,30 +358,34 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 <tr class="row-even"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>4,096</p></td>
+<td><p>16,384</p></td>
 <td><p>-3.974500095603923 — 4.07455276849542</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id24" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id26" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>2,041</p></td>
+<td><p>9,604</p></td>
 <td><p>-4.570368670534508 — 3.942823083195053</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id26" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id28" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-even"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>1,296</p></td>
+<td><p>5,184</p></td>
 <td><p>-5.094655883484119 — 3.8885579774279107</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id28" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id30" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p>EA</p></td>
 <td><p>3</p></td>
 <td><p>625</p></td>
+<td><p>2,500</p></td>
 <td><p>-3.824305097349775 — 3.525499579857149</p></td>
 <td><p><a class="reference external" href="https://zenodo.org/records/7562380">https://zenodo.org/records/7562380</a></p></td>
-<td><p><a class="footnote-reference brackets" href="#id33" id="id30" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+<td><p><a class="footnote-reference brackets" href="#id35" id="id32" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -396,29 +429,41 @@ This task builds upon RL4Maxcut — an integration of Physics and RL designed fo
 </tr>
 </tbody>
 </table>
+</section>
+<section id="benchmark">
+<h2>Benchmark<a class="headerlink" href="#benchmark" title="Link to this heading"></a></h2>
+<p>Baseline Solvers:</p>
+<ul class="simple">
+<li><p>Gurobi</p></li>
+<li><p>cuLoRADS</p></li>
+</ul>
+<p>RL Methods:</p>
+<ul class="simple">
+<li><p>MCPG</p></li>
+</ul>
 <p><strong>References</strong></p>
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id32" role="doc-footnote">
+<aside class="footnote brackets" id="id34" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">1</a><span class="fn-bracket">]</span></span>
 <p>Hibat-Allah, M., Inack, E.M., Wiersema, R. et al. Variational neural annealing. Nat Mach Intell 3, 952–961 (2021). <a class="reference external" href="https://doi.org/10.1038/s42256-021-00401-3">https://doi.org/10.1038/s42256-021-00401-3</a></p>
 </aside>
-<aside class="footnote brackets" id="id33" role="doc-footnote">
+<aside class="footnote brackets" id="id35" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id19">2</a>,<a role="doc-backlink" href="#id21">3</a>,<a role="doc-backlink" href="#id24">4</a>,<a role="doc-backlink" href="#id26">5</a>,<a role="doc-backlink" href="#id28">6</a>,<a role="doc-backlink" href="#id30">7</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id12">1</a>,<a role="doc-backlink" href="#id16">2</a>,<a role="doc-backlink" href="#id21">3</a>,<a role="doc-backlink" href="#id23">4</a>,<a role="doc-backlink" href="#id26">5</a>,<a role="doc-backlink" href="#id28">6</a>,<a role="doc-backlink" href="#id30">7</a>,<a role="doc-backlink" href="#id32">8</a>)</span>
 <p>Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023). <a class="reference external" href="https://doi.org/10.1038/s41467-023-36363-w">https://doi.org/10.1038/s41467-023-36363-w</a></p>
 </aside>
-<aside class="footnote brackets" id="id34" role="doc-footnote">
+<aside class="footnote brackets" id="id36" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id13">3</a><span class="fn-bracket">]</span></span>
 <p>Mills, K., Ronagh, P. &amp; Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). <a class="reference external" href="https://doi.org/10.1038/s42256-020-0226-x">https://doi.org/10.1038/s42256-020-0226-x</a></p>
 </aside>
-<aside class="footnote brackets" id="id35" role="doc-footnote">
+<aside class="footnote brackets" id="id37" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>,<a role="doc-backlink" href="#id5">3</a>,<a role="doc-backlink" href="#id7">4</a>,<a role="doc-backlink" href="#id9">5</a>)</span>
 <p>Rendl, F., Rinaldi, G., &amp; Wiegele, A. (2010). Solving Max-Cut to optimality by intersecting semidefinite and polyhedral relaxations. Mathematical Programming, 121(2), 307.</p>
 </aside>
-<aside class="footnote brackets" id="id36" role="doc-footnote">
+<aside class="footnote brackets" id="id38" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id15">1</a>,<a role="doc-backlink" href="#id17">2</a>)</span>
+<span class="backrefs">(<a role="doc-backlink" href="#id17">1</a>,<a role="doc-backlink" href="#id19">2</a>)</span>
 <p>Zhang, H., and Kamenev, A. 2025. On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer. arXiv e-prints, p.arXiv:2501.01107.</p>
 </aside>
 </aside>
