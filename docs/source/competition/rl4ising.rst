@@ -248,22 +248,34 @@ To run the various methods, follow the commands listed below:
      - Mixed Integer Programming
      - N/A
 
-Benchmark
------------------------
+:ref:`Benchmark <benchmark>`
+----------------------------
 
 Baseline Solvers:
 
-- Gurobi
-- cuLoRADS
+- `Gurobi <https://www.gurobi.com/faqs/mip-solvers/>`_: A mixed-integer programming solver that identifies optimal solutions given an objective function, typically by applying a branch-and-cut algorithm.
+- cuLoRADS: GPU accelerated solver that combines the Burer-Monterio method and a splitting scheme with a logarithmic rank. [6]_
 
 RL Methods:
 
-- MCPG
+- MCPG: Parallel MCMC sampling and a filter scheme to replace the objective function with one with a local search technique. [7]_
+
+Metrics:
+
+We will be evaluating scores based on the Hamiltonian of the solution obtained. In other words, you are aiming to find the ground state configuration of an Ising model system. Your goal: achieve the lowest energy configuration.
 
 **References**
 
 .. [1] Hibat-Allah, M., Inack, E.M., Wiersema, R. et al. Variational neural annealing. Nat Mach Intell 3, 952–961 (2021). https://doi.org/10.1038/s42256-021-00401-3
+
 .. [2] Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023). https://doi.org/10.1038/s41467-023-36363-w
+
 .. [3] Mills, K., Ronagh, P. & Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). https://doi.org/10.1038/s42256-020-0226-x
+
 .. [4] Rendl, F., Rinaldi, G., & Wiegele, A. (2010). Solving Max-Cut to optimality by intersecting semidefinite and polyhedral relaxations. Mathematical Programming, 121(2), 307.
+
 .. [5] Zhang, H., and Kamenev, A. 2025. On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer. arXiv e-prints, p.arXiv:2501.01107.
+
+.. [6] Han, Q., Lin, Z., Liu, H., Chen, C., Deng, Q., Ge, D., & Ye, Y. (2024). Accelerating low-rank factorization-based semidefinite programming algorithms on GPU. arXiv. https://arxiv.org/abs/2407.15049
+
+.. [7] Chen, C., Chen, R., Li, T., Ao, R., & Wen, Z. (2023). Monte Carlo policy gradient method for binary optimization. arXiv. https://arxiv.org/abs/2307.00783
