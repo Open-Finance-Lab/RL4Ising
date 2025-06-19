@@ -91,7 +91,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../competition/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising_benchmark.html">Task 2: RL4Ising Baseline Benchmark</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -127,9 +126,9 @@
 <section id="description-of-ising-model-type">
 <h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading"></a></h2>
 <p>In an anti-ferromagnetic Ising model, neighboring spins want to anti-align. In other words, they want to point in the opposite directions to minimize the system’s energy.
-The energy configuration of this model can be given by</p>
+The energy Hamiltonian of this model can be given by</p>
 <div class="math notranslate nohighlight">
-\[E = -J \sum_{&lt;i,j&gt;}s_i s_j\]</div>
+\[E = -J \sum_{i&lt;j}s_i s_j\]</div>
 <p>If the neighboring spins point in the same direction, the energy of the system will increase and, conversely arranged, will decrease.</p>
 </section>
 <section id="instances">

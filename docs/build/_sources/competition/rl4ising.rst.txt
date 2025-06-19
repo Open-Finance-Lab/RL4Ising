@@ -21,7 +21,7 @@ Participants are encouraged to propose creative improvements and extensions that
 Datasets
 ----------------------------
 
-Here we curate a **challenging** Spin Glass dataset featuring geometric frustration, large edge weights, large scale, and high dimensionality.
+Here we curate a **challenging** instance-wise Spin Glass dataset featuring geometric frustration, large edge weights, large scale, and high dimensionality.
 
 - **Geometric frustration**: Not all interactions can exist in their lowest energy state (There may be several orientations that reach the same energy level).
 - **Large edge weights**: The numerical value of edge weightings can reach several hundred thousand.
@@ -221,7 +221,7 @@ Here we curate a **challenging** Spin Glass dataset featuring geometric frustrat
 Starter Kit 
 ----------------------------------------
 
-This `starter kit <https://github.com/HMacEntee/RL4Ising_Contest_2025>`_ includes training scripts and environment files for the Ising model. Follow the instructions below to get started.
+This `starter kit <https://github.com/Open-Finance-Lab/RLSolver_Contest_2025>`_ includes training scripts and environment files for the Ising model. Follow the instructions below to get started.
 
 Commands
 ~~~~~~~~~~~~~~~
@@ -241,9 +241,6 @@ To run the various methods, follow the commands listed below:
    * - ECO-DQN
      - Exploratory Combinatorial Optimization Deep Q-Network
      - N/A
-   * - VCA
-     - Variational Classical Annealing
-     - N/A
    * - Gurobi
      - Mixed Integer Programming
      - N/A
@@ -256,15 +253,21 @@ Full benchmark can be found here, :ref:`Benchmark <isingbenchmark>`.
 Baseline Solvers:
 
 - `Gurobi <https://www.gurobi.com/faqs/mip-solvers/>`_: A mixed-integer programming solver that identifies optimal solutions given an objective function, typically by applying a branch-and-cut algorithm.
-- cuLoRADS: GPU accelerated solver that combines the Burer-Monterio method and a splitting scheme with a logarithmic rank. [6]_
+.. - cuLoRADS: GPU accelerated solver that combines the Burer-Monterio method and a splitting scheme with a logarithmic rank. [6]_
 
 RL Methods:
 
-- MCPG: Parallel MCMC sampling and a filter scheme to replace the objective function with one with a local search technique. [7]_
+- MCPG: Parallel MCMC sampling and a filter scheme to replace the objective function with one with a local search technique. [6]_
 
-Metrics:
+Metrics
+-------
 
-We will be evaluating scores based on the Hamiltonian of the solution obtained. In other words, you are aiming to find the ground state configuration of an Ising model system. Your goal: achieve the lowest energy configuration.
+We will be evaluating scores based on the Hamiltonian (shown below) of the solution obtained. In other words, you are aiming to find the ground state configuration of an Ising model system. Your goal: achieve the lowest energy configuration.
+
+.. math::
+    E = -J \sum_{i<j}s_i s_j
+
+To confirm submitted scores, we will be requiring submission with the encoded bit configuration as well as the reported score. 
 
 **References**
 
@@ -278,6 +281,6 @@ We will be evaluating scores based on the Hamiltonian of the solution obtained. 
 
 .. [5] Zhang, H., and Kamenev, A. 2025. On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer. arXiv e-prints, p.arXiv:2501.01107.
 
-.. [6] Han, Q., Lin, Z., Liu, H., Chen, C., Deng, Q., Ge, D., & Ye, Y. (2024). Accelerating low-rank factorization-based semidefinite programming algorithms on GPU. arXiv. https://arxiv.org/abs/2407.15049
+.. [6]_ Han, Q., Lin, Z., Liu, H., Chen, C., Deng, Q., Ge, D., & Ye, Y. (2024). Accelerating low-rank factorization-based semidefinite programming algorithms on GPU. arXiv. https://arxiv.org/abs/2407.15049
 
-.. [7] Chen, C., Chen, R., Li, T., Ao, R., & Wen, Z. (2023). Monte Carlo policy gradient method for binary optimization. arXiv. https://arxiv.org/abs/2307.00783
+.. [6] Chen, C., Chen, R., Li, T., Ao, R., & Wen, Z. (2023). Monte Carlo policy gradient method for binary optimization. arXiv. https://arxiv.org/abs/2307.00783

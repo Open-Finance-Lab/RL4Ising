@@ -95,7 +95,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../competition/overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising_benchmark.html">Task 2: RL4Ising Baseline Benchmark</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">References</span></p>
 <ul>
@@ -131,9 +130,9 @@
 <section id="description-of-ising-model-type">
 <h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading"></a></h2>
 <p>A spin glass Ising model is characterized by frustrated interactions, meaning some neighboring spins prefer to align while others prefer to oppose. These conflicting orientations prevent the system from reaching a uniformly ordered state.
-The energy configuration of this model can be given by</p>
+The energy Hamiltonian of this model can be given by</p>
 <div class="math notranslate nohighlight">
-\[E = -J \sum_{&lt;i,j&gt;}s_i s_j\]</div>
+\[H = -J \sum_{i&lt;j}s_i s_j\]</div>
 <p>Here, <span class="math notranslate nohighlight">\(J_{&lt;i,j&gt;}\)</span> can be either positive or negative. If <span class="math notranslate nohighlight">\(J_{&lt;i,j&gt;}\)</span> is positive, <span class="math notranslate nohighlight">\(s_i\)</span> and <span class="math notranslate nohighlight">\(s_j\)</span> prefer to align and, conversely, they will anti-align. This is the precise phenomenon that defines a spin glass.</p>
 </section>
 <section id="instances">
