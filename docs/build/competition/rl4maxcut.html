@@ -79,7 +79,14 @@
 <p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Task 1: RL4MaxCut</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#task-overview">Task Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starter-kit">Starter Kit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#benchmark"><span class="xref std std-ref">Benchmark</span></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="rl4ising.html">Task 2: RL4Ising</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rl4ising_benchmark.html">Task 2: RL4Ising Baseline Benchmark</a></li>
 </ul>
@@ -114,6 +121,87 @@
              
   <section id="task-1-rl4maxcut">
 <h1>Task 1: RL4MaxCut<a class="headerlink" href="#task-1-rl4maxcut" title="Link to this heading"></a></h1>
+<p>RL4Maxcut is a task that challenges you to build agents capable of solving the MaxCut problem on unseen graphs drawn from diverse distributions, while surpassing industry-level MIP solvers in performance and scalability.
+Your mission: train agents to effectively explore the vast discrete space of graph partitions and generalize beyond the training set to new, previously unseen graph instances.
+This task emphasizes distribution-wise generalization — encouraging the development of agents that learn robust, transferable policies applicable to a wide range of graph types (e.g., ER, BA, PowerLaw), rather than overfitting to specific training graphs.</p>
+<section id="task-overview">
+<h2>Task Overview<a class="headerlink" href="#task-overview" title="Link to this heading"></a></h2>
+<p>In this task, participants are invited to develop MaxCut agents that can produce high-quality solutions and improve the scalability and generalization of reinforcement learning algorithms. We provide a baseline solver, and invite participants to match or surpass its performance — particularly on previously unseen graphs drawn from diverse distributions.</p>
+<p>Participants are encouraged to explore a wide range of approaches, including but not limited to:</p>
+<ul class="simple">
+<li><p>Improve sampling strategies, such as enhancing solution diversity, improving rollout efficiency, or reducing memory usage.</p></li>
+<li><p>Apply post-processing filters, such as Local Search or Simulated Annealing, to refine the output from RL agents.</p></li>
+<li><p>Explore and innovate RL algorithms, such as S2V-DQN, ECO-DQN.</p></li>
+<li><p>Design a Curriculum Learning schedule to gradually increase problem complexity and accelerate convergence.</p></li>
+</ul>
+<p>Participants are encouraged to propose creative enhancements and hybrid methods that further advance the ability of RL agents to generalize to new and challenging MaxCut instances across different graph distributions.</p>
+</section>
+<section id="datasets">
+<h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h2>
+<p>We provide a <strong>challenging dataset</strong> of graphs curated to evaluate the <strong>distribution-wise generalization</strong> of MaxCut agents. These graphs vary widely in both <strong>structural properties</strong> and <strong>graph sizes</strong>, encouraging models to learn transferable policies rather than overfit to specific instances.</p>
+</section>
+<section id="starter-kit">
+<h2>Starter Kit<a class="headerlink" href="#starter-kit" title="Link to this heading"></a></h2>
+<p>This <a class="reference external" href="https://github.com/HMacEntee/RL4Ising_Contest_2025">starter kit</a> includes training scripts and environment files for the Maxcut problem. Follow the instructions below to get started.</p>
+</section>
+<section id="commands">
+<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<p>To run the various methods, follow the commands listed below:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Method</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Command</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MCPG</p></td>
+<td><p>Monte Carlo Policy Gradient</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-odd"><td><p>ECO-DQN</p></td>
+<td><p>Exploratory Combinatorial Optimization Deep Q-Network</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>Gurobi</p></td>
+<td><p>Mixed Integer Programming</p></td>
+<td><p>N/A</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="benchmark">
+<h2><a class="reference internal" href="rl4maxcut_benchmark.html#benchmark"><span class="std std-ref">Benchmark</span></a><a class="headerlink" href="#benchmark" title="Link to this heading"></a></h2>
+<p>Baseline Solvers:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.gurobi.com/faqs/mip-solvers/">Gurobi</a>: A mixed-integer programming solver that identifies optimal solutions given an objective function, typically by applying a branch-and-cut algorithm.</p></li>
+</ul>
+<p>RL Methods:</p>
+<ul class="simple">
+<li><p>MCPG: Parallel MCMC sampling and a filter scheme to replace the objective function with one with a local search technique. <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a></p></li>
+<li><p>ECO-DQN: Reinforcement learning method for MaxCut that trains on a distribution of graphs, using a graph neural network to embed states and learn Q-values that guide partition decisions.</p></li>
+</ul>
+<p>Metrics:</p>
+<p>Each solution is evaluated based on the cut size, which is the total weight of edges that are cut by the current node partition.
+The goal is to maximize the cut value—i.e., find the node partition that produces the maximum total weight across the cut.
+This is equivalent to finding the optimal solution to the MaxCut problem, and serves as the benchmark for comparing different solvers and algorithms.</p>
+<p><strong>References</strong></p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
+<p>Han, Q., Lin, Z., Liu, H., Chen, C., Deng, Q., Ge, D., &amp; Ye, Y. (2024). Accelerating low-rank factorization-based semidefinite programming algorithms on GPU. arXiv. <a class="reference external" href="https://arxiv.org/abs/2407.15049">https://arxiv.org/abs/2407.15049</a></p>
+</aside>
+<aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">7</a><span class="fn-bracket">]</span></span>
+<p>Chen, C., Chen, R., Li, T., Ao, R., &amp; Wen, Z. (2023). Monte Carlo policy gradient method for binary optimization. arXiv. <a class="reference external" href="https://arxiv.org/abs/2307.00783">https://arxiv.org/abs/2307.00783</a></p>
+</aside>
+</aside>
+</section>
 </section>
 
 

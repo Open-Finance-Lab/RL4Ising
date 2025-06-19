@@ -66,7 +66,6 @@ Reinforcement Learning for Ising model provides a **collective dataset**, **solv
    competition/overview
    competition/rl4maxcut
    competition/rl4ising
-   competition/rl4ising_benchmark
 
 .. toctree::
    :maxdepth: 1

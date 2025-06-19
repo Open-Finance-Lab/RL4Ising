@@ -1,0 +1,457 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1: RL4Maxcut Baseline Benchmark &mdash; Reinforcement Learning for Ising Model  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Reinforcement Learning for Ising Model
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/classification.html">Classification of Ising Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/gurobi.html">Gurobi Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/cplex.html">IBM ILOG CPLEX Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/copt.html">COPT Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../solvers/scip.html">SCIP Solver</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../methods/s2v.html">S2V-DQN Algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/vca.html">Variational Neural Annealing (VCA)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../methods/reinforce.html">REINFORCE Algorithm</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl4maxcut.html">Task 1: RL4MaxCut</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl4ising.html">Task 2: RL4Ising</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rl4ising_benchmark.html">Task 2: RL4Ising Baseline Benchmark</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">References</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Reinforcement Learning for Ising Model</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Task 1: RL4Maxcut Baseline Benchmark</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/competition/rl4maxcut_benchmark.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="task-1-rl4maxcut-baseline-benchmark">
+<span id="benchmark"></span><h1>Task 1: RL4Maxcut Baseline Benchmark<a class="headerlink" href="#task-1-rl4maxcut-baseline-benchmark" title="Link to this heading"></a></h1>
+<p>## BA Benchmark</p>
+<p>The following table represents the results for MaxCut on the syn_BA dataset.</p>
+<div class="line-block">
+<div class="line">Nodes | Graph ID | ECO-DQN | S2V-DQN | Gurobi |</div>
+<div class="line">—– | ——– | ——- | ——- | —— |</div>
+</div>
+<p><a href="#id1"><span class="problematic" id="id2">|100|0|285|277|285|</span></a>
+<a href="#id3"><span class="problematic" id="id4">|100|1|284|283|284|</span></a>
+<a href="#id5"><span class="problematic" id="id6">|100|2|287|275|287|</span></a>
+<a href="#id7"><span class="problematic" id="id8">|100|3|282|278|282|</span></a>
+<a href="#id9"><span class="problematic" id="id10">|100|4|285|284|285|</span></a>
+<a href="#id11"><span class="problematic" id="id12">|100|5|287|275|287|</span></a>
+<a href="#id13"><span class="problematic" id="id14">|100|6|282|283|282|</span></a>
+<a href="#id15"><span class="problematic" id="id16">|100|7|285|277|285|</span></a>
+<a href="#id17"><span class="problematic" id="id18">|100|8|282|272|282|</span></a>
+<a href="#id19"><span class="problematic" id="id20">|100|9|282|275|282|</span></a>
+<a href="#id21"><span class="problematic" id="id22">|100|10|284|285|284|</span></a>
+<a href="#id23"><span class="problematic" id="id24">|100|11|286|285|286|</span></a>
+<a href="#id25"><span class="problematic" id="id26">|100|12|287|281|287|</span></a>
+<a href="#id27"><span class="problematic" id="id28">|100|13|285|285|285|</span></a>
+<a href="#id29"><span class="problematic" id="id30">|100|14|288|270|288|</span></a>
+<a href="#id31"><span class="problematic" id="id32">|100|15|281|277|281|</span></a>
+<a href="#id33"><span class="problematic" id="id34">|100|16|283|283|283|</span></a>
+<a href="#id35"><span class="problematic" id="id36">|100|17|284|277|284|</span></a>
+<a href="#id37"><span class="problematic" id="id38">|100|18|281|285|281|</span></a>
+<a href="#id39"><span class="problematic" id="id40">|100|19|288|275|288|</span></a>
+<a href="#id41"><span class="problematic" id="id42">|100|20|280|283|280|</span></a>
+<a href="#id43"><span class="problematic" id="id44">|100|21|283|283|283|</span></a>
+<a href="#id45"><span class="problematic" id="id46">|100|22|285|277|285|</span></a>
+<a href="#id47"><span class="problematic" id="id48">|100|23|284|282|284|</span></a>
+<a href="#id49"><span class="problematic" id="id50">|100|24|283|277|283|</span></a>
+<a href="#id51"><span class="problematic" id="id52">|100|25|280|272|280|</span></a>
+<a href="#id53"><span class="problematic" id="id54">|100|26|282|274|283|</span></a>
+<a href="#id55"><span class="problematic" id="id56">|100|27|281|280|281|</span></a>
+<a href="#id57"><span class="problematic" id="id58">|100|28|283|270|283|</span></a>
+<a href="#id59"><span class="problematic" id="id60">|100|29|281|277|281|</span></a>
+<a href="#id61"><span class="problematic" id="id62">|200|0|584|559|585|</span></a>
+<a href="#id63"><span class="problematic" id="id64">|200|1|586|545|586|</span></a>
+<a href="#id65"><span class="problematic" id="id66">|200|2|576|561|579|</span></a>
+<a href="#id67"><span class="problematic" id="id68">|200|3|575|543|576|</span></a>
+<a href="#id69"><span class="problematic" id="id70">|200|4|581|556|581|</span></a>
+<a href="#id71"><span class="problematic" id="id72">|200|5|584|567|584|</span></a>
+<a href="#id73"><span class="problematic" id="id74">|200|6|587|563|587|</span></a>
+<a href="#id75"><span class="problematic" id="id76">|200|7|585|573|585|</span></a>
+<a href="#id77"><span class="problematic" id="id78">|200|8|583|558|584|</span></a>
+<a href="#id79"><span class="problematic" id="id80">|200|9|582|550|583|</span></a>
+<a href="#id81"><span class="problematic" id="id82">|200|10|578|554|578|</span></a>
+<a href="#id83"><span class="problematic" id="id84">|200|11|580|551|581|</span></a>
+<a href="#id85"><span class="problematic" id="id86">|200|12|585|551|585|</span></a>
+<a href="#id87"><span class="problematic" id="id88">|200|13|582|555|582|</span></a>
+<a href="#id89"><span class="problematic" id="id90">|200|14|585|577|585|</span></a>
+<a href="#id91"><span class="problematic" id="id92">|200|15|584|559|584|</span></a>
+<a href="#id93"><span class="problematic" id="id94">|200|16|584|557|584|</span></a>
+<a href="#id95"><span class="problematic" id="id96">|200|17|579|563|581|</span></a>
+<a href="#id97"><span class="problematic" id="id98">|200|18|588|558|588|</span></a>
+<a href="#id99"><span class="problematic" id="id100">|200|19|579|565|579|</span></a>
+<a href="#id101"><span class="problematic" id="id102">|200|20|582|546|582|</span></a>
+<a href="#id103"><span class="problematic" id="id104">|200|21|588|557|588|</span></a>
+<a href="#id105"><span class="problematic" id="id106">|200|22|588|570|588|</span></a>
+<a href="#id107"><span class="problematic" id="id108">|200|23|584|563|585|</span></a>
+<a href="#id109"><span class="problematic" id="id110">|200|24|578|546|580|</span></a>
+<a href="#id111"><span class="problematic" id="id112">|200|25|587|551|587|</span></a>
+<a href="#id113"><span class="problematic" id="id114">|200|26|581|551|581|</span></a>
+<a href="#id115"><span class="problematic" id="id116">|200|27|585|547|585|</span></a>
+<a href="#id117"><span class="problematic" id="id118">|200|28|582|558|582|</span></a>
+<a href="#id119"><span class="problematic" id="id120">|200|29|583|563|583|</span></a>
+<a href="#id121"><span class="problematic" id="id122">|300|0|873|841|882|</span></a>
+<a href="#id123"><span class="problematic" id="id124">|300|1|876|821|879|</span></a>
+<a href="#id125"><span class="problematic" id="id126">|300|2|878|818|879|</span></a>
+<a href="#id127"><span class="problematic" id="id128">|300|3|875|823|882|</span></a>
+<a href="#id129"><span class="problematic" id="id130">|300|4|875|817|879|</span></a>
+<a href="#id131"><span class="problematic" id="id132">|300|5|881|848|884|</span></a>
+<a href="#id133"><span class="problematic" id="id134">|300|6|869|818|872|</span></a>
+<a href="#id135"><span class="problematic" id="id136">|300|7|874|820|881|</span></a>
+<a href="#id137"><span class="problematic" id="id138">|300|8|880|826|884|</span></a>
+<a href="#id139"><span class="problematic" id="id140">|300|9|874|831|882|</span></a>
+<a href="#id141"><span class="problematic" id="id142">|300|10|874|827|880|</span></a>
+<a href="#id143"><span class="problematic" id="id144">|300|11|871|820|876|</span></a>
+<a href="#id145"><span class="problematic" id="id146">|300|12|876|832|879|</span></a>
+<a href="#id147"><span class="problematic" id="id148">|300|13|875|815|885|</span></a>
+<a href="#id149"><span class="problematic" id="id150">|300|14|869|815|874|</span></a>
+<a href="#id151"><span class="problematic" id="id152">|300|15|875|801|883|</span></a>
+<a href="#id153"><span class="problematic" id="id154">|300|16|887|841|888|</span></a>
+<a href="#id155"><span class="problematic" id="id156">|300|17|872|810|881|</span></a>
+<a href="#id157"><span class="problematic" id="id158">|300|18|877|829|884|</span></a>
+<a href="#id159"><span class="problematic" id="id160">|300|19|871|820|874|</span></a>
+<a href="#id161"><span class="problematic" id="id162">|300|20|879|823|879|</span></a>
+<a href="#id163"><span class="problematic" id="id164">|300|21|880|833|881|</span></a>
+<a href="#id165"><span class="problematic" id="id166">|300|22|882|856|887|</span></a>
+<a href="#id167"><span class="problematic" id="id168">|300|23|882|833|886|</span></a>
+<a href="#id169"><span class="problematic" id="id170">|300|24|874|817|878|</span></a>
+<a href="#id171"><span class="problematic" id="id172">|300|25|867|812|873|</span></a>
+<a href="#id173"><span class="problematic" id="id174">|300|26|873|816|877|</span></a>
+<a href="#id175"><span class="problematic" id="id176">|300|27|876|845|880|</span></a>
+<a href="#id177"><span class="problematic" id="id178">|300|28|880|826|882|</span></a>
+<a href="#id179"><span class="problematic" id="id180">|300|29|874|829|882|</span></a>
+<a href="#id181"><span class="problematic" id="id182">|400|0|1172|1064|1177|</span></a>
+<a href="#id183"><span class="problematic" id="id184">|400|1|1170|1119|1181|</span></a>
+<a href="#id185"><span class="problematic" id="id186">|400|2|1179|1134|1185|</span></a>
+<a href="#id187"><span class="problematic" id="id188">|400|3|1169|1088|1187|</span></a>
+<a href="#id189"><span class="problematic" id="id190">|400|4|1168|1106|1178|</span></a>
+<a href="#id191"><span class="problematic" id="id192">|400|5|1167|1093|1176|</span></a>
+<a href="#id193"><span class="problematic" id="id194">|400|6|1171|1095|1179|</span></a>
+<a href="#id195"><span class="problematic" id="id196">|400|7|1160|1102|1174|</span></a>
+<a href="#id197"><span class="problematic" id="id198">|400|8|1184|1105|1186|</span></a>
+<a href="#id199"><span class="problematic" id="id200">|400|9|1173|1111|1181|</span></a>
+<a href="#id201"><span class="problematic" id="id202">|400|10|1168|1121|1181|</span></a>
+<a href="#id203"><span class="problematic" id="id204">|400|11|1164|1078|1178|</span></a>
+<a href="#id205"><span class="problematic" id="id206">|400|12|1174|1107|1183|</span></a>
+<a href="#id207"><span class="problematic" id="id208">|400|13|1175|1119|1182|</span></a>
+<a href="#id209"><span class="problematic" id="id210">|400|14|1172|1103|1177|</span></a>
+<a href="#id211"><span class="problematic" id="id212">|400|15|1155|1074|1174|</span></a>
+<a href="#id213"><span class="problematic" id="id214">|400|16|1167|1103|1182|</span></a>
+<a href="#id215"><span class="problematic" id="id216">|400|17|1175|1115|1181|</span></a>
+<a href="#id217"><span class="problematic" id="id218">|400|18|1169|1104|1177|</span></a>
+<a href="#id219"><span class="problematic" id="id220">|400|19|1169|1083|1177|</span></a>
+<a href="#id221"><span class="problematic" id="id222">|400|20|1166|1082|1175|</span></a>
+<a href="#id223"><span class="problematic" id="id224">|400|21|1162|1111|1175|</span></a>
+<a href="#id225"><span class="problematic" id="id226">|400|22|1165|1110|1174|</span></a>
+<a href="#id227"><span class="problematic" id="id228">|400|23|1170|1108|1179|</span></a>
+<a href="#id229"><span class="problematic" id="id230">|400|24|1167|1082|1173|</span></a>
+<a href="#id231"><span class="problematic" id="id232">|400|25|1171|1105|1181|</span></a>
+<a href="#id233"><span class="problematic" id="id234">|400|26|1169|1100|1182|</span></a>
+<a href="#id235"><span class="problematic" id="id236">|400|27|1162|1104|1175|</span></a>
+<a href="#id237"><span class="problematic" id="id238">|400|28|1167|1108|1182|</span></a>
+<a href="#id239"><span class="problematic" id="id240">|400|29|1165|1083|1181|</span></a>
+<a href="#id241"><span class="problematic" id="id242">|500|0|1454|1386|1471|</span></a>
+<a href="#id243"><span class="problematic" id="id244">|500|1|1432|1293|1478|</span></a>
+<a href="#id245"><span class="problematic" id="id246">|500|2|1461|1393|1478|</span></a>
+<a href="#id247"><span class="problematic" id="id248">|500|3|1453|1362|1468|</span></a>
+<a href="#id249"><span class="problematic" id="id250">|500|4|1468|1392|1483|</span></a>
+<a href="#id251"><span class="problematic" id="id252">|500|5|1474|1387|1477|</span></a>
+<a href="#id253"><span class="problematic" id="id254">|500|6|1460|1361|1479|</span></a>
+<a href="#id255"><span class="problematic" id="id256">|500|7|1453|1381|1477|</span></a>
+<a href="#id257"><span class="problematic" id="id258">|500|8|1448|1380|1472|</span></a>
+<a href="#id259"><span class="problematic" id="id260">|500|9|1477|1370|1477|</span></a>
+<a href="#id261"><span class="problematic" id="id262">|500|10|1463|1381|1469|</span></a>
+<a href="#id263"><span class="problematic" id="id264">|500|11|1466|1373|1486|</span></a>
+<a href="#id265"><span class="problematic" id="id266">|500|12|1465|1397|1476|</span></a>
+<a href="#id267"><span class="problematic" id="id268">|500|13|1459|1369|1477|</span></a>
+<a href="#id269"><span class="problematic" id="id270">|500|14|1448|1350|1481|</span></a>
+<a href="#id271"><span class="problematic" id="id272">|500|15|1461|1349|1483|</span></a>
+<a href="#id273"><span class="problematic" id="id274">|500|16|1464|1387|1472|</span></a>
+<a href="#id275"><span class="problematic" id="id276">|500|17|1467|1394|1478|</span></a>
+<a href="#id277"><span class="problematic" id="id278">|500|18|1461|1353|1487|</span></a>
+<a href="#id279"><span class="problematic" id="id280">|500|19|1468|1428|1480|</span></a>
+<a href="#id281"><span class="problematic" id="id282">|500|20|1473|1354|1477|</span></a>
+<a href="#id283"><span class="problematic" id="id284">|500|21|1482|1396|1489|</span></a>
+<a href="#id285"><span class="problematic" id="id286">|500|22|1448|1348|1476|</span></a>
+<a href="#id287"><span class="problematic" id="id288">|500|23|1464|1368|1478|</span></a>
+<a href="#id289"><span class="problematic" id="id290">|500|24|1472|1405|1481|</span></a>
+<a href="#id291"><span class="problematic" id="id292">|500|25|1456|1372|1479|</span></a>
+<a href="#id293"><span class="problematic" id="id294">|500|26|1465|1386|1472|</span></a>
+<a href="#id295"><span class="problematic" id="id296">|500|27|1467|1370|1480|</span></a>
+<a href="#id297"><span class="problematic" id="id298">|500|28|1465|1386|1476|</span></a>
+<a href="#id299"><span class="problematic" id="id300">|500|29|1452|1377|1471|</span></a></p>
+<p>## ER Benchmark</p>
+<p>The following table represents the results for MaxCut on the syn_BA dataset.</p>
+<div class="line-block">
+<div class="line">Nodes | Graph ID | ECO-DQN | S2V-DQN | Gurobi |</div>
+<div class="line">—– | ——– | ——- | ——- | —— |</div>
+</div>
+<p><a href="#id301"><span class="problematic" id="id302">|100|0|520|484|</span></a>.|
+<a href="#id303"><span class="problematic" id="id304">|100|1|523|482|</span></a>.|
+<a href="#id305"><span class="problematic" id="id306">|100|2|530|488|</span></a>.|
+<a href="#id307"><span class="problematic" id="id308">|100|3|505|470|</span></a>.|
+<a href="#id309"><span class="problematic" id="id310">|100|4|506|468|</span></a>.|
+<a href="#id311"><span class="problematic" id="id312">|100|5|494|457|</span></a>.|
+<a href="#id313"><span class="problematic" id="id314">|100|6|499|468|</span></a>.|
+<a href="#id315"><span class="problematic" id="id316">|100|7|492|457|</span></a>.|
+<a href="#id317"><span class="problematic" id="id318">|100|8|509|477|</span></a>.|
+<a href="#id319"><span class="problematic" id="id320">|100|9|493|465|</span></a>.|
+<a href="#id321"><span class="problematic" id="id322">|100|10|519|477|</span></a>.|
+<a href="#id323"><span class="problematic" id="id324">|100|11|511|470|</span></a>.|
+<a href="#id325"><span class="problematic" id="id326">|100|12|472|440|</span></a>.|
+<a href="#id327"><span class="problematic" id="id328">|100|13|482|448|</span></a>.|
+<a href="#id329"><span class="problematic" id="id330">|100|14|488|462|</span></a>.|
+<a href="#id331"><span class="problematic" id="id332">|100|15|524|478|</span></a>.|
+<a href="#id333"><span class="problematic" id="id334">|100|16|507|473|</span></a>.|
+<a href="#id335"><span class="problematic" id="id336">|100|17|517|484|</span></a>.|
+<a href="#id337"><span class="problematic" id="id338">|100|18|503|469|</span></a>.|
+<a href="#id339"><span class="problematic" id="id340">|100|19|523|466|</span></a>.|
+<a href="#id341"><span class="problematic" id="id342">|100|20|493|461|</span></a>.|
+<a href="#id343"><span class="problematic" id="id344">|100|21|509|472|</span></a>.|
+<a href="#id345"><span class="problematic" id="id346">|100|22|511|473|</span></a>.|
+<a href="#id347"><span class="problematic" id="id348">|100|23|528|488|</span></a>.|
+<a href="#id349"><span class="problematic" id="id350">|100|24|484|437|</span></a>.|
+<a href="#id351"><span class="problematic" id="id352">|100|25|507|466|</span></a>.|
+<a href="#id353"><span class="problematic" id="id354">|100|26|525|489|</span></a>.|
+<a href="#id355"><span class="problematic" id="id356">|100|27|506|474|</span></a>.|
+<a href="#id357"><span class="problematic" id="id358">|100|28|557|525|</span></a>.|
+<a href="#id359"><span class="problematic" id="id360">|100|29|498|444|</span></a>.|
+<a href="#id361"><span class="problematic" id="id362">|200|0|1878|1771|</span></a>.|
+<a href="#id363"><span class="problematic" id="id364">|200|1|1850|1768|</span></a>.|
+<a href="#id365"><span class="problematic" id="id366">|200|2|1875|1783|</span></a>.|
+<a href="#id367"><span class="problematic" id="id368">|200|3|1867|1780|</span></a>.|
+<a href="#id369"><span class="problematic" id="id370">|200|4|1944|1849|</span></a>.|
+<a href="#id371"><span class="problematic" id="id372">|200|5|1869|1785|</span></a>.|
+<a href="#id373"><span class="problematic" id="id374">|200|6|1870|1769|</span></a>.|
+<a href="#id375"><span class="problematic" id="id376">|200|7|1850|1782|</span></a>.|
+<a href="#id377"><span class="problematic" id="id378">|200|8|1803|1727|</span></a>.|
+<a href="#id379"><span class="problematic" id="id380">|200|9|1889|1774|</span></a>.|
+<a href="#id381"><span class="problematic" id="id382">|200|10|1866|1769|</span></a>.|
+<a href="#id383"><span class="problematic" id="id384">|200|11|1814|1721|</span></a>.|
+<a href="#id385"><span class="problematic" id="id386">|200|12|1836|1723|</span></a>.|
+<a href="#id387"><span class="problematic" id="id388">|200|13|1815|1741|</span></a>.|
+<a href="#id389"><span class="problematic" id="id390">|200|14|1818|1743|</span></a>.|
+<a href="#id391"><span class="problematic" id="id392">|200|15|1868|1770|</span></a>.|
+<a href="#id393"><span class="problematic" id="id394">|200|16|1865|1767|</span></a>.|
+<a href="#id395"><span class="problematic" id="id396">|200|17|1874|1788|</span></a>.|
+<a href="#id397"><span class="problematic" id="id398">|200|18|1853|1768|</span></a>.|
+<a href="#id399"><span class="problematic" id="id400">|200|19|1817|1719|</span></a>.|
+<a href="#id401"><span class="problematic" id="id402">|200|20|1870|1766|</span></a>.|
+<a href="#id403"><span class="problematic" id="id404">|200|21|1874|1775|</span></a>.|
+<a href="#id405"><span class="problematic" id="id406">|200|22|1872|1764|</span></a>.|
+<a href="#id407"><span class="problematic" id="id408">|200|23|1857|1765|</span></a>.|
+<a href="#id409"><span class="problematic" id="id410">|200|24|1880|1790|</span></a>.|
+<a href="#id411"><span class="problematic" id="id412">|200|25|1829|1749|</span></a>.|
+<a href="#id413"><span class="problematic" id="id414">|200|26|1841|1755|</span></a>.|
+<a href="#id415"><span class="problematic" id="id416">|200|27|1864|1770|</span></a>.|
+<a href="#id417"><span class="problematic" id="id418">|200|28|1900|1822|</span></a>.|
+<a href="#id419"><span class="problematic" id="id420">|200|29|1846|1763|</span></a>.|
+<a href="#id421"><span class="problematic" id="id422">|300|0|3992|3872|</span></a>.|
+<a href="#id423"><span class="problematic" id="id424">|300|1|4154|4007|</span></a>.|
+<a href="#id425"><span class="problematic" id="id426">|300|2|4099|3985|</span></a>.|
+<a href="#id427"><span class="problematic" id="id428">|300|3|3998|3890|</span></a>.|
+<a href="#id429"><span class="problematic" id="id430">|300|4|4020|3857|</span></a>.|
+<a href="#id431"><span class="problematic" id="id432">|300|5|4079|3955|</span></a>.|
+<a href="#id433"><span class="problematic" id="id434">|300|6|4097|3954|</span></a>.|
+<a href="#id435"><span class="problematic" id="id436">|300|7|4000|3871|</span></a>.|
+<a href="#id437"><span class="problematic" id="id438">|300|8|4074|3938|</span></a>.|
+<a href="#id439"><span class="problematic" id="id440">|300|9|4096|3953|</span></a>.|
+<a href="#id441"><span class="problematic" id="id442">|300|10|4051|3950|</span></a>.|
+<a href="#id443"><span class="problematic" id="id444">|300|11|4067|3943|</span></a>.|
+<a href="#id445"><span class="problematic" id="id446">|300|12|4104|3969|</span></a>.|
+<a href="#id447"><span class="problematic" id="id448">|300|13|4070|3905|</span></a>.|
+<a href="#id449"><span class="problematic" id="id450">|300|14|4030|3927|</span></a>.|
+<a href="#id451"><span class="problematic" id="id452">|300|15|4050|3923|</span></a>.|
+<a href="#id453"><span class="problematic" id="id454">|300|16|4051|3930|</span></a>.|
+<a href="#id455"><span class="problematic" id="id456">|300|17|4075|3973|</span></a>.|
+<a href="#id457"><span class="problematic" id="id458">|300|18|4120|4038|</span></a>.|
+<a href="#id459"><span class="problematic" id="id460">|300|19|4080|3977|</span></a>.|
+<a href="#id461"><span class="problematic" id="id462">|300|20|4017|3890|</span></a>.|
+<a href="#id463"><span class="problematic" id="id464">|300|21|4088|3942|</span></a>.|
+<a href="#id465"><span class="problematic" id="id466">|300|22|4071|3941|</span></a>.|
+<a href="#id467"><span class="problematic" id="id468">|300|23|4096|3975|</span></a>.|
+<a href="#id469"><span class="problematic" id="id470">|300|24|3982|3857|</span></a>.|
+<a href="#id471"><span class="problematic" id="id472">|300|25|4035|3916|</span></a>.|
+<a href="#id473"><span class="problematic" id="id474">|300|26|4060|3929|</span></a>.|
+<a href="#id475"><span class="problematic" id="id476">|300|27|3973|3835|</span></a>.|
+<a href="#id477"><span class="problematic" id="id478">|300|28|4025|3885|</span></a>.|
+<a href="#id479"><span class="problematic" id="id480">|300|29|4155|4019|</span></a>.|
+<a href="#id481"><span class="problematic" id="id482">|400|0|7082|6905|</span></a>.|
+<a href="#id483"><span class="problematic" id="id484">|400|1|7003|6826|</span></a>.|
+<a href="#id485"><span class="problematic" id="id486">|400|2|6960|6798|</span></a>.|
+<a href="#id487"><span class="problematic" id="id488">|400|3|7019|6878|</span></a>.|
+<a href="#id489"><span class="problematic" id="id490">|400|4|7037|6838|</span></a>.|
+<a href="#id491"><span class="problematic" id="id492">|400|5|7018|6867|</span></a>.|
+<a href="#id493"><span class="problematic" id="id494">|400|6|7068|6906|</span></a>.|
+<a href="#id495"><span class="problematic" id="id496">|400|7|7115|6937|</span></a>.|
+<a href="#id497"><span class="problematic" id="id498">|400|8|6977|6770|</span></a>.|
+<a href="#id499"><span class="problematic" id="id500">|400|9|6959|6745|</span></a>.|
+<a href="#id501"><span class="problematic" id="id502">|400|10|7052|6872|</span></a>.|
+<a href="#id503"><span class="problematic" id="id504">|400|11|7048|6850|</span></a>.|
+<a href="#id505"><span class="problematic" id="id506">|400|12|7109|6956|</span></a>.|
+<a href="#id507"><span class="problematic" id="id508">|400|13|7015|6856|</span></a>.|
+<a href="#id509"><span class="problematic" id="id510">|400|14|7003|6811|</span></a>.|
+<a href="#id511"><span class="problematic" id="id512">|400|15|7081|6904|</span></a>.|
+<a href="#id513"><span class="problematic" id="id514">|400|16|7005|6815|</span></a>.|
+<a href="#id515"><span class="problematic" id="id516">|400|17|7023|6838|</span></a>.|
+<a href="#id517"><span class="problematic" id="id518">|400|18|7059|6910|</span></a>.|
+<a href="#id519"><span class="problematic" id="id520">|400|19|7005|6874|</span></a>.|
+<a href="#id521"><span class="problematic" id="id522">|400|20|7008|6825|</span></a>.|
+<a href="#id523"><span class="problematic" id="id524">|400|21|7078|6898|</span></a>.|
+<a href="#id525"><span class="problematic" id="id526">|400|22|6994|6820|</span></a>.|
+<a href="#id527"><span class="problematic" id="id528">|400|23|6913|6778|</span></a>.|
+<a href="#id529"><span class="problematic" id="id530">|400|24|7083|6845|</span></a>.|
+<a href="#id531"><span class="problematic" id="id532">|400|25|7097|6934|</span></a>.|
+<a href="#id533"><span class="problematic" id="id534">|400|26|7044|6876|</span></a>.|
+<a href="#id535"><span class="problematic" id="id536">|400|27|7041|6877|</span></a>.|
+<a href="#id537"><span class="problematic" id="id538">|400|28|7033|6886|</span></a>.|
+<a href="#id539"><span class="problematic" id="id540">|400|29|7026|6852|</span></a>.|
+<a href="#id541"><span class="problematic" id="id542">|500|0|10835|10612|</span></a>.|
+<a href="#id543"><span class="problematic" id="id544">|500|1|10866|10683|</span></a>.|
+<a href="#id545"><span class="problematic" id="id546">|500|2|10817|10605|</span></a>.|
+<a href="#id547"><span class="problematic" id="id548">|500|3|10729|10460|</span></a>.|
+<a href="#id549"><span class="problematic" id="id550">|500|4|10778|10568|</span></a>.|
+<a href="#id551"><span class="problematic" id="id552">|500|5|10900|10754|</span></a>.|
+<a href="#id553"><span class="problematic" id="id554">|500|6|10922|10739|</span></a>.|
+<a href="#id555"><span class="problematic" id="id556">|500|7|10862|10624|</span></a>.|
+<a href="#id557"><span class="problematic" id="id558">|500|8|10833|10629|</span></a>.|
+<a href="#id559"><span class="problematic" id="id560">|500|9|10845|10695|</span></a>.|
+<a href="#id561"><span class="problematic" id="id562">|500|10|10760|10543|</span></a>.|
+<a href="#id563"><span class="problematic" id="id564">|500|11|10899|10717|</span></a>.|
+<a href="#id565"><span class="problematic" id="id566">|500|12|10871|10664|</span></a>.|
+<a href="#id567"><span class="problematic" id="id568">|500|13|10760|10557|</span></a>.|
+<a href="#id569"><span class="problematic" id="id570">|500|14|10904|10727|</span></a>.|
+<a href="#id571"><span class="problematic" id="id572">|500|15|10904|10705|</span></a>.|
+<a href="#id573"><span class="problematic" id="id574">|500|16|10904|10756|</span></a>.|
+<a href="#id575"><span class="problematic" id="id576">|500|17|10842|10694|</span></a>.|
+<a href="#id577"><span class="problematic" id="id578">|500|18|10912|10754|</span></a>.|
+<a href="#id579"><span class="problematic" id="id580">|500|19|10850|10587|</span></a>.|
+<a href="#id581"><span class="problematic" id="id582">|500|20|10713|10493|</span></a>.|
+<a href="#id583"><span class="problematic" id="id584">|500|21|10894|10730|</span></a>.|
+<a href="#id585"><span class="problematic" id="id586">|500|22|10801|10565|</span></a>.|
+<a href="#id587"><span class="problematic" id="id588">|500|23|10742|10538|</span></a>.|
+<a href="#id589"><span class="problematic" id="id590">|500|24|10902|10765|</span></a>.|
+<a href="#id591"><span class="problematic" id="id592">|500|25|10877|10667|</span></a>.|
+<a href="#id593"><span class="problematic" id="id594">|500|26|10820|10606|</span></a>.|
+<a href="#id595"><span class="problematic" id="id596">|500|27|10813|10648|</span></a>.|
+<a href="#id597"><span class="problematic" id="id598">|500|28|10824|10634|</span></a>.|
+<a href="#id599"><span class="problematic" id="id600">|500|29|10844|10599|</span></a>.|</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
