@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/documentation_options.js?v=9dc39874"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Reinforcement Learning for Ising Model</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Introduction</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/overview.html" class="reference internal ">Overview</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/motivation.html" class="reference internal ">Motivation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/content.html" class="reference internal ">Content</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Datasets</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/classification.html" class="reference internal ">Classification of Ising Models</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/spin_glass.html" class="reference internal ">Spin Glass Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/spin_ice.html" class="reference internal ">Spin-Ice Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/ferromagnetic.html" class="reference internal ">Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/anti_ferromagnetic.html" class="reference internal ">Anti-Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Baseline Solvers</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Reinforcement Learning Algorithms</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Benchmark</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">RL4Ising Competition 2025</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">References</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="exploratory-combinatorial-optimization-with-reinforcement-learning-eco-dqn">
+<h1>Exploratory Combinatorial Optimization with Reinforcement Learning (ECO-DQN)<a class="headerlink" href="#exploratory-combinatorial-optimization-with-reinforcement-learning-eco-dqn" title="Link to this heading">¶</a></h1>
+<p><strong>Citation:</strong>
+Barrett, T. D., Clements, W. R., Foerster, J. N., &amp; Lvovsky, A. I. (2019). <em>Exploratory Combinatorial Optimization with Reinforcement Learning</em>. In Proc. of the Thirty-Fourth AAAI Conference on Artificial Intelligence (AAAI-20). DOI: <a class="reference external" href="https://doi.org/10.1609/aaai.v34i04.5723">10.1609/aaai.v34i04.5723</a></p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>ECO-DQN introduces a reinforcement learning framework for solving combinatorial optimization problems with a key focus on <em>reversible exploration</em>. The method allows agents to revise earlier decisions during inference, leading to more robust solutions.</p>
+</section>
+<section id="strengths">
+<h2>Strengths<a class="headerlink" href="#strengths" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Reversible Exploration</strong>:
+The agent is permitted to undo prior actions and iteratively refine the solution. This mechanism enables it to escape local optima during test time.</p></li>
+<li><p><strong>Flexible Initialization</strong>:
+ECO-DQN supports initialization from various strategies (e.g., random, greedy, heuristic) and can improve upon them. This makes it compatible with other optimization approaches.</p></li>
+</ul>
+</section>
+<section id="weaknesses">
+<h2>Weaknesses<a class="headerlink" href="#weaknesses" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>High Computational Cost</strong>:
+Each step in the decision process requires two inferences from a graph neural network—one for adding and one for removing actions. This leads to significantly longer per-instance runtimes compared to greedy methods.</p></li>
+<li><p><strong>Stopping Criterion Ambiguity</strong>:
+Since the agent continues exploring during inference, determining when to stop (balancing runtime and solution quality) is challenging.</p></li>
+<li><p><strong>Outdated Algorithmic Core</strong>:
+The approach uses Q-learning with experience replay and target networks to approximate the Q-function. While stabilizing, it incurs high sample complexity and is prone to training instability.</p></li>
+</ul>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2018-present, Eduardo Naufel Schettino.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

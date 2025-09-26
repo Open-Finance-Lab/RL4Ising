@@ -1,130 +1,352 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Task 1: RL4MaxCut &mdash; Reinforcement Learning for Ising Model  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+      <title>Task 1: RL4MaxCut</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/documentation_options.js?v=9dc39874"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Reinforcement Learning for Ising Model</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
 
   
-      <script src="../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Task 2: RL4Ising" href="rl4ising.html" />
-    <link rel="prev" title="Overview" href="overview.html" /> 
-</head>
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
 
-          
-          
-          <a href="../index.html" class="icon icon-home">
-            Reinforcement Learning for Ising Model
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/classification.html">Classification of Ising Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_glass.html">Spin Glass Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/spin_ice.html">Spin-Ice Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/ferromagnetic.html">Ferromagnetic Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../datasets/anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/gurobi.html">Gurobi Solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/cplex.html">IBM ILOG CPLEX Solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/copt.html">COPT Solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/scip.html">SCIP Solver</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../methods/s2v.html">S2V-DQN Algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/vca.html">Variational Neural Annealing (VCA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/reinforce.html">REINFORCE Algorithm</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Task 1: RL4MaxCut</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#task-overview">Task Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#starter-kit">Starter Kit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#benchmark"><span class="xref std std-ref">Benchmark</span></a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="rl4ising.html">Task 2: RL4Ising</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
-</ul>
 
-        </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
       </div>
-    </nav>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Reinforcement Learning for Ising Model</a>
-      </nav>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Task 1: RL4MaxCut</li>
-      <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/competition/rl4maxcut.rst" class="fa fa-github"> Edit on GitHub</a>
-      </li>
-  </ul>
-  <hr/>
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Introduction</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/overview.html" class="reference internal ">Overview</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/motivation.html" class="reference internal ">Motivation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/content.html" class="reference internal ">Content</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Datasets</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/classification.html" class="reference internal ">Classification of Ising Models</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/spin_glass.html" class="reference internal ">Spin Glass Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/spin_ice.html" class="reference internal ">Spin-Ice Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/ferromagnetic.html" class="reference internal ">Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/anti_ferromagnetic.html" class="reference internal ">Anti-Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Baseline Solvers</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Reinforcement Learning Algorithms</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Benchmark</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">RL4Ising Competition 2025</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">References</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Task 1: RL4MaxCut</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
   <section id="task-1-rl4maxcut">
-<h1>Task 1: RL4MaxCut<a class="headerlink" href="#task-1-rl4maxcut" title="Link to this heading"></a></h1>
+<h1>Task 1: RL4MaxCut<a class="headerlink" href="#task-1-rl4maxcut" title="Link to this heading">¶</a></h1>
 <p>RL4Maxcut is a task that challenges you to build agents capable of solving the MaxCut problem on unseen graphs drawn from diverse distributions, while surpassing industry-level MIP solvers in performance and scalability.
 Your mission: train agents to effectively explore the vast discrete space of graph partitions and generalize beyond the training set to new, previously unseen graph instances.
 This task emphasizes distribution-wise generalization — encouraging the development of agents that learn robust, transferable policies applicable to a wide range of graph types (e.g., ER, BA, PowerLaw), rather than overfitting to specific training graphs.</p>
 <section id="task-overview">
-<h2>Task Overview<a class="headerlink" href="#task-overview" title="Link to this heading"></a></h2>
+<h2>Task Overview<a class="headerlink" href="#task-overview" title="Link to this heading">¶</a></h2>
 <p>In this task, participants are invited to develop MaxCut agents that can produce high-quality solutions and improve the scalability and generalization of reinforcement learning algorithms. We provide a baseline solver, and invite participants to match or surpass its performance — particularly on previously unseen graphs drawn from diverse distributions.</p>
 <p>Participants are encouraged to explore a wide range of approaches, including but not limited to:</p>
 <ul class="simple">
@@ -136,15 +358,15 @@ This task emphasizes distribution-wise generalization — encouraging the develo
 <p>Participants are encouraged to propose creative enhancements and hybrid methods that further advance the ability of RL agents to generalize to new and challenging MaxCut instances across different graph distributions.</p>
 </section>
 <section id="datasets">
-<h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading"></a></h2>
+<h2>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">¶</a></h2>
 <p>We provide a <strong>challenging dataset</strong> of graphs curated to evaluate the <strong>distribution-wise generalization</strong> of MaxCut agents. These graphs vary widely in both <strong>structural properties</strong> and <strong>graph sizes</strong>, encouraging models to learn transferable policies rather than overfit to specific instances.</p>
 </section>
 <section id="starter-kit">
-<h2>Starter Kit<a class="headerlink" href="#starter-kit" title="Link to this heading"></a></h2>
+<h2>Starter Kit<a class="headerlink" href="#starter-kit" title="Link to this heading">¶</a></h2>
 <p>This <a class="reference external" href="https://github.com/HMacEntee/RL4Ising_Contest_2025">starter kit</a> includes training scripts and environment files for the Maxcut problem. Follow the instructions below to get started.</p>
 </section>
 <section id="commands">
-<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading"></a></h2>
+<h2>Commands<a class="headerlink" href="#commands" title="Link to this heading">¶</a></h2>
 <p>To run the various methods, follow the commands listed below:</p>
 <table class="docutils align-default">
 <colgroup>
@@ -175,7 +397,7 @@ This task emphasizes distribution-wise generalization — encouraging the develo
 </table>
 </section>
 <section id="benchmark">
-<h2><a class="reference internal" href="rl4maxcut_benchmark.html#benchmark"><span class="std std-ref">Benchmark</span></a><a class="headerlink" href="#benchmark" title="Link to this heading"></a></h2>
+<h2><a class="reference internal" href="rl4maxcut_benchmark.html#benchmark"><span class="std std-ref">Benchmark</span></a><a class="headerlink" href="#benchmark" title="Link to this heading">¶</a></h2>
 <p>Baseline Solvers:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.gurobi.com/faqs/mip-solvers/">Gurobi</a>: A mixed-integer programming solver that identifies optimal solutions given an objective function, typically by applying a branch-and-cut algorithm.</p></li>
@@ -204,34 +426,19 @@ This is equivalent to finding the optimal solution to the MaxCut problem, and se
 </section>
 
 
-           </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="rl4ising.html" class="btn btn-neutral float-right" title="Task 2: RL4Ising" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2018-present, Eduardo Naufel Schettino.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
 </html>

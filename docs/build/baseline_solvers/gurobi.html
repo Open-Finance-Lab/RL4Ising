@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Gurobi Solver</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/documentation_options.js?v=9dc39874"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Reinforcement Learning for Ising Model</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Introduction</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/overview.html" class="reference internal ">Overview</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/motivation.html" class="reference internal ">Motivation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/content.html" class="reference internal ">Content</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Datasets</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/classification.html" class="reference internal ">Classification of Ising Models</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/spin_glass.html" class="reference internal ">Spin Glass Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/spin_ice.html" class="reference internal ">Spin-Ice Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/ferromagnetic.html" class="reference internal ">Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../datasets/anti_ferromagnetic.html" class="reference internal ">Anti-Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Baseline Solvers</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Reinforcement Learning Algorithms</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Benchmark</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">RL4Ising Competition 2025</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">References</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Gurobi Solver</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="gurobi-solver">
+<h1>Gurobi Solver<a class="headerlink" href="#gurobi-solver" title="Link to this heading">¶</a></h1>
+<p><strong>Citation:</strong>
+Gurobi Optimization, LLC. (Latest Release). <em>Gurobi Optimizer Reference Manual</em>.</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>Gurobi is a state-of-the-art commercial solver for linear, quadratic, and mixed-integer programming. It solves the Max-Cut problem by formulating it as a mixed-integer quadratic program (MIQP) or via linearized approximations.</p>
+</section>
+<section id="strengths">
+<h2>Strengths<a class="headerlink" href="#strengths" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Advanced Parallel Cut Generation</strong>:
+Gurobi applies automatic cutting-planes, heuristics, and parallel tree-search threads at each node, accelerating convergence on dense MIP problems.</p></li>
+<li><p><strong>Optimality Guarantee</strong>:
+Using branch-and-cut, Gurobi provides certificates of global optimality for the Max-Cut formulation, ensuring exact solutions when possible.</p></li>
+</ul>
+</section>
+<section id="weaknesses">
+<h2>Weaknesses<a class="headerlink" href="#weaknesses" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Formulation Overhead</strong>:
+Encoding Max-Cut as a QUBO or MIP often requires auxiliary variables and linearization constraints. These overheads can significantly inflate the model size and slow root-node relaxation.</p></li>
+<li><p><strong>Scalability Limits on Large Instances</strong>:
+On large-scale benchmarks (e.g., G70 with |V| = 10,000), Gurobi may take substantial time to close the optimality gap. While it found a cut of 9490 in 0.5h and 9506 in 1h, these results highlight potential bottlenecks under time constraints.</p></li>
+</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs/source/solvers/index.rst
+IBM CPLEX Solver
+======================</p>
+<p><strong>Citation:</strong>
+Cplex, I. I. (2009). V12. 1: User’s Manual for CPLEX. International Business Machines Corporation, 46(53), 157.</p>
+</section>
+<section id="mosek-solver">
+<h2>Mosek Solver<a class="headerlink" href="#mosek-solver" title="Link to this heading">¶</a></h2>
+<p><strong>Citation:</strong>
+<a class="reference external" href="https://docs.mosek.com/latest/pythonfusion/index.html">https://docs.mosek.com/latest/pythonfusion/index.html</a></p>
+</section>
+<section id="copt-solver">
+<h2>COPT Solver<a class="headerlink" href="#copt-solver" title="Link to this heading">¶</a></h2>
+<p><strong>Citation:</strong>
+<a class="reference external" href="https://doi.org/10.48550/arXiv.2208.14314">https://doi.org/10.48550/arXiv.2208.14314</a></p>
+</section>
+<section id="ecole-solver">
+<h2>Ecole Solver<a class="headerlink" href="#ecole-solver" title="Link to this heading">¶</a></h2>
+<p><strong>Citation:</strong>
+Antoine Prouvost, Justin Dumouchelle, Lara Scavuzzo, Maxime Gasse, Didier Chetelat, &amp; Andrea Lodi (2020). Ecole: A Gym-like Library for Machine Learning in Combinatorial Optimization Solvers. In Learning Meets Combinatorial Algorithms at NeurIPS2020.</p>
+</section>
+<section id="scip-solver">
+<h2>SCIP Solver<a class="headerlink" href="#scip-solver" title="Link to this heading">¶</a></h2>
+<p><strong>Citation:</strong>
+Suresh Bolusani, Mathieu Besançon, Ksenia Bestuzheva, Antonia Chmiela, João Dionísio, Tim Donkiewicz, Jasper van Doornmalen, Leon Eifler, Mohammed Ghannam, Ambros Gleixner, Christoph Graczyk, Katrin Halbig, Ivo Hedtke, Alexander Hoen, Christopher Hojny, Rolf van der Hulst, Dominik Kamp, Thorsten Koch, Kevin Kofler, Jurgen Lentz, Julian Manns, Gioni Mexi, Erik~Mühmer, Marc E. Pfetsch, Franziska Schlosser, Felipe Serrano, Yuji Shinano, Mark Turner, Stefan Vigerske, Dieter Weninger, &amp; Lixing Xu (2024). The SCIP Optimization Suite 9.0 [White paper]. Optimization Online.</p>
+</section>
+<section id="rl4co-solver">
+<h2>RL4CO Solver<a class="headerlink" href="#rl4co-solver" title="Link to this heading">¶</a></h2>
+<p><strong>Citation:</strong>
+<a class="reference external" href="https://doi.org/10.48550/arXiv.2306.17100">https://doi.org/10.48550/arXiv.2306.17100</a>
+=======
+Tutorial
+===========
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; b98a1f8 (website overhaul):docs/source/solvers/gurobi.rst</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2018-present, Eduardo Naufel Schettino.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>
