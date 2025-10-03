@@ -2,7 +2,7 @@
 Reinforcement Learning for Ising Models is an open-source dataset and benchmark suite for Ising models. Our goal is to curate a public dataset of Ising models, provide a comprehensive benchmark of state-of-the-art reinforcement learning algorithms alongside an industry-standard solver baseline, and offer detailed tutorials for each reinforcement learning algorithm. 
 
 Explore our comprehensive benchmark suite and in-depth tutorials at [rl4ising-docs.readthedocs.io](https://rl4ising-docs.readthedocs.io/en/latest/). <br>
-Our curated datasets of various Ising models is at [huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances](https://huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances)
+Our curated datasets of various Ising models is at [huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances](https://huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances).
 
 ## Ising Model Datasets
 We curate a diverse collection of over 170,000 Ising models and construct two distinct datasets:
@@ -22,16 +22,16 @@ We curate a diverse collection of over 170,000 Ising models and construct two di
 
 | Types of Ising Models | Description | Instances | Spin Range | Coupling Range |
 | --------------------- | ----------- | :-------: | :--------: | :------------: |
-| 1D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
+| 1D ising Models       | ...         |           | 0 - 0      | 0 - 0          |
 | 2D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
 | 3D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
 | 4D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
 
 ## Benchmark Suite
-Our benchmark suite consist of two intergal components:
+Our benchmark suite consists of two integral components, a solver baseline and SOTA RL benchmark, allowing for the direct comparison of the classical optimization methods vs modern RL-based approaches.
 
-- **Solver Baseline**:
-- **SOTA RL Benchmark**: 
+- **Solver Baseline**: Offers transparent and provable optimal or near-optimial solutions while leveraging highly optimized, memory-efficient algorithms. Most importantly, solvers provide an upper bound enabling the measurement of solution quality for approximate methods such as RL-based algorithms. 
+- **SOTA RL Benchmark**: Showcases key milestones of state-of-the-art RL algorithms over the years in terms of performance and scalability. Most importantly, we highlight the current top-of-the-line RL algorithms providing high quality solutions with a scaliability and time advantage against industry solvers.
 
 | Algorithm/Solver | Description | Reference                          |
 | ---------------- | ----------- | ---------------------------------- |
