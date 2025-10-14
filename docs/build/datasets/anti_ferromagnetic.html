@@ -1,130 +1,365 @@
-
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="../">
-<head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anti-Ferromagnetic Dataset &mdash; Reinforcement Learning for Ising Model  documentation</title>
-      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
+      <title>Anti-Ferromagnetic Dataset</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/documentation_options.js?v=9dc39874"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="prev" title="Ferromagnetic Dataset" href="ferromagnetic.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Reinforcement Learning for Ising Model</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
 
   
-      <script src="../_static/jquery.js?v=5d32c60e"></script>
-      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Gurobi Solver" href="../solvers/gurobi.html" />
-    <link rel="prev" title="Ferromagnetic Dataset" href="ferromagnetic.html" /> 
-</head>
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link  router-link-active">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
 
-          
-          
-          <a href="../index.html" class="icon icon-home">
-            Reinforcement Learning for Ising Model
-          </a>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../overview/key_concepts.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/motivation.html">Motivation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../overview/content.html">Content</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Datasets</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="classification.html">Classification of Ising Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Anti-Ferromagnetic Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#instances">Instances</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#d">2D</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#dataset-references">Dataset References</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Baseline Solvers</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/gurobi.html">Gurobi Solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/cplex.html">IBM ILOG CPLEX Solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/copt.html">COPT Solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../solvers/scip.html">SCIP Solver</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">RL Algorithms</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../methods/s2v.html">S2V-DQN Algorithm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/vca.html">Variational Neural Annealing (VCA)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/mcpg.html">Monte Carlo Policy Gradient with Local Search (MCPG)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../methods/reinforce.html">REINFORCE Algorithm</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Benchmarks</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../benchmark/results.html">Benchmark Results</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">RL4Ising Competition 2025</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../competition/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../competition/rl4maxcut.html">Task 1: RL4MaxCut</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../competition/rl4ising.html">Task 2: RL4Ising</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">References</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../references/dataset_references.html">Dataset References</a></li>
-</ul>
 
-        </div>
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
       </div>
-    </nav>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Reinforcement Learning for Ising Model</a>
-      </nav>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Introduction
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link  router-link-active">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Anti-Ferromagnetic Dataset</li>
-      <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/Open-Finance-Lab/RL4Ising/blob/main/docs/source/datasets/anti_ferromagnetic.rst" class="fa fa-github"> Edit on GitHub</a>
-      </li>
-  </ul>
-  <hr/>
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Introduction</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/overview.html" class="reference internal ">Overview</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/motivation.html" class="reference internal ">Motivation</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../introduction/content.html" class="reference internal ">Content</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Datasets</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="classification.html" class="reference internal ">Classification of Ising Models</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="spin_glass.html" class="reference internal ">Spin Glass Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="spin_ice.html" class="reference internal ">Spin-Ice Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="ferromagnetic.html" class="reference internal ">Ferromagnetic Dataset</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Anti-Ferromagnetic Dataset</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#description-of-ising-model-type" class="reference internal">Description of Ising Model Type</a></li>
+                
+                  <li class="toctree-l2"><a href="#instances" class="reference internal">Instances</a></li>
+                
+                  <li class="toctree-l2"><a href="#dataset-references" class="reference internal">Dataset References</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Baseline Solvers</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Reinforcement Learning Algorithms</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Benchmark</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">RL4Ising Competition 2025</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">References</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Anti-Ferromagnetic Dataset</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="ferromagnetic.html"
+       title="previous chapter">← Ferromagnetic Dataset</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
   <section id="anti-ferromagnetic-dataset">
-<h1>Anti-Ferromagnetic Dataset<a class="headerlink" href="#anti-ferromagnetic-dataset" title="Link to this heading"></a></h1>
+<h1>Anti-Ferromagnetic Dataset<a class="headerlink" href="#anti-ferromagnetic-dataset" title="Link to this heading">¶</a></h1>
 <section id="description-of-ising-model-type">
-<h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading"></a></h2>
+<h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading">¶</a></h2>
 <p>In an anti-ferromagnetic Ising model, neighboring spins want to anti-align. In other words, they want to point in the opposite directions to minimize the system’s energy.
 The energy Hamiltonian of this model can be given by</p>
 <div class="math notranslate nohighlight">
@@ -132,10 +367,10 @@ The energy Hamiltonian of this model can be given by</p>
 <p>If the neighboring spins point in the same direction, the energy of the system will increase and, conversely arranged, will decrease.</p>
 </section>
 <section id="instances">
-<h2>Instances<a class="headerlink" href="#instances" title="Link to this heading"></a></h2>
+<h2>Instances<a class="headerlink" href="#instances" title="Link to this heading">¶</a></h2>
 <p>The instances we are providing for the anti-ferromagnetic Ising model type consist of weighted edges. Note that there are only negative weights present for these instances. The complexity of an instance is determined by its size (# of nodes).</p>
 <section id="d">
-<h3>2D<a class="headerlink" href="#d" title="Link to this heading"></a></h3>
+<h3>2D<a class="headerlink" href="#d" title="Link to this heading">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 16.7%" />
@@ -272,7 +507,7 @@ The energy Hamiltonian of this model can be given by</p>
 </section>
 </section>
 <section id="dataset-references">
-<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Link to this heading"></a></h2>
+<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Link to this heading">¶</a></h2>
 <p>Below contain the references to the datasets we gathered on this website.</p>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="id17" role="doc-footnote">
@@ -297,34 +532,23 @@ Mills, K., Ronagh, P. &amp; Tamblyn, I. Finding the ground state of spin Hamilto
 </section>
 
 
-           </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="ferromagnetic.html" class="btn btn-neutral float-left" title="Ferromagnetic Dataset" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../solvers/gurobi.html" class="btn btn-neutral float-right" title="Gurobi Solver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2025, Reinforcement Learning for Ising Model.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
-      </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
-
-</body>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="ferromagnetic.html"
+       title="previous chapter">← Ferromagnetic Dataset</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2018-present, Eduardo Naufel Schettino.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
 </html>

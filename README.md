@@ -1,347 +1,81 @@
-# RL4Ising: Reinforcement Learning for Ising Models. Datasets and Benchmarks
-## Motivation
-Finding the ground state of Ising models is a prominent problem in physics, invented by Wilhelm Lenz and Ersnt Ising in the 1920s. It provides a mathematical explanation of ferromagnetism in statistical mechanics: found by searching a configuration of spins that minimize energy. The Ising model helps analyze various physical properties, e.g., magnetism or phase transitions. In addition to its properties in physics, the Ising model serves as a framework for many NP-Hard problems, such as Maxcut. Currently, the Ising model in high dimensions remains unsolved and is an active research area. Our project seeks to utilize the recent advancements in deep neural networks and reinforcement learning to find the ground state of Ising models.
+# RL4Ising (Reinforcement Learning for Ising Models): Datasets and Benchmark
+Reinforcement Learning for Ising Models is an open-source dataset and benchmark suite for Ising models. Our goal is to curate a public dataset of Ising models, provide a comprehensive benchmark of state-of-the-art reinforcement learning algorithms alongside an industry-standard solver baseline, and offer detailed tutorials for each reinforcement learning algorithm. 
 
-## Graph Distributions
-
-| Types | Description |
-| ----- | ----------- |
-| Barabasi-Albert (BA) | Random scale-free networks |
-| Erdos-Renyi (ER) | Random graphs of fixed vertex set and fixed edges of equal probability |
-| Powerlaw (PL) | Random graphs, degree distribution follows a powerlaw |
-| Gset | Set of Maxcut graphs containing: Even, Tor, and Skewed graphs |
-
-## Graph Datasets
-
-| Datasets | Description |
-| -------- | ----------- |
-| syn_BA | Dataset of Barabasi-Albert graphs ranging from 100 to 3000 nodes | 
-| syn_ER | Dataset of Erdoes-Renyi graphs ranging from 100 to 3000 nodes |
-| syn_PL | Dataset of Power Law graphs ranging from 100 to 3000 nodes | 
+Explore our comprehensive benchmark suite and in-depth tutorials at [rl4ising-docs.readthedocs.io](https://rl4ising-docs.readthedocs.io/en/latest/). <br>
+Our curated datasets of various Ising models is at [huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances](https://huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances).
 
 ## Ising Model Datasets
+We curate a diverse collection of over 170,000 Ising models and construct two distinct datasets:
 
-N/A
+- **Dataset 1**: Classification based on spin interactions
+- **Dataset 2**: Classification based on model dimensionality
 
-## Basline Solvers
+### Dataset 1
 
-| Solvers | Description |
-| ------- | ----------- |
-| [Variational Classical Annealing](https://github.com/RNN-VCA-CO/RNN-VCA-CO/tree/main) | VCA iteratively improves candidate solutions by minimizing a defined cost function. Leveraging variational principles, VCA explores the solution space aiming to find near-optimal or optimal solutions efficiently. |
-| [S2V-DQN](https://github.com/Hanjun-Dai/graph_comb_opt) | S2V-DQN combines graph representation learning (Structure2Vec) and deep Q-learning to find solutions for combinatorial optimization problems. |
-| [ECO-DQN](https://github.com/tomdbar/eco-dqn) | ECO-DQN solves for the MaxCut problem through the use of an Deep Q-Network and their unique, "learning to explore at test time" approach. This exploratory combinatorial optimization approach improves on the pre-existing S2V-DQN algorithm, allowing the agent to add and remove vertices from the solution subset. Key features of the algorithm include: allowing the agent to flip a vertex more than once (reversible action); continually re-evaluating Q-values to explore the solution space at test time; and providing intermediate rewards when reaching locally optimal solutions during the search process.  |
-| Gurobi | Upon defining an optimization model with decision variables, an objective function, and constraints, Gurobi applies algorithms usch as simplex or branch-and-bound to find an optimal solution efficiently.  |
+| Types of Ising Models | Description | Instances | Spin Range | Coupling Range |
+| --------------------- | ----------- | :-------: | :--------: | :------------: |
+| Spin Glass            | ...         |           | 0 - 0      | 0 - 0          | 
+| Ferromagnetic         | ...         |           | 0 - 0      | 0 - 0          | 
+| Anti-Ferromagnetic    | ...         |           | 0 - 0      | 0 - 0          | 
 
-## BA Benchmark
+### Dataset 2
 
-The following table represents the results for MaxCut on the syn_BA dataset.
+| Types of Ising Models | Description | Instances | Spin Range | Coupling Range |
+| --------------------- | ----------- | :-------: | :--------: | :------------: |
+| 1D ising Models       | ...         |           | 0 - 0      | 0 - 0          |
+| 2D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
+| 3D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
+| 4D ising Models       | ...         |           | 0 - 0      | 0 - 0          | 
 
-| Nodes | Graph ID | ECO-DQN | S2V-DQN | Gurobi | 
-| ----- | -------- | ------- | ------- | ------ |
-|100|0|285|277|285|
-|100|1|284|283|284|
-|100|2|287|275|287|
-|100|3|282|278|282|
-|100|4|285|284|285|
-|100|5|287|275|287|
-|100|6|282|283|282|
-|100|7|285|277|285|
-|100|8|282|272|282|
-|100|9|282|275|282|
-|100|10|284|285|284|
-|100|11|286|285|286|
-|100|12|287|281|287|
-|100|13|285|285|285|
-|100|14|288|270|288|
-|100|15|281|277|281|
-|100|16|283|283|283|
-|100|17|284|277|284|
-|100|18|281|285|281|
-|100|19|288|275|288|
-|100|20|280|283|280|
-|100|21|283|283|283|
-|100|22|285|277|285|
-|100|23|284|282|284|
-|100|24|283|277|283|
-|100|25|280|272|280|
-|100|26|282|274|283|
-|100|27|281|280|281|
-|100|28|283|270|283|
-|100|29|281|277|281|
-|200|0|584|559|585|
-|200|1|586|545|586|
-|200|2|576|561|579|
-|200|3|575|543|576|
-|200|4|581|556|581|
-|200|5|584|567|584|
-|200|6|587|563|587|
-|200|7|585|573|585|
-|200|8|583|558|584|
-|200|9|582|550|583|
-|200|10|578|554|578|
-|200|11|580|551|581|
-|200|12|585|551|585|
-|200|13|582|555|582|
-|200|14|585|577|585|
-|200|15|584|559|584|
-|200|16|584|557|584|
-|200|17|579|563|581|
-|200|18|588|558|588|
-|200|19|579|565|579|
-|200|20|582|546|582|
-|200|21|588|557|588|
-|200|22|588|570|588|
-|200|23|584|563|585|
-|200|24|578|546|580|
-|200|25|587|551|587|
-|200|26|581|551|581|
-|200|27|585|547|585|
-|200|28|582|558|582|
-|200|29|583|563|583|
-|300|0|873|841|882|
-|300|1|876|821|879|
-|300|2|878|818|879|
-|300|3|875|823|882|
-|300|4|875|817|879|
-|300|5|881|848|884|
-|300|6|869|818|872|
-|300|7|874|820|881|
-|300|8|880|826|884|
-|300|9|874|831|882|
-|300|10|874|827|880|
-|300|11|871|820|876|
-|300|12|876|832|879|
-|300|13|875|815|885|
-|300|14|869|815|874|
-|300|15|875|801|883|
-|300|16|887|841|888|
-|300|17|872|810|881|
-|300|18|877|829|884|
-|300|19|871|820|874|
-|300|20|879|823|879|
-|300|21|880|833|881|
-|300|22|882|856|887|
-|300|23|882|833|886|
-|300|24|874|817|878|
-|300|25|867|812|873|
-|300|26|873|816|877|
-|300|27|876|845|880|
-|300|28|880|826|882|
-|300|29|874|829|882|
-|400|0|1172|1064|1177|
-|400|1|1170|1119|1181|
-|400|2|1179|1134|1185|
-|400|3|1169|1088|1187|
-|400|4|1168|1106|1178|
-|400|5|1167|1093|1176|
-|400|6|1171|1095|1179|
-|400|7|1160|1102|1174|
-|400|8|1184|1105|1186|
-|400|9|1173|1111|1181|
-|400|10|1168|1121|1181|
-|400|11|1164|1078|1178|
-|400|12|1174|1107|1183|
-|400|13|1175|1119|1182|
-|400|14|1172|1103|1177|
-|400|15|1155|1074|1174|
-|400|16|1167|1103|1182|
-|400|17|1175|1115|1181|
-|400|18|1169|1104|1177|
-|400|19|1169|1083|1177|
-|400|20|1166|1082|1175|
-|400|21|1162|1111|1175|
-|400|22|1165|1110|1174|
-|400|23|1170|1108|1179|
-|400|24|1167|1082|1173|
-|400|25|1171|1105|1181|
-|400|26|1169|1100|1182|
-|400|27|1162|1104|1175|
-|400|28|1167|1108|1182|
-|400|29|1165|1083|1181|
-|500|0|1454|1386|1471|
-|500|1|1432|1293|1478|
-|500|2|1461|1393|1478|
-|500|3|1453|1362|1468|
-|500|4|1468|1392|1483|
-|500|5|1474|1387|1477|
-|500|6|1460|1361|1479|
-|500|7|1453|1381|1477|
-|500|8|1448|1380|1472|
-|500|9|1477|1370|1477|
-|500|10|1463|1381|1469|
-|500|11|1466|1373|1486|
-|500|12|1465|1397|1476|
-|500|13|1459|1369|1477|
-|500|14|1448|1350|1481|
-|500|15|1461|1349|1483|
-|500|16|1464|1387|1472|
-|500|17|1467|1394|1478|
-|500|18|1461|1353|1487|
-|500|19|1468|1428|1480|
-|500|20|1473|1354|1477|
-|500|21|1482|1396|1489|
-|500|22|1448|1348|1476|
-|500|23|1464|1368|1478|
-|500|24|1472|1405|1481|
-|500|25|1456|1372|1479|
-|500|26|1465|1386|1472|
-|500|27|1467|1370|1480|
-|500|28|1465|1386|1476|
-|500|29|1452|1377|1471|
+## Benchmark Suite
+Our benchmark suite consists of two integral components, a solver baseline and SOTA RL benchmark, allowing for the direct comparison of the classical optimization methods vs modern RL-based approaches.
 
-## ER Benchmark
+- **Solver Baseline**: Offers transparent and provable optimal or near-optimial solutions while leveraging highly optimized, memory-efficient algorithms. Most importantly, solvers provide an upper bound enabling the measurement of solution quality for approximate methods such as RL-based algorithms. 
+- **SOTA RL Benchmark**: Showcases key milestones of state-of-the-art RL algorithms over the years in terms of performance and scalability. Most importantly, we highlight the current top-of-the-line RL algorithms providing high quality solutions with a scaliability and time advantage against industry solvers.
 
-The following table represents the results for MaxCut on the syn_BA dataset.
+| Algorithm/Solver | Description | Reference                          |
+| ---------------- | ----------- | ---------------------------------- |
+| Gurobi           | ----------- | [1](https://www.gurobi.com)        |
+| IBM CPLEX        | ----------- | [2](https://www.ibm.com/docs/en/icos/22.1.1?topic=optimizers-users-manual-cplex) |
+| COPT             | ----------- | [3](https://arxiv.org/abs/2208.14314) |
+| SCIP             | ----------- | [4](https://optimization-online.org/2024/02/the-scip-optimization-suite-9-0/) |
+| ECOLE            | ----------- | [5](https://arxiv.org/abs/2011.06069) |
+| MOSEK            | ----------- | [6](https://docs.mosek.com/latest/pythonfusion/index.html) |
+| L2A              | ----------- | [7]() |
+| VCA              | ----------- | [8](https://www.nature.com/articles/s42256-021-00401-3) |
+| MCPG             | ----------- | [9](https://arxiv.org/abs/2307.00783) |
+| ECO-DQN          | ----------- | [10](https://arxiv.org/abs/1909.04063) |
+| S2V-DQN          | ----------- | [11](https://dl.acm.org/doi/10.5555/3295222.3295382) |
 
-| Nodes | Graph ID | ECO-DQN | S2V-DQN | Gurobi | 
-| ----- | -------- | ------- | ------- | ------ |
-|100|0|520|484|.|
-|100|1|523|482|.|
-|100|2|530|488|.|
-|100|3|505|470|.|
-|100|4|506|468|.|
-|100|5|494|457|.|
-|100|6|499|468|.|
-|100|7|492|457|.|
-|100|8|509|477|.|
-|100|9|493|465|.|
-|100|10|519|477|.|
-|100|11|511|470|.|
-|100|12|472|440|.|
-|100|13|482|448|.|
-|100|14|488|462|.|
-|100|15|524|478|.|
-|100|16|507|473|.|
-|100|17|517|484|.|
-|100|18|503|469|.|
-|100|19|523|466|.|
-|100|20|493|461|.|
-|100|21|509|472|.|
-|100|22|511|473|.|
-|100|23|528|488|.|
-|100|24|484|437|.|
-|100|25|507|466|.|
-|100|26|525|489|.|
-|100|27|506|474|.|
-|100|28|557|525|.|
-|100|29|498|444|.|
-|200|0|1878|1771|.|
-|200|1|1850|1768|.|
-|200|2|1875|1783|.|
-|200|3|1867|1780|.|
-|200|4|1944|1849|.|
-|200|5|1869|1785|.|
-|200|6|1870|1769|.|
-|200|7|1850|1782|.|
-|200|8|1803|1727|.|
-|200|9|1889|1774|.|
-|200|10|1866|1769|.|
-|200|11|1814|1721|.|
-|200|12|1836|1723|.|
-|200|13|1815|1741|.|
-|200|14|1818|1743|.|
-|200|15|1868|1770|.|
-|200|16|1865|1767|.|
-|200|17|1874|1788|.|
-|200|18|1853|1768|.|
-|200|19|1817|1719|.|
-|200|20|1870|1766|.|
-|200|21|1874|1775|.|
-|200|22|1872|1764|.|
-|200|23|1857|1765|.|
-|200|24|1880|1790|.|
-|200|25|1829|1749|.|
-|200|26|1841|1755|.|
-|200|27|1864|1770|.|
-|200|28|1900|1822|.|
-|200|29|1846|1763|.|
-|300|0|3992|3872|.|
-|300|1|4154|4007|.|
-|300|2|4099|3985|.|
-|300|3|3998|3890|.|
-|300|4|4020|3857|.|
-|300|5|4079|3955|.|
-|300|6|4097|3954|.|
-|300|7|4000|3871|.|
-|300|8|4074|3938|.|
-|300|9|4096|3953|.|
-|300|10|4051|3950|.|
-|300|11|4067|3943|.|
-|300|12|4104|3969|.|
-|300|13|4070|3905|.|
-|300|14|4030|3927|.|
-|300|15|4050|3923|.|
-|300|16|4051|3930|.|
-|300|17|4075|3973|.|
-|300|18|4120|4038|.|
-|300|19|4080|3977|.|
-|300|20|4017|3890|.|
-|300|21|4088|3942|.|
-|300|22|4071|3941|.|
-|300|23|4096|3975|.|
-|300|24|3982|3857|.|
-|300|25|4035|3916|.|
-|300|26|4060|3929|.|
-|300|27|3973|3835|.|
-|300|28|4025|3885|.|
-|300|29|4155|4019|.|
-|400|0|7082|6905|.|
-|400|1|7003|6826|.|
-|400|2|6960|6798|.|
-|400|3|7019|6878|.|
-|400|4|7037|6838|.|
-|400|5|7018|6867|.|
-|400|6|7068|6906|.|
-|400|7|7115|6937|.|
-|400|8|6977|6770|.|
-|400|9|6959|6745|.|
-|400|10|7052|6872|.|
-|400|11|7048|6850|.|
-|400|12|7109|6956|.|
-|400|13|7015|6856|.|
-|400|14|7003|6811|.|
-|400|15|7081|6904|.|
-|400|16|7005|6815|.|
-|400|17|7023|6838|.|
-|400|18|7059|6910|.|
-|400|19|7005|6874|.|
-|400|20|7008|6825|.|
-|400|21|7078|6898|.|
-|400|22|6994|6820|.|
-|400|23|6913|6778|.|
-|400|24|7083|6845|.|
-|400|25|7097|6934|.|
-|400|26|7044|6876|.|
-|400|27|7041|6877|.|
-|400|28|7033|6886|.|
-|400|29|7026|6852|.|
-|500|0|10835|10612|.|
-|500|1|10866|10683|.|
-|500|2|10817|10605|.|
-|500|3|10729|10460|.|
-|500|4|10778|10568|.|
-|500|5|10900|10754|.|
-|500|6|10922|10739|.|
-|500|7|10862|10624|.|
-|500|8|10833|10629|.|
-|500|9|10845|10695|.|
-|500|10|10760|10543|.|
-|500|11|10899|10717|.|
-|500|12|10871|10664|.|
-|500|13|10760|10557|.|
-|500|14|10904|10727|.|
-|500|15|10904|10705|.|
-|500|16|10904|10756|.|
-|500|17|10842|10694|.|
-|500|18|10912|10754|.|
-|500|19|10850|10587|.|
-|500|20|10713|10493|.|
-|500|21|10894|10730|.|
-|500|22|10801|10565|.|
-|500|23|10742|10538|.|
-|500|24|10902|10765|.|
-|500|25|10877|10667|.|
-|500|26|10820|10606|.|
-|500|27|10813|10648|.|
-|500|28|10824|10634|.|
-|500|29|10844|10599|.|
+
+### Solver Baseline
+
+| Solvers   | Spin Glass         | Ferromagnetic      | Anti-Ferromagnetic | 1D Ising           | 2D Ising           | 3D Ising           | 4D Ising           |
+| --------- | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
+| Gurobi    | :white_check_mark: | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :x:                | :x:                |
+| IBM CPLEX | :white_check_mark: | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+| COPT      | :white_check_mark: | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :x:                | :x:                |
+| SCIP      | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+| ECOLE     | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+| MOSEK     | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+
+### Benchmarks
+
+| Becnhmark | Spin Glass         | Ferromagnetic      | Anti-Ferromagnetic | 1D Ising           | 2D Ising           | 3D Ising           | 4D Ising           |
+| --------- | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: | :----------------: |
+| L2A       | :white_check_mark: | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :x:                | :x:                |
+| VCA       | :white_check_mark: | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+| MCPG      | :white_check_mark: | :x:                | :x:                | :white_check_mark: | :white_check_mark: | :x:                | :x:                |
+| ECO-DQN   | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+| S2V-DQN   | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                | :x:                |
+
+
+## Tutorials
+
+## File Structure
+```
+    ├── docs           : RL4Ising website. 
+    └── tutorials      : MIP solver and RL algorithm tutorials.
+```
+
+## Motivation
