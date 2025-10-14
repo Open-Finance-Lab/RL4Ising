@@ -14,9 +14,9 @@ We curate a diverse collection of over 170,000 Ising models and construct two di
 
 | Types of Ising Models | Description | Instances | Spin Range | Coupling Range |
 | --------------------- | ----------- | :-------: | :--------: | :------------: |
-| Spin Glass            | ...         |           | 0 - 0      | 0 - 0          | 
-| Ferromagnetic         | ...         |           | 0 - 0      | 0 - 0          | 
-| Anti-Ferromagnetic    | ...         |           | 0 - 0      | 0 - 0          | 
+| Spin Glass            | ...         | 14,045    | 0 - 0      | 0 - 0          | 
+| Ferromagnetic         | ...         | 90,000    | 0 - 0      | 0 - 0          | 
+| Anti-Ferromagnetic    | ...         | 90,007    | 0 - 0      | 0 - 0          | 
 
 ### Dataset 2
 
