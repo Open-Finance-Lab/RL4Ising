@@ -20,7 +20,9 @@
       <script src="../_static/theme.js" defer></script>
     
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="search" title="Search" href="../search.html" /> 
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="REINFORCE Algorithm" href="reinforce.html" />
+  <link rel="prev" title="Variational Neural Annealing (VCA)" href="vca.html" /> 
   </head>
 
   <body>
@@ -39,7 +41,7 @@
     <div class="nav-item">
       <a href="../index.html#rl4ising"
          class="nav-link ">
-         Introduction
+         Overview
       </a>
     </div>
   
@@ -59,7 +61,7 @@
   
     <div class="nav-item">
       <a href="../index.html#rl4ising"
-         class="nav-link ">
+         class="nav-link  router-link-active">
          Reinforcement Learning Algorithms
       </a>
     </div>
@@ -113,7 +115,7 @@
     <div class="nav-item">
       <a href="../index.html#rl4ising"
          class="nav-link ">
-         Introduction
+         Overview
       </a>
     </div>
   
@@ -133,7 +135,7 @@
   
     <div class="nav-item">
       <a href="../index.html#rl4ising"
-         class="nav-link ">
+         class="nav-link  router-link-active">
          Reinforcement Learning Algorithms
       </a>
     </div>
@@ -187,13 +189,13 @@
   
     <div class="sidebar-group">
       <p class="caption">
-        <span class="caption-text"><a href="../index.html#rl4ising">Introduction</a></span>
+        <span class="caption-text"><a href="../index.html#rl4ising">Overview</a></span>
       </p>
       <ul class="">
         
           <li class="toctree-l1 ">
             
-              <a href="../introduction/overview.html" class="reference internal ">Overview</a>
+              <a href="../overview/key_concepts.html" class="reference internal ">Key Concepts</a>
             
 
             
@@ -202,16 +204,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="../introduction/motivation.html" class="reference internal ">Motivation</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../introduction/content.html" class="reference internal ">Content</a>
+              <a href="../overview/content.html" class="reference internal ">Content</a>
             
 
             
@@ -229,7 +222,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="../datasets/classification.html" class="reference internal ">Classification of Ising Models</a>
+              <a href="../datasets/datasets.html" class="reference internal ">Datasets</a>
             
 
             
@@ -238,7 +231,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="../datasets/spin_glass.html" class="reference internal ">Spin Glass Dataset</a>
+              <a href="../datasets/dataset1.html" class="reference internal ">Spin Glass Dataset</a>
             
 
             
@@ -247,25 +240,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="../datasets/spin_ice.html" class="reference internal ">Spin-Ice Dataset</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../datasets/ferromagnetic.html" class="reference internal ">Ferromagnetic Dataset</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../datasets/anti_ferromagnetic.html" class="reference internal ">Anti-Ferromagnetic Dataset</a>
+              <a href="../datasets/dataset2.html" class="reference internal "><no title></a>
             
 
             
@@ -281,6 +256,42 @@
       </p>
       <ul class="">
         
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/gurobi.html" class="reference internal ">Gurobi Solver</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/cplex.html" class="reference internal ">IBM ILOG CPLEX Solver</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/copt.html" class="reference internal ">COPT Solver</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/scip.html" class="reference internal ">SCIP Solver</a>
+            
+
+            
+          </li>
+
+        
       </ul>
     </div>
   
@@ -288,7 +299,53 @@
       <p class="caption">
         <span class="caption-text"><a href="../index.html#rl4ising">Reinforcement Learning Algorithms</a></span>
       </p>
-      <ul class="">
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="s2v.html" class="reference internal ">S2V-DQN Algorithm</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="vca.html" class="reference internal ">Variational Neural Annealing (VCA)</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Monte Carlo Policy Gradient with Local Search (MCPG)</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#overview" class="reference internal">Overview</a></li>
+                
+                  <li class="toctree-l2"><a href="#strengths" class="reference internal">Strengths</a></li>
+                
+                  <li class="toctree-l2"><a href="#weaknesses" class="reference internal">Weaknesses</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="reinforce.html" class="reference internal ">REINFORCE Algorithm</a>
+            
+
+            
+          </li>
+
         
       </ul>
     </div>
@@ -299,6 +356,15 @@
       </p>
       <ul class="">
         
+          <li class="toctree-l1 ">
+            
+              <a href="../benchmark/results.html" class="reference internal ">Benchmark Results</a>
+            
+
+            
+          </li>
+
+        
       </ul>
     </div>
   
@@ -308,6 +374,33 @@
       </p>
       <ul class="">
         
+          <li class="toctree-l1 ">
+            
+              <a href="../competition/overview.html" class="reference internal ">Overview</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../competition/rl4maxcut.html" class="reference internal ">Task 1: RL4MaxCut</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../competition/rl4ising.html" class="reference internal ">Task 2: RL4Ising</a>
+            
+
+            
+          </li>
+
+        
       </ul>
     </div>
   
@@ -316,6 +409,15 @@
         <span class="caption-text"><a href="../index.html#rl4ising">References</a></span>
       </p>
       <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../references/dataset_references.html" class="reference internal ">Dataset References</a>
+            
+
+            
+          </li>
+
         
       </ul>
     </div>
@@ -334,6 +436,14 @@
   
 
   <ul class="page-nav">
+  <li class="prev">
+    <a href="vca.html"
+       title="previous chapter">← Variational Neural Annealing (VCA)</a>
+  </li>
+  <li class="next">
+    <a href="reinforce.html"
+       title="next chapter">REINFORCE Algorithm →</a>
+  </li>
 </ul>
   
 </div>
@@ -370,6 +480,14 @@ Similar to ECO-DQN, MCPG continues to explore during inference. Determining when
           </div>
           <div class="page-nav">
             <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="vca.html"
+       title="previous chapter">← Variational Neural Annealing (VCA)</a>
+  </li>
+  <li class="next">
+    <a href="reinforce.html"
+       title="next chapter">REINFORCE Algorithm →</a>
+  </li>
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2018-present, Eduardo Naufel Schettino.
     <br>

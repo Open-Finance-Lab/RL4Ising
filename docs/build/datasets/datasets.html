@@ -13,7 +13,6 @@
         <script src="../_static/documentation_options.js?v=9dc39874"></script>
         <script src="../_static/doctools.js?v=9bcbadda"></script>
         <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
       
       <!-- bundled in js (rollup iife) -->
@@ -21,7 +20,9 @@
       <script src="../_static/theme.js" defer></script>
     
   <link rel="index" title="Index" href="../genindex.html" />
-  <link rel="search" title="Search" href="../search.html" /> 
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Spin Glass Dataset" href="dataset1.html" />
+  <link rel="prev" title="Content" href="../overview/content.html" /> 
   </head>
 
   <body>
@@ -40,13 +41,13 @@
     <div class="nav-item">
       <a href="../index.html#rl4ising"
          class="nav-link ">
-         Introduction
+         Overview
       </a>
     </div>
   
     <div class="nav-item">
       <a href="../index.html#rl4ising"
-         class="nav-link ">
+         class="nav-link  router-link-active">
          Datasets
       </a>
     </div>
@@ -114,13 +115,13 @@
     <div class="nav-item">
       <a href="../index.html#rl4ising"
          class="nav-link ">
-         Introduction
+         Overview
       </a>
     </div>
   
     <div class="nav-item">
       <a href="../index.html#rl4ising"
-         class="nav-link ">
+         class="nav-link  router-link-active">
          Datasets
       </a>
     </div>
@@ -188,13 +189,13 @@
   
     <div class="sidebar-group">
       <p class="caption">
-        <span class="caption-text"><a href="../index.html#rl4ising">Introduction</a></span>
+        <span class="caption-text"><a href="../index.html#rl4ising">Overview</a></span>
       </p>
       <ul class="">
         
           <li class="toctree-l1 ">
             
-              <a href="../introduction/overview.html" class="reference internal ">Overview</a>
+              <a href="../overview/key_concepts.html" class="reference internal ">Key Concepts</a>
             
 
             
@@ -203,16 +204,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="../introduction/motivation.html" class="reference internal ">Motivation</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="../introduction/content.html" class="reference internal ">Content</a>
+              <a href="../overview/content.html" class="reference internal ">Content</a>
             
 
             
@@ -226,11 +218,34 @@
       <p class="caption">
         <span class="caption-text"><a href="../index.html#rl4ising">Datasets</a></span>
       </p>
-      <ul class="">
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Datasets</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#classification-of-ising-models" class="reference internal">Classification of Ising Models</a></li>
+                
+                  <li class="toctree-l2"><a href="#spin-glass-ising-model" class="reference internal">Spin Glass Ising Model</a></li>
+                
+                  <li class="toctree-l2"><a href="#spin-ice-ising-model" class="reference internal">Spin Ice Ising Model</a></li>
+                
+                  <li class="toctree-l2"><a href="#ferromagnetic-ising-model" class="reference internal">Ferromagnetic Ising Model</a></li>
+                
+                  <li class="toctree-l2"><a href="#anti-ferromagnetic-ising-model" class="reference internal">Anti-Ferromagnetic Ising Model</a></li>
+                
+              </ul>
+            
+          </li>
+
         
           <li class="toctree-l1 ">
             
-              <a href="classification.html" class="reference internal ">Classification of Ising Models</a>
+              <a href="dataset1.html" class="reference internal ">Spin Glass Dataset</a>
             
 
             
@@ -239,34 +254,7 @@
         
           <li class="toctree-l1 ">
             
-              <a href="spin_glass.html" class="reference internal ">Spin Glass Dataset</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="spin_ice.html" class="reference internal ">Spin-Ice Dataset</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="ferromagnetic.html" class="reference internal ">Ferromagnetic Dataset</a>
-            
-
-            
-          </li>
-
-        
-          <li class="toctree-l1 ">
-            
-              <a href="anti_ferromagnetic.html" class="reference internal ">Anti-Ferromagnetic Dataset</a>
+              <a href="dataset2.html" class="reference internal "><no title></a>
             
 
             
@@ -452,6 +440,14 @@
   
 
   <ul class="page-nav">
+  <li class="prev">
+    <a href="../overview/content.html"
+       title="previous chapter">← Content</a>
+  </li>
+  <li class="next">
+    <a href="dataset1.html"
+       title="next chapter">Spin Glass Dataset →</a>
+  </li>
 </ul>
   
 </div>
@@ -461,76 +457,39 @@
   <section id="datasets">
 <h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">¶</a></h1>
 <p><strong>Dataset Introduction</strong></p>
-<p>Our dataset collection spans a diverse set of spin systems that are central to both statistical physics and combinatorial optimization. These instances serve as benchmarks for algorithms tackling complex energy landscapes. Below is a high-level introduction to the core instance types and how we organize our datasets.</p>
-<p>To facilitate benchmarking across different complexity levels and problem types, we partition each Ising model type into <strong>three subcategories</strong>:</p>
-<ul class="simple">
-<li><p><strong>Simple</strong>
-Instances with fewer than 256 spins. These systems are small enough for exhaustive methods or exact solvers and often have regular or predictable interaction patterns.</p></li>
-<li><p><strong>Intermediate</strong>
-Instances with between 256 and 1023 spins. These are more challenging due to increased size or interaction complexity. They are well-suited for testing heuristic or hybrid quantum-classical methods.</p></li>
-<li><p><strong>Complex</strong>
-Instances with 1024 spins or more. These often represent high-dimensional spin glasses or large-scale simulations of physical systems. They pose significant challenges for both classical and quantum solvers, making them important benchmarks for state-of-the-art techniques in physics and optimization.</p></li>
-</ul>
-<p><strong>Instances of Ising Models</strong></p>
-<table class="docutils align-default" id="id1">
-<caption><span class="caption-text">Title</span><a class="headerlink" href="#id1" title="Link to this table">¶</a></caption>
-<colgroup>
-<col style="width: 25.0%" />
-<col style="width: 25.0%" />
-<col style="width: 50.0%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Heading row 1, column 1</p></th>
-<th class="head"><p>Heading row 1, column 2</p></th>
-<th class="head"><p>Heading row 1, column 3</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Row 1, column 1</p></td>
-<td></td>
-<td><p>Row 1, column 3</p></td>
-</tr>
-<tr class="row-odd"><td><p>Row 2, column 1</p></td>
-<td><p>Row 2, column 2</p></td>
-<td><p>Row 2, column 3</p></td>
-</tr>
-</tbody>
-</table>
-<img alt="_static/instances_model_figure.png" class="align-center" src="_static/instances_model_figure.png" />
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="spin_glass.html">Spin Glass Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spin_glass.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin_glass.html#instances">Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin_glass.html#dataset-references">Dataset References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="spin_ice.html">Spin-Ice Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="spin_ice.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin_ice.html#instances">Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="spin_ice.html#dataset-references">Dataset References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="ferromagnetic.html">Ferromagnetic Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#instances">Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ferromagnetic.html#dataset-references">Dataset References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="anti_ferromagnetic.html">Anti-Ferromagnetic Dataset</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html#description-of-ising-model-type">Description of Ising Model Type</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html#instances">Instances</a></li>
-<li class="toctree-l2"><a class="reference internal" href="anti_ferromagnetic.html#dataset-references">Dataset References</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<section id="classification-of-ising-models">
+<h2>Classification of Ising Models<a class="headerlink" href="#classification-of-ising-models" title="Link to this heading">¶</a></h2>
+</section>
+<section id="spin-glass-ising-model">
+<h2>Spin Glass Ising Model<a class="headerlink" href="#spin-glass-ising-model" title="Link to this heading">¶</a></h2>
+<p>Spin glass systems are characterized by disorder and frustration. These models are difficult to optimize due to their intricate energy landscapes, making them ideal benchmarks for advanced optimization algorithms such as reinforcement learning, quantum annealing, and simulated annealing.</p>
+</section>
+<section id="spin-ice-ising-model">
+<h2>Spin Ice Ising Model<a class="headerlink" href="#spin-ice-ising-model" title="Link to this heading">¶</a></h2>
+<p>Inspired by the arrangement of protons in ice, spin ice models mimic “ice rules” in spin configurations, leading to emergent quasiparticle behavior and exotic magnetic monopole excitations. These models are of great interest in condensed matter physics and have recently gained traction in programmable quantum simulators and artificial materials.</p>
+</section>
+<section id="ferromagnetic-ising-model">
+<h2>Ferromagnetic Ising Model<a class="headerlink" href="#ferromagnetic-ising-model" title="Link to this heading">¶</a></h2>
+<p>These instances represent one of the simplest yet most fundamental systems in statistical mechanics. In ferromagnetic configurations, all spins prefer to align in the same direction, minimizing the system’s energy. They exhibit critical behavior such as phase transitions and are widely used in benchmarking due to their well-understood structure.</p>
+</section>
+<section id="anti-ferromagnetic-ising-model">
+<h2>Anti-Ferromagnetic Ising Model<a class="headerlink" href="#anti-ferromagnetic-ising-model" title="Link to this heading">¶</a></h2>
+<p>Conversely to ferromagnetic models, the spins of anti-ferromagnetic configurations prefer to anti-align to minimize the energy.</p>
+</section>
 </section>
 
 
           </div>
           <div class="page-nav">
             <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="../overview/content.html"
+       title="previous chapter">← Content</a>
+  </li>
+  <li class="next">
+    <a href="dataset1.html"
+       title="next chapter">Spin Glass Dataset →</a>
+  </li>
 </ul><div class="footer" role="contentinfo">
       &#169; Copyright 2018-present, Eduardo Naufel Schettino.
     <br>
