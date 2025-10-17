@@ -74,8 +74,27 @@ Our benchmark suite consists of two integral components, a solver baseline and S
 
 ## File Structure
 ```
-    ├── docs           : RL4Ising website. 
-    └── tutorials      : MIP solver and RL algorithm tutorials.
+    ├── docs            : ReadTheDocs website containing algorithms, tutorials, and dataset overview. 
+    |
+    └── src
+        ├── algorithms
+        |   ├── vca                 : Variational Classical Annealing algorithm.
+        |   ├── mcpg                : Monte Carlo Policy Gradient algorithm modified for Ising models.
+        |   ├── eco_dqn             : Exploratory Combinatorial Optimization with Reinforcement Learning modified for Ising models.
+        |   └── vta                 : Variational Transformer Annealing algorithm, transformer based VCA.
+        |       
+        ├── baseline
+        |   ├── gurobi.py           : Gurobi MIP Solver.
+        |   ├── ilog_cplex.py       : IBM ILOG CPLEX MIP Solver.
+        |   └── copt.py             : COPT Cardinal MIP Solver.
+        |
+        └── tutorials
+            ├── vca.ipynb           : VCA tutorial for EA 100 node instance.
+            ├── mcpg.ipynb          : MCPG tutorial for EA 100 node instance.
+            └── eco_dqn.ipynb       : ECO-DQN tutorial for EA 100 node instance.
+
+
+
 ```
 
 ## Motivation
