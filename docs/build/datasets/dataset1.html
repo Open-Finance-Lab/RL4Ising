@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <title>Spin Glass Dataset</title>
+    
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script src="../_static/documentation_options.js?v=9dc39874"></script>
+        <script src="../_static/doctools.js?v=9bcbadda"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="&lt;no title&gt;" href="dataset2.html" />
+  <link rel="prev" title="Datasets" href="datasets.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Reinforcement Learning for Ising Model</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Overview
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link  router-link-active">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Overview
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link  router-link-active">
+         Datasets
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Baseline Solvers
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Reinforcement Learning Algorithms
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         Benchmark
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         RL4Ising Competition 2025
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#rl4ising"
+         class="nav-link ">
+         References
+      </a>
+    </div>
+  
+
+
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/Open-Finance-Lab/RL4Ising"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Overview</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../overview/key_concepts.html" class="reference internal ">Key Concepts</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../overview/content.html" class="reference internal ">Content</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Datasets</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="datasets.html" class="reference internal ">Datasets</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Spin Glass Dataset</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#spin-glass-dataset" class="reference internal">Spin Glass Dataset</a></li>
+                
+                  <li class="toctree-l2"><a href="#ferromagnetic-dataset" class="reference internal">Ferromagnetic Dataset</a></li>
+                
+                  <li class="toctree-l2"><a href="#anti-ferromagnetic-dataset" class="reference internal">Anti-Ferromagnetic Dataset</a></li>
+                
+                  <li class="toctree-l2"><a href="#spin-ice-dataset" class="reference internal">Spin-Ice Dataset</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="dataset2.html" class="reference internal "><no title></a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Baseline Solvers</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/gurobi.html" class="reference internal ">Gurobi Solver</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/cplex.html" class="reference internal ">IBM ILOG CPLEX Solver</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/copt.html" class="reference internal ">COPT Solver</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../baseline_solvers/scip.html" class="reference internal ">SCIP Solver</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Reinforcement Learning Algorithms</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../rl_algorithms/s2v.html" class="reference internal ">S2V-DQN Algorithm</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../rl_algorithms/vca.html" class="reference internal ">Variational Neural Annealing (VCA)</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../rl_algorithms/mcpg.html" class="reference internal ">Monte Carlo Policy Gradient with Local Search (MCPG)</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../rl_algorithms/reinforce.html" class="reference internal ">REINFORCE Algorithm</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">Benchmark</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../benchmark/results.html" class="reference internal ">Benchmark Results</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">RL4Ising Competition 2025</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../competition/overview.html" class="reference internal ">Overview</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../competition/rl4maxcut.html" class="reference internal ">Task 1: RL4MaxCut</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../competition/rl4ising.html" class="reference internal ">Task 2: RL4Ising</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#rl4ising">References</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="../references/dataset_references.html" class="reference internal ">Dataset References</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Spin Glass Dataset</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="datasets.html"
+       title="previous chapter">← Datasets</a>
+  </li>
+  <li class="next">
+    <a href="dataset2.html"
+       title="next chapter">&lt;no title&gt; →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="spin-glass-dataset">
+<h1>Spin Glass Dataset<a class="headerlink" href="#spin-glass-dataset" title="Link to this heading">¶</a></h1>
+<section id="description-of-ising-model-type">
+<h2>Description of Ising Model Type<a class="headerlink" href="#description-of-ising-model-type" title="Link to this heading">¶</a></h2>
+<p>A spin glass Ising model is characterized by frustrated interactions, meaning some neighboring spins prefer to align while others prefer to oppose. These conflicting orientations prevent the system from reaching a uniformly ordered state.
+The energy Hamiltonian of this model can be given by</p>
+<div class="math notranslate nohighlight">
+\[H = -J \sum_{i&lt;j}s_i s_j\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(J_{&lt;i,j&gt;}\)</span> can be either positive or negative. If <span class="math notranslate nohighlight">\(J_{&lt;i,j&gt;}\)</span> is positive, <span class="math notranslate nohighlight">\(s_i\)</span> and <span class="math notranslate nohighlight">\(s_j\)</span> prefer to align and, conversely, they will anti-align. This is the precise phenomenon that defines a spin glass.</p>
+</section>
+<section id="instances">
+<h2>Instances<a class="headerlink" href="#instances" title="Link to this heading">¶</a></h2>
+<p>The instances we are providing for the spin glass Ising model type consist of weighted edges. Note that there are both positive and negative edge weights. The complexity of an instance is determined not only by the size, but also the pattern of interactions and frustration.</p>
+<section id="d">
+<h3>1D<a class="headerlink" href="#d" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>6</p></td>
+<td><p>300</p></td>
+<td><p>Complex</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>6</p></td>
+<td><p>250</p></td>
+<td><p>Complex</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>6</p></td>
+<td><p>200</p></td>
+<td><p>Complex</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>6</p></td>
+<td><p>150</p></td>
+<td><p>Complex</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>6</p></td>
+<td><p>100</p></td>
+<td><p>Complex</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>10</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>9</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>8</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>7</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>6</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>5</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id11" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>4</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id12" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>3</p></td>
+<td><p>Simple</p></td>
+<td><p>Chain</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id14">
+<h3>2D<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>25</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id100" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>50</p></td>
+<td><p>1,225</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>3</p></td>
+<td><p>20</p></td>
+<td><p>Complex</p></td>
+<td><p>Toroidal</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id17" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>3</p></td>
+<td><p>15</p></td>
+<td><p>Complex</p></td>
+<td><p>Toroidal</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id18" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>3</p></td>
+<td><p>10</p></td>
+<td><p>Complex</p></td>
+<td><p>Toroidal</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id19" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>50</p></td>
+<td><p>900</p></td>
+<td><p>Intermediate</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id20" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>50</p></td>
+<td><p>625</p></td>
+<td><p>Intermediate</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id21" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>256</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id148"><span class="problematic" id="id22">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>50</p></td>
+<td><p>400</p></td>
+<td><p>Simple</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id23" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>50</p></td>
+<td><p>225</p></td>
+<td><p>Simple</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id24" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>196</p></td>
+<td><p>Simple</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id149"><span class="problematic" id="id25">[3]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>144</p></td>
+<td><p>Simple</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id150"><span class="problematic" id="id26">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>1,000</p></td>
+<td><p>100</p></td>
+<td><p>Simple</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id27" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>Simple</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id151"><span class="problematic" id="id28">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>64</p></td>
+<td><p>Simple</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id152"><span class="problematic" id="id29">[3]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>64</p></td>
+<td><p>Simple</p></td>
+<td><p>Cylindrical</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id30" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>49</p></td>
+<td><p>Simple</p></td>
+<td><p>Cylindrical</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id31" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>36</p></td>
+<td><p>Simple</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id153"><span class="problematic" id="id32">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>36</p></td>
+<td><p>Simple</p></td>
+<td><p>Cylindrical</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id33" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>25</p></td>
+<td><p>Simple</p></td>
+<td><p>Cylindrical</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id34" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>16</p></td>
+<td><p>Simple</p></td>
+<td><p>Random</p></td>
+<td><p><a href="#id154"><span class="problematic" id="id35">[3]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>16</p></td>
+<td><p>Simple</p></td>
+<td><p>Cylindrical</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id36" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id37">
+<h3>3D<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>8,000</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id38" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>5,730</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id108" id="id39" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>4,644</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id108" id="id40" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>4,312</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id108" id="id41" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>4,101</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id108" id="id42" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>3,920</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id108" id="id43" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>3,558</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id108" id="id44" role="doc-noteref"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>3,375</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id45" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>1,000</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id46" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>3</p></td>
+<td><p>7</p></td>
+<td><p>Complex</p></td>
+<td><p>Toroidal</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id47" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>3</p></td>
+<td><p>6</p></td>
+<td><p>Complex</p></td>
+<td><p>Toroidal</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id48" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>3</p></td>
+<td><p>5</p></td>
+<td><p>Complex</p></td>
+<td><p>Toroidal</p></td>
+<td><p><a class="footnote-reference brackets" href="#id107" id="id49" role="doc-noteref"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>512</p></td>
+<td><p>Intermediate</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id50" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>216</p></td>
+<td><p>Simple</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id51" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>64</p></td>
+<td><p>Simple</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id52" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>54</p></td>
+<td><p>Simple</p></td>
+<td><p>Cubic</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id53" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>50</p></td>
+<td><p>Simple</p></td>
+<td><p>Diamond</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id54" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>36</p></td>
+<td><p>Simple</p></td>
+<td><p>Cubic</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id55" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>32</p></td>
+<td><p>Simple</p></td>
+<td><p>Diamond</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id56" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>24</p></td>
+<td><p>Simple</p></td>
+<td><p>Cubic</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id57" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>20</p></td>
+<td><p>18</p></td>
+<td><p>Simple</p></td>
+<td><p>Diamond</p></td>
+<td><p><a class="footnote-reference brackets" href="#id105" id="id58" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id59">
+<h3>4D<a class="headerlink" href="#id59" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>4,096</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id60" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>2,041</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id61" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>1,296</p></td>
+<td><p>Complex</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id62" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>625</p></td>
+<td><p>Intermediate</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id63" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>50</p></td>
+<td><p>256</p></td>
+<td><p>Intermediate</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id64" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>1,000</p></td>
+<td><p>81</p></td>
+<td><p>Simple</p></td>
+<td><p>EA</p></td>
+<td><p><a class="footnote-reference brackets" href="#id101" id="id65" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mean-field">
+<h3>Mean-Field<a class="headerlink" href="#mean-field" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>900</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id66" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>900</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id67" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>800</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id68" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>800</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id69" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>700</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id70" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>700</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id71" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>600</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id72" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>600</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id73" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>500</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id74" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>500</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id75" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>400</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id76" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>400</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id77" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>300</p></td>
+<td><p>Intermediate</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id78" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>300</p></td>
+<td><p>Intermediate</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id79" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>200</p></td>
+<td><p>Simple</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id80" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>200</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id81" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>Simple</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id82" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>100</p></td>
+<td><p>100</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id83" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>40</p></td>
+<td><p>100</p></td>
+<td><p>Simple</p></td>
+<td><p>Hopfield</p></td>
+<td><p><a class="footnote-reference brackets" href="#id109" id="id84" role="doc-noteref"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>25</p></td>
+<td><p>32</p></td>
+<td><p>Simple</p></td>
+<td><p>WPE</p></td>
+<td><p><a class="footnote-reference brackets" href="#id100" id="id85" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>10</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id86" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>9</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id87" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>8</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id88" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>7</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id89" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>6</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id90" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>5</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id91" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>4</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id92" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>500</p></td>
+<td><p>3</p></td>
+<td><p>Simple</p></td>
+<td><p>FC</p></td>
+<td><p><a class="footnote-reference brackets" href="#id103" id="id93" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>10</p></td>
+<td><p>72</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id106" id="id94" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>10</p></td>
+<td><p>56</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id106" id="id95" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>10</p></td>
+<td><p>40</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id106" id="id96" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>10</p></td>
+<td><p>24</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id106" id="id97" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Spin Glass</p></td>
+<td><p>10</p></td>
+<td><p>8</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id106" id="id98" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Spin Glass</p></td>
+<td><p>1</p></td>
+<td><p>16</p></td>
+<td><p>Simple</p></td>
+<td><p>SK</p></td>
+<td><p><a class="footnote-reference brackets" href="#id104" id="id99" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="dataset-references">
+<h2>Dataset References<a class="headerlink" href="#dataset-references" title="Link to this heading">¶</a></h2>
+<p>Below contain the references to the datasets we gathered on this website.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id100" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id15">1</a>,<a role="doc-backlink" href="#id85">2</a>)</span>
+<p>Variational Neural Annealing</p>
+</aside>
+</aside>
+<p>VNA proposes a parameterized annealing model to stochastically search for ground states of the Ising model. It features fully connected spin glass instances, as well as Edwards-Anderson (EA) and Wishart Planted Ensemble (WPE) graph instances of the Ising model.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id101" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id16">1</a>,<a role="doc-backlink" href="#id20">2</a>,<a role="doc-backlink" href="#id21">3</a>,<a role="doc-backlink" href="#id23">4</a>,<a role="doc-backlink" href="#id24">5</a>,<a role="doc-backlink" href="#id27">6</a>,<a role="doc-backlink" href="#id38">7</a>,<a role="doc-backlink" href="#id45">8</a>,<a role="doc-backlink" href="#id46">9</a>,<a role="doc-backlink" href="#id50">10</a>,<a role="doc-backlink" href="#id51">11</a>,<a role="doc-backlink" href="#id52">12</a>,<a role="doc-backlink" href="#id60">13</a>,<a role="doc-backlink" href="#id61">14</a>,<a role="doc-backlink" href="#id62">15</a>,<a role="doc-backlink" href="#id63">16</a>,<a role="doc-backlink" href="#id64">17</a>,<a role="doc-backlink" href="#id65">18</a>)</span>
+<p>Searching for Spin Glass Ground States Through Deep Reinforcement Learning</p>
+</aside>
+</aside>
+<p>This paper introduces DIRAC, a deep reinforcement learning framework that can be trained on small-scale spin glass instances and applied to arbitrarily large ones. DIRAC has found success in scalability compared to other methods and has been tested on 2D, 3D, and 4D EA spin-glass instances.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id102" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<p>Finding the Ground State of Spin Hamiltonians with Reinforcement Learning</p>
+</aside>
+</aside>
+<p>This paper demonstrates that an RL agent is able to surpass the performance of standard heuristic temperature schedule for two classes of Hamiltonians. They show the performance of their implementation by training on weak-strong clusters (bipartite graph with two fully connected clusters) and nearest-neighbor square spin glasses.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id103" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id6">1</a>,<a role="doc-backlink" href="#id7">2</a>,<a role="doc-backlink" href="#id8">3</a>,<a role="doc-backlink" href="#id9">4</a>,<a role="doc-backlink" href="#id10">5</a>,<a role="doc-backlink" href="#id11">6</a>,<a role="doc-backlink" href="#id12">7</a>,<a role="doc-backlink" href="#id13">8</a>,<a role="doc-backlink" href="#id86">9</a>,<a role="doc-backlink" href="#id87">10</a>,<a role="doc-backlink" href="#id88">11</a>,<a role="doc-backlink" href="#id89">12</a>,<a role="doc-backlink" href="#id90">13</a>,<a role="doc-backlink" href="#id91">14</a>,<a role="doc-backlink" href="#id92">15</a>,<a role="doc-backlink" href="#id93">16</a>)</span>
+<p>Quantum-enhanced Markov Chain Monte Carlo</p>
+</aside>
+</aside>
+<p>This paper provides an algorithm that leverages MCMC to sample from the Boltzmann distribution of classical Ising models. It performs testing analysis on spin-glass Ising models ranging from 3 to 10 spins, and each set of spins featuring both a fully connected and line connected configuration.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id104" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id99">5</a><span class="fn-bracket">]</span></span>
+<p>Wavelength-Division Multiplexing Optical Ising Simulator</p>
+</aside>
+</aside>
+<p>This paper uses a spatial photonic Ising machine to compute Ising Hamiltonians of programmable Ising models. To demonstrate the programming capabilities, testing is performed on $pm$ J models, Sherrington-Kirkpatrick (SK) models, and locally connected $J_1-J_2$ models</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id105" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id30">1</a>,<a role="doc-backlink" href="#id31">2</a>,<a role="doc-backlink" href="#id33">3</a>,<a role="doc-backlink" href="#id34">4</a>,<a role="doc-backlink" href="#id36">5</a>,<a role="doc-backlink" href="#id53">6</a>,<a role="doc-backlink" href="#id54">7</a>,<a role="doc-backlink" href="#id55">8</a>,<a role="doc-backlink" href="#id56">9</a>,<a role="doc-backlink" href="#id57">10</a>,<a role="doc-backlink" href="#id58">11</a>)</span>
+<p>Beyond-classical computation in quantum simulation</p>
+</aside>
+</aside>
+<p>This paper uses seeks to establish quantum computing’s capability of handling complex computational problems, within the field of quantum simulation. With the problem scope focusing on the Ising model, they compare their QPU’s results against classical algorithms (Schrodinger equation dependent) on various spin-glass models. Specifically, testing was performed on 2D cylindrical spin-glass, 3D cubic spin-glass, 3D diamond spin-glass, and bi-clique spin-glass instances.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id106" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id94">1</a>,<a role="doc-backlink" href="#id95">2</a>,<a role="doc-backlink" href="#id96">3</a>,<a role="doc-backlink" href="#id97">4</a>,<a role="doc-backlink" href="#id98">5</a>)</span>
+<p>Quantum-enhanced greedy combinatorial optimization solver</p>
+</aside>
+</aside>
+<p>This paper introduces a quantum heuristic optimization algorithm for combinatorial optimization problems. Attempting to overcome noise constraints by reducing the problem to a classical greedy problem. Specifically, this heuristic algorithm is tested on Sherrington-Kirkpatrick spin-glass problems.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id107" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>,<a role="doc-backlink" href="#id4">4</a>,<a role="doc-backlink" href="#id5">5</a>,<a role="doc-backlink" href="#id17">6</a>,<a role="doc-backlink" href="#id18">7</a>,<a role="doc-backlink" href="#id19">8</a>,<a role="doc-backlink" href="#id47">9</a>,<a role="doc-backlink" href="#id48">10</a>,<a role="doc-backlink" href="#id49">11</a>)</span>
+<p>Biq Mac Library</p>
+</aside>
+</aside>
+<p>A dataset for QUBO and Max-Cut instances curated for the development of a QUBO and Max-Cut solver (Biq Mac). Within this dataset contains Ising model instances, specifically, Toroidal grid graphs and Ising chain instances.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id108" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>12<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id39">1</a>,<a role="doc-backlink" href="#id40">2</a>,<a role="doc-backlink" href="#id41">3</a>,<a role="doc-backlink" href="#id42">4</a>,<a role="doc-backlink" href="#id43">5</a>,<a role="doc-backlink" href="#id44">6</a>)</span>
+<p>On Computational Complexity of 3D Ising Spin Glass: Lessons from D-Wave Annealer</p>
+</aside>
+</aside>
+<p>This paper searches for the ground state of 3D spin-glass instances using annealing methods on the D-Wave quantum annealer. To demostrate the NP-hard complexity of 3D spin-glass instances, they performed testing on 3D instances ranging from 3558 to 5627 spins.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id109" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>14<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id66">1</a>,<a role="doc-backlink" href="#id67">2</a>,<a role="doc-backlink" href="#id68">3</a>,<a role="doc-backlink" href="#id69">4</a>,<a role="doc-backlink" href="#id70">5</a>,<a role="doc-backlink" href="#id71">6</a>,<a role="doc-backlink" href="#id72">7</a>,<a role="doc-backlink" href="#id73">8</a>,<a role="doc-backlink" href="#id74">9</a>,<a role="doc-backlink" href="#id75">10</a>,<a role="doc-backlink" href="#id76">11</a>,<a role="doc-backlink" href="#id77">12</a>,<a role="doc-backlink" href="#id78">13</a>,<a role="doc-backlink" href="#id79">14</a>,<a role="doc-backlink" href="#id80">15</a>,<a role="doc-backlink" href="#id81">16</a>,<a role="doc-backlink" href="#id82">17</a>,<a role="doc-backlink" href="#id83">18</a>,<a role="doc-backlink" href="#id84">19</a>)</span>
+<p>Solving Statistical Mechanics Using Variational Autoregressive Networks</p>
+</aside>
+</aside>
+</section>
+</section>
+<section id="ferromagnetic-dataset">
+<h1>Ferromagnetic Dataset<a class="headerlink" href="#ferromagnetic-dataset" title="Link to this heading">¶</a></h1>
+<section id="id110">
+<h2>Description of Ising Model Type<a class="headerlink" href="#id110" title="Link to this heading">¶</a></h2>
+<p>In a ferromagnetic Ising model, neighboring spins want to align. In other words, they want to point in the same direction to minimize the system’s energy. Uniformity, whether it be in the form of all spins pointing up or down, is a key trait of the ferromagnetic instance.
+The energy Hamiltonian of this model can be given by</p>
+<div class="math notranslate nohighlight">
+\[E = -J \sum_{i&lt;j}s_i s_j\]</div>
+<p>If the neighboring spins point in the same direction, the energy of the system will decrease and, conversely arranged, will increase. Essential behaviors of the ferromagnetic model are the randomness of spins at high temperatures, and the aligned spins at lower temperatures.</p>
+</section>
+<section id="id111">
+<h2>Instances<a class="headerlink" href="#id111" title="Link to this heading">¶</a></h2>
+<p>The instances we are providing for the ferromagnetic Ising model type consist of weighted edges. Note that there are only positive weights present for these instances. The complexity of an instance is determined by its size (# of nodes).</p>
+<section id="id112">
+<h3>2D<a class="headerlink" href="#id112" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id155"><span class="problematic" id="id113">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id156"><span class="problematic" id="id114">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id157"><span class="problematic" id="id115">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id158"><span class="problematic" id="id116">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id159"><span class="problematic" id="id117">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id160"><span class="problematic" id="id118">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id161"><span class="problematic" id="id119">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id162"><span class="problematic" id="id120">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id163"><span class="problematic" id="id121">[13]_</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id122">
+<h2>Dataset References<a class="headerlink" href="#id122" title="Link to this heading">¶</a></h2>
+<p>Below contain the references to the datasets we gathered on this website.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id123" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></span>
+<ol class="upperalpha simple" start="16">
+<li><p>Mehta, M. Bukov, C.-H. Wang, A.G. Day, C. Richardson, C.K. Fisher, D.J. Schwab. A high-bias, low-variance introduction to machine learning for physicists. Physics Reports, 810 (2019), pp. 1-124, 10.1016/j.physrep.2019.03.001</p></li>
+</ol>
+</aside>
+</aside>
+<p>This textbook introduces Machine Learning and its applications towards physics problems and research. Within the textbook, contains an Ising model dataset of locally-connected 2D Ising models.</p>
+</section>
+</section>
+<section id="anti-ferromagnetic-dataset">
+<h1>Anti-Ferromagnetic Dataset<a class="headerlink" href="#anti-ferromagnetic-dataset" title="Link to this heading">¶</a></h1>
+<section id="id124">
+<h2>Description of Ising Model Type<a class="headerlink" href="#id124" title="Link to this heading">¶</a></h2>
+<p>In an anti-ferromagnetic Ising model, neighboring spins want to anti-align. In other words, they want to point in the opposite directions to minimize the system’s energy.
+The energy Hamiltonian of this model can be given by</p>
+<div class="math notranslate nohighlight">
+\[E = -J \sum_{i&lt;j}s_i s_j\]</div>
+<p>If the neighboring spins point in the same direction, the energy of the system will increase and, conversely arranged, will decrease.</p>
+</section>
+<section id="id125">
+<h2>Instances<a class="headerlink" href="#id125" title="Link to this heading">¶</a></h2>
+<p>The instances we are providing for the anti-ferromagnetic Ising model type consist of weighted edges. Note that there are only negative weights present for these instances. The complexity of an instance is determined by its size (# of nodes).</p>
+<section id="id126">
+<h3>2D<a class="headerlink" href="#id126" title="Link to this heading">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id164"><span class="problematic" id="id127">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id165"><span class="problematic" id="id128">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id166"><span class="problematic" id="id129">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id167"><span class="problematic" id="id130">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id168"><span class="problematic" id="id131">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id169"><span class="problematic" id="id132">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id170"><span class="problematic" id="id133">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id171"><span class="problematic" id="id134">[13]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>10,000</p></td>
+<td><p>1,600</p></td>
+<td><p>Complex</p></td>
+<td><p>Metropolis</p></td>
+<td><p><a href="#id172"><span class="problematic" id="id135">[13]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>256</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id173"><span class="problematic" id="id136">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>196</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id174"><span class="problematic" id="id137">[3]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>144</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id175"><span class="problematic" id="id138">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>100</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id176"><span class="problematic" id="id139">[3]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>64</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id177"><span class="problematic" id="id140">[3]_</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>36</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id178"><span class="problematic" id="id141">[3]_</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Anti-Ferromagnetic</p></td>
+<td><p>1</p></td>
+<td><p>16</p></td>
+<td><p>Intermediate</p></td>
+<td><p>…</p></td>
+<td><p><a href="#id179"><span class="problematic" id="id142">[3]_</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id143">
+<h2>Dataset References<a class="headerlink" href="#id143" title="Link to this heading">¶</a></h2>
+<p>Below contain the references to the datasets we gathered on this website.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id144" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<p>Finding the Ground State of Spin Hamiltonians with Reinforcement Learning</p>
+</aside>
+</aside>
+<hr class="docutils" />
+<p><strong>Citation:</strong>
+Mills, K., Ronagh, P. &amp; Tamblyn, I. Finding the ground state of spin Hamiltonians with reinforcement learning. Nat Mach Intell 2, 509–517 (2020). <a class="reference external" href="https://doi.org/10.1038/s42256-020-0226-x">https://doi.org/10.1038/s42256-020-0226-x</a></p>
+<p>This paper demonstrates that an RL agent is able to surpass the performance of standard heuristic temperature schedule for two classes of Hamiltonians. They show the performance of their implementation by training on weak-strong clusters (bipartite graph with two fully connected clusters) and nearest-neighbor square spin glasses.</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id145" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>13<span class="fn-bracket">]</span></span>
+<p>A high-bias, low-variance introduction to Machine Learning for physicists</p>
+</aside>
+</aside>
+<p>This textbook introduces Machine Learning and its applications towards physics problems and research. Within the textbook, contains an Ising model dataset of locally-connected 2D Ising models.</p>
+</section>
+</section>
+<section id="spin-ice-dataset">
+<h1>Spin-Ice Dataset<a class="headerlink" href="#spin-ice-dataset" title="Link to this heading">¶</a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<p>…</p>
+</section>
+<section id="id146">
+<h2>Instances<a class="headerlink" href="#id146" title="Link to this heading">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+<col style="width: 16.7%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Instance</p></th>
+<th class="head"><p># of Instances</p></th>
+<th class="head"><p># of Spins</p></th>
+<th class="head"><p>Complexity</p></th>
+<th class="head"><p>Graph Geometry</p></th>
+<th class="head"><p>Reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id147">
+<h2>Dataset References<a class="headerlink" href="#id147" title="Link to this heading">¶</a></h2>
+<p>Below contain the references to the datasets we gathered on this website.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="datasets.html"
+       title="previous chapter">← Datasets</a>
+  </li>
+  <li class="next">
+    <a href="dataset2.html"
+       title="next chapter">&lt;no title&gt; →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2018-present, Eduardo Naufel Schettino.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.9.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>
