@@ -9,6 +9,9 @@ build:
   os: ubuntu-20.04
   tools:
     python: mambaforge-4.10
+  jobs:
+    pre_build:
+      - pip install sphinx_press_theme==0.9.1
 
 conda:
   environment: docs/environment.yml
