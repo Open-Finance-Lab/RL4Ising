@@ -605,13 +605,46 @@ def mcpg_solver(nvar, config, data, verbose=False):
 '''
 Dataloader
 '''
-def maxcut_dataloader(path, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+def maxcut_dataloader(path,
+                      device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+    """
+    Load a Max-Cut instance from file and construct a graph data object
+    with additional preprocessing for MCPG / local search.
+
+    The input file format is expected to be:
+        line 1:  <num_nodes> <num_edges>
+        line i:  <node_u> <node_v> <edge_weight>
+
+    Node indices in the file are assumed to be 1-based.
+
+    Parameters
+    ----------
+    path : str
+        Path to the Max-Cut instance file.
+    device : torch.device
+        Device on which tensors are allocated.
+
+    Returns
+    -------
+    data_maxcut : Data
+        PyTorch Geometric Data object with auxiliary attributes used by MCPG.
+    num_nodes : int
+        Number of nodes in the graph.
+    """
+
+    # -----------------------------
+    # Read graph from file
+    # -----------------------------
     with open(path) as f:
-        fline = f.readline()
-        fline = fline.split()
+        fline = f.readline().split()
         num_nodes, num_edges = int(fline[0]), int(fline[1])
+
+        # Edge index tensor (2 x num_edges)
         edge_index = torch.LongTensor(2, num_edges)
+
+        # Edge weight tensor (num_edges x 1)
         edge_attr = torch.Tensor(num_edges, 1)
+
         cnt = 0
         while True:
             lines = f.readlines(num_edges * 2)
@@ -623,46 +656,101 @@ def maxcut_dataloader(path, device=torch.device('cuda' if torch.cuda.is_availabl
                 edge_index[1][cnt] = int(line[1]) - 1
                 edge_attr[cnt][0] = float(line[2])
                 cnt += 1
-        data_maxcut = Data(num_nodes=num_nodes,
-                           edge_index=edge_index, edge_attr=edge_attr)
-        data_maxcut = data_maxcut.to(device)
-        data_maxcut.edge_weight_sum = float(torch.sum(data_maxcut.edge_attr))
 
+        # Create PyTorch Geometric data object
+        data_maxcut = Data(
+            num_nodes=num_nodes,
+            edge_index=edge_index,
+            edge_attr=edge_attr
+        )
+        data_maxcut = data_maxcut.to(device)
+
+        # Total sum of edge weights
+        data_maxcut.edge_weight_sum = float(
+            torch.sum(data_maxcut.edge_attr)
+        )
+
+        # -----------------------------
+        # Build neighbor structures
+        # -----------------------------
         data_maxcut = append_neighbors(data_maxcut)
 
+        # -----------------------------
+        # Compute node degrees
+        # -----------------------------
         data_maxcut.single_degree = []
         data_maxcut.weighted_degree = []
         tensor_abs_weighted_degree = []
-        for i0 in range(data_maxcut.num_nodes):
-            data_maxcut.single_degree.append(len(data_maxcut.neighbors[i0]))
-            data_maxcut.weighted_degree.append(
-                float(torch.sum(data_maxcut.neighbor_edges[i0])))
-            tensor_abs_weighted_degree.append(
-                float(torch.sum(torch.abs(data_maxcut.neighbor_edges[i0]))))
-        tensor_abs_weighted_degree = torch.tensor(tensor_abs_weighted_degree)
-        data_maxcut.sorted_degree_nodes = torch.argsort(
-            tensor_abs_weighted_degree, descending=True)
 
+        for i0 in range(data_maxcut.num_nodes):
+            # Number of neighbors
+            data_maxcut.single_degree.append(
+                len(data_maxcut.neighbors[i0])
+            )
+
+            # Sum of incident edge weights
+            data_maxcut.weighted_degree.append(
+                float(torch.sum(data_maxcut.neighbor_edges[i0]))
+            )
+
+            # Sum of absolute incident edge weights
+            tensor_abs_weighted_degree.append(
+                float(torch.sum(
+                    torch.abs(data_maxcut.neighbor_edges[i0])
+                ))
+            )
+
+        tensor_abs_weighted_degree = torch.tensor(
+            tensor_abs_weighted_degree
+        )
+
+        # Nodes sorted by absolute weighted degree
+        data_maxcut.sorted_degree_nodes = torch.argsort(
+            tensor_abs_weighted_degree, descending=True
+        )
+
+        # -----------------------------
+        # Compute edge scores and auxiliary constants
+        # -----------------------------
         edge_degree = []
         add = torch.zeros(3, num_edges).to(device)
+
         for i0 in range(num_edges):
-            edge_degree.append(abs(edge_attr[i0].item())*(
-                tensor_abs_weighted_degree[edge_index[0][i0]]+tensor_abs_weighted_degree[edge_index[1][i0]]))
+            # Edge importance score (used for ordering)
+            edge_degree.append(
+                abs(edge_attr[i0].item()) * (
+                    tensor_abs_weighted_degree[edge_index[0][i0]] +
+                    tensor_abs_weighted_degree[edge_index[1][i0]]
+                )
+            )
+
             node_r = edge_index[0][i0]
             node_c = edge_index[1][i0]
-            add[0][i0] = - data_maxcut.weighted_degree[node_r] / \
-                2 + data_maxcut.edge_attr[i0] - 0.05
-            add[1][i0] = - data_maxcut.weighted_degree[node_c] / \
-                2 + data_maxcut.edge_attr[i0] - 0.05
-            add[2][i0] = data_maxcut.edge_attr[i0]+0.05
 
+            # Precomputed constants for local search updates
+            add[0][i0] = (
+                - data_maxcut.weighted_degree[node_r] / 2
+                + data_maxcut.edge_attr[i0] - 0.05
+            )
+            add[1][i0] = (
+                - data_maxcut.weighted_degree[node_c] / 2
+                + data_maxcut.edge_attr[i0] - 0.05
+            )
+            add[2][i0] = data_maxcut.edge_attr[i0] + 0.05
+
+        # Ensure neighbor edge tensors have batch dimension
         for i0 in range(num_nodes):
-            data_maxcut.neighbor_edges[i0] = data_maxcut.neighbor_edges[i0].unsqueeze(
-                0)
+            data_maxcut.neighbor_edges[i0] = (
+                data_maxcut.neighbor_edges[i0].unsqueeze(0)
+            )
+
         data_maxcut.add = add
+
+        # Sort edges by importance
         edge_degree = torch.tensor(edge_degree)
         data_maxcut.sorted_degree_edges = torch.argsort(
-            edge_degree, descending=True)
+            edge_degree, descending=True
+        )
 
         return data_maxcut, num_nodes
     
