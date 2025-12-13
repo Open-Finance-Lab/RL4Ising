@@ -754,61 +754,116 @@ def maxcut_dataloader(path,
 
         return data_maxcut, num_nodes
     
-def append_neighbors(data, device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
-    data.neighbors = []
-    data.neighbor_edges = []
+def append_neighbors(data,
+                     device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+    """
+    Augment a graph data object with neighbor and edge-adjacency information.
+
+    This function builds:
+      - Node-wise neighbor lists and incident edge weights
+      - Edge-wise neighbor node sets excluding the edge itself (n0, n1)
+      - Corresponding edge-weight tensors (n0_edges, n1_edges)
+
+    These auxiliary structures are used to accelerate local search updates
+    in MCPG-based Max-Cut / Ising optimization.
+
+    Parameters
+    ----------
+    data : Data
+        PyTorch Geometric Data object with attributes:
+        - num_nodes
+        - edge_index
+        - edge_attr
+    device : torch.device
+        Device on which tensors are allocated.
+
+    Returns
+    -------
+    Data
+        The input data object augmented with neighbor-related attributes.
+    """
+
+    # -----------------------------
+    # Initialize neighbor containers
+    # -----------------------------
+    data.neighbors = []        # neighbors[i]: list of neighbors of node i
+    data.neighbor_edges = []   # neighbor_edges[i]: edge weights incident to node i
     num_nodes = data.num_nodes
+
     for i in range(num_nodes):
         data.neighbors.append([])
         data.neighbor_edges.append([])
+
     edge_number = data.edge_index.shape[1]
 
-    for index in range(0, edge_number):
+    # -----------------------------
+    # Build node-wise adjacency lists
+    # -----------------------------
+    for index in range(edge_number):
         row = data.edge_index[0][index]
         col = data.edge_index[1][index]
         edge_weight = data.edge_attr[index][0].item()
 
+        # Undirected graph: add both directions
         data.neighbors[row].append(col.item())
         data.neighbor_edges[row].append(edge_weight)
+
         data.neighbors[col].append(row.item())
         data.neighbor_edges[col].append(edge_weight)
 
-    data.n0 = []
-    data.n1 = []
-    data.n0_edges = []
+    # -----------------------------
+    # Build edge-wise neighbor sets
+    # -----------------------------
+    data.n0 = []        # neighbors of edge's first endpoint (excluding second)
+    data.n1 = []        # neighbors of edge's second endpoint (excluding first)
+    data.n0_edges = []  # corresponding edge weights
     data.n1_edges = []
-    for index in range(0, edge_number):
+
+    for index in range(edge_number):
         row = data.edge_index[0][index]
         col = data.edge_index[1][index]
+
+        # Copy full neighbor lists
         data.n0.append(data.neighbors[row].copy())
         data.n1.append(data.neighbors[col].copy())
         data.n0_edges.append(data.neighbor_edges[row].copy())
         data.n1_edges.append(data.neighbor_edges[col].copy())
-        i = 0
+
+        # Remove the current edge endpoint from each list
         for i in range(len(data.n0[index])):
             if data.n0[index][i] == col:
                 break
         data.n0[index].pop(i)
         data.n0_edges[index].pop(i)
+
         for i in range(len(data.n1[index])):
             if data.n1[index][i] == row:
                 break
         data.n1[index].pop(i)
         data.n1_edges[index].pop(i)
 
+        # Convert to tensors
         data.n0[index] = torch.LongTensor(data.n0[index]).to(device)
         data.n1[index] = torch.LongTensor(data.n1[index]).to(device)
-        data.n0_edges[index] = torch.tensor(
-            data.n0_edges[index]).unsqueeze(0).to(device)
-        data.n1_edges[index] = torch.tensor(
-            data.n1_edges[index]).unsqueeze(0).to(device)
 
+        data.n0_edges[index] = torch.tensor(
+            data.n0_edges[index]
+        ).unsqueeze(0).to(device)
+        data.n1_edges[index] = torch.tensor(
+            data.n1_edges[index]
+        ).unsqueeze(0).to(device)
+
+    # -----------------------------
+    # Convert node-wise lists to tensors
+    # -----------------------------
     for i in range(num_nodes):
         data.neighbors[i] = torch.LongTensor(data.neighbors[i]).to(device)
         data.neighbor_edges[i] = torch.tensor(
-            data.neighbor_edges[i]).to(device)
+            data.neighbor_edges[i]
+        ).to(device)
 
     return data
+
 
 if __name__ == "__main__":
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
