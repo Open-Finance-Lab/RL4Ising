@@ -435,73 +435,150 @@ class simple(torch.nn.Module):
 Algorithm
 '''
 def mcpg_solver(nvar, config, data, verbose=False):
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    sampler = mcpg_sampling_ising
-    change_times = int(nvar/10)  # transition times for metropolis sampling
+    """
+    Monte Carlo Policy Gradient (MCPG) solver for combinatorial optimization
+    problems formulated as Ising models.
 
+    This solver alternates between:
+      1) Policy network optimization via REINFORCE,
+      2) MCMC-based sampling (Metropolis + local search),
+      3) Selecting elite samples to guide the next iteration.
+
+    Parameters
+    ----------
+    nvar : int
+        Number of variables / nodes in the problem.
+    config : dict
+        Configuration dictionary containing training and sampling hyperparameters.
+    data : object
+        Graph or problem-specific data structure.
+    verbose : bool
+        Whether to print intermediate optimization results.
+
+    Returns
+    -------
+    float
+        Best (minimum) objective value found.
+    torch.Tensor
+        Best solution configuration.
+    torch.Tensor
+        Energy values of the best solutions per chain.
+    torch.Tensor
+        Solution configurations corresponding to now_max_res.
+    """
+
+    # Select computation device
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    # Sampling function (Ising MCPG sampler)
+    sampler = mcpg_sampling_ising
+
+    # Number of accepted Metropolis transitions per chain
+    change_times = int(nvar / 10)
+
+    # Initialize policy network
     net = simple(nvar)
     net.to(device).reset_parameters()
+
+    # Optimizer
     optimizer = torch.optim.Adam(net.parameters(), lr=config['lr_init'])
 
+    # Initial samples are not available at the beginning
     start_samples = None
+
+    # -----------------------------
+    # Main training loop
+    # -----------------------------
     for epoch in range(config['max_epoch_num']):
 
+        # Periodically reset network parameters
         if epoch % config['reset_epoch_num'] == 0:
             net.to(device).reset_parameters()
             regular = config['regular_init']
 
         net.train()
+
+        # Inference-only mode for the first epoch
         if epoch <= 0:
             retdict = net(regular, None, None)
         else:
             retdict = net(regular, start_samples, value)
 
+        # Backpropagation
         retdict["loss"][0].backward()
+
+        # Gradient clipping for stability
         torch.nn.utils.clip_grad_norm_(net.parameters(), 1)
+
         optimizer.step()
 
-        # get start samples
+        # --------------------------------------------------
+        # Initial sampling (epoch 0)
+        # --------------------------------------------------
         if epoch == 0:
-            probs = (torch.zeros(nvar)+0.5).to(device)
+            # Start from uniform Bernoulli probabilities
+            probs = (torch.zeros(nvar) + 0.5).to(device)
+
+            # Initialize MCMC samples
             tensor_probs = sample_initializer(
-                config["problem_type"], probs, config, data=data)
+                config["problem_type"], probs, config, data=data
+            )
+
+            # Run sampler without Metropolis transitions
             temp_max, temp_max_info, temp_start_samples, value = sampler(
-                data, tensor_probs, probs, config['num_ls'], 0, config['total_mcmc_num'])
+                data, tensor_probs, probs,
+                config['num_ls'], 0, config['total_mcmc_num']
+            )
+
+            # Store current best solutions
             now_max_res = temp_max
             now_max_info = temp_max_info
+
+            # Repeat elite samples for next iteration
             tensor_probs = temp_max_info.clone()
             tensor_probs = tensor_probs.repeat(1, config['repeat_times'])
+
+            # Initialize start samples for policy gradient
             start_samples = temp_start_samples.t().to(device)
 
-        # get samples
+        # --------------------------------------------------
+        # Periodic resampling and elite selection
+        # --------------------------------------------------
         if epoch % config['sample_epoch_num'] == 0 and epoch > 0:
-            probs = retdict["output"][0]
-            probs = probs.detach()
+            # Get probabilities predicted by policy network
+            probs = retdict["output"][0].detach()
+
+            # Run MCPG sampler
             temp_max, temp_max_info, start_samples_temp, value = sampler(
-                data, tensor_probs, probs, config['num_ls'], change_times, config['total_mcmc_num'])
-            # update now_max
+                data, tensor_probs, probs,
+                config['num_ls'], change_times, config['total_mcmc_num']
+            )
+
+            # Update best solutions per chain
             for i0 in range(config['total_mcmc_num']):
                 if temp_max[i0] < now_max_res[i0]:
                     now_max_res[i0] = temp_max[i0]
                     now_max_info[:, i0] = temp_max_info[:, i0]
 
-            # update if min is too small
+            # Identify best and worst chains
             now_max = min(now_max_res).item()
             now_max_index = torch.argmin(now_max_res)
 
             now_min = max(now_max_res).item()
             now_min_index = torch.argmax(now_max_res)
 
+            # Replace the worst chain with the best one
             now_max_res[now_min_index] = now_max
-
             now_max_info[:, now_min_index] = now_max_info[:, now_max_index]
             temp_max_info[:, now_min_index] = now_max_info[:, now_max_index]
 
-            # select best samples
+            # Prepare samples for the next iteration
             tensor_probs = temp_max_info.clone()
             tensor_probs = tensor_probs.repeat(1, config['repeat_times'])
-            # construct the start point for next iteration
+
             start_samples = start_samples_temp.t()
+
+            # Optional logging
             if verbose:
                 if config["problem_type"] == "maxsat" and len(data.pdata) == 7:
                     res = max(now_max_res).item()
@@ -512,8 +589,13 @@ def mcpg_solver(nvar, config, data, verbose=False):
                     print("o {:.3f}".format((-min(now_max_res).item())))
                 else:
                     print("o {:f}".format((min(now_max_res).item())))
-        del (retdict)
 
+        # Explicitly free dictionary
+        del retdict
+
+    # -----------------------------
+    # Final result selection
+    # -----------------------------
     total_max = now_max_res
     best_sort = torch.argsort(now_max_res, descending=False)
     total_best_info = torch.squeeze(now_max_info[:, best_sort[0]])
