@@ -10,17 +10,60 @@ import time
 Sampler
 '''
 def sample_initializer(problem_type, probs, config,
-                       device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'), data=None):
+                       device=torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
+                       data=None):
+    """
+    Initialize MCMC samples for different problem types.
+
+    Parameters
+    ----------
+    problem_type : str
+        Type of optimization problem (e.g. 'r_cheegercut', 'n_cheegercut').
+    probs : torch.Tensor
+        Bernoulli probabilities used for random initialization.
+    config : dict
+        Configuration dictionary containing sampling parameters such as
+        'total_mcmc_num' and 'repeat_times'.
+    device : torch.device
+        Device on which tensors are allocated (CPU or GPU).
+    data : object, optional
+        Graph-related data structure containing node information, such as
+        number of nodes and degree-based ordering.
+
+    Returns
+    -------
+    torch.Tensor
+        Initialized samples with shape (num_nodes, num_samples).
+    """
+
+    # Special initialization strategy for Cheeger cut problems
     if problem_type in ["r_cheegercut", "n_cheegercut"]:
+        # Initialize all samples as zero vectors
         samples = torch.zeros(config['total_mcmc_num'], data.num_nodes)
-        index = data.sorted_degree_nodes[- config['total_mcmc_num']:]
+
+        # Select nodes with the largest degrees
+        index = data.sorted_degree_nodes[-config['total_mcmc_num']:]
+
+        # Activate one node per sample according to degree ranking
         for i in range(config['total_mcmc_num']):
             samples[i][index[i]] = 1
+
+        # Repeat samples to match the required number of MCMC chains
         samples = samples.repeat(config['repeat_times'], 1)
+
+        # Transpose to shape (num_nodes, num_samples)
         return samples.t()
+
+    # Default random initialization using Bernoulli distribution
     m = Bernoulli(probs)
+
+    # Sample binary states for all MCMC chains
     samples = m.sample([config['total_mcmc_num'] * config['repeat_times']])
+
+    # Detach from computation graph and move to target device
     samples = samples.detach().to(device)
+
+    # Transpose to shape (num_nodes, num_samples)
     return samples.t()
 
 def metro_sampling(probs, start_status, max_transfer_time,
