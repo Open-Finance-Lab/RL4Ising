@@ -866,40 +866,98 @@ def append_neighbors(data,
 
 
 if __name__ == "__main__":
+    """
+    Main entry point for running the MCPG solver.
+
+    This script:
+      1) Parses command-line arguments,
+      2) Loads configuration and problem instance,
+      3) Runs the MCPG solver,
+      4) Prints the final result and timing statistics.
+    """
+
+    # Select computation device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    # -----------------------------
+    # Argument parsing
+    # -----------------------------
     parser = argparse.ArgumentParser()
-    parser.add_argument("config_file", type=str,
-                        help="input the configuration file for the mcpg solver")
-    parser.add_argument("problem_instance", type=str,
-                        help="input the data file for the problem instance")
+    parser.add_argument(
+        "config_file",
+        type=str,
+        help="Path to the YAML configuration file for the MCPG solver"
+    )
+    parser.add_argument(
+        "problem_instance",
+        type=str,
+        help="Path to the problem instance file (e.g., Max-Cut / Max-SAT)"
+    )
 
     args = parser.parse_args()
+
+    # -----------------------------
+    # Load configuration
+    # -----------------------------
     with open(args.config_file) as f:
         config = yaml.safe_load(f)
 
     path = args.problem_instance
+
+    # -----------------------------
+    # Data loading
+    # -----------------------------
     start_time = time.perf_counter()
+
     dataloader = maxcut_dataloader
     data, nvar = dataloader(path)
+
     dataloader_t = time.perf_counter()
-    res, solutions, _, _ = mcpg_solver(nvar, config, data, verbose=True)
+
+    # -----------------------------
+    # Run MCPG solver
+    # -----------------------------
+    res, solutions, _, _ = mcpg_solver(
+        nvar, config, data, verbose=True
+    )
+
     mcpg_t = time.perf_counter()
 
+    # -----------------------------
+    # Output post-processing
+    # -----------------------------
     if config["problem_type"] == "maxsat" and len(data.pdata) == 7:
+        # Special handling for Max-SAT instances
         if res > data.pdata[5] * data.pdata[6]:
             res -= data.pdata[5] * data.pdata[6]
             print("SATISFIED")
             print("SATISFIED SOFT CLAUSES:", res)
-            print("UNSATISFIED SOFT CLAUSES:", data.pdata[1] - data.pdata[-1] - res)
-        else: 
-            res = res//data.pdata[5]-data.pdata[6]
+            print(
+                "UNSATISFIED SOFT CLAUSES:",
+                data.pdata[1] - data.pdata[-1] - res
+            )
+        else:
+            res = res // data.pdata[5] - data.pdata[6]
             print("UNSATISFIED")
-            
+
     elif "obj_type" in config and config["obj_type"] == "neg":
+        # Objective is negated
         print("OUTPUT: {:.2f}".format(-res))
+
     else:
+        # Default output
         print("OUTPUT: {:f}".format(res))
 
-
-    print("DATA LOADING TIME: {:f}".format(dataloader_t - start_time))
-    print("MCPG RUNNING TIME: {:f}".format(mcpg_t - dataloader_t))
+    # -----------------------------
+    # Timing statistics
+    # -----------------------------
+    print(
+        "DATA LOADING TIME: {:f}".format(
+            dataloader_t - start_time
+        )
+    )
+    print(
+        "MCPG RUNNING TIME: {:f}".format(
+            mcpg_t - dataloader_t
+        )
+    )
