@@ -316,47 +316,119 @@ def mcpg_sampling_ising(
 Network
 '''
 class simple(torch.nn.Module):
+    """
+    A simple probabilistic policy network.
+
+    This model learns a vector of Bernoulli probabilities using a single
+    linear layer followed by a sigmoid activation. It is mainly used as
+    a policy network in Monte Carlo Policy Gradient (MCPG) methods.
+    """
+
     def __init__(self, output_num):
+        """
+        Initialize the model.
+
+        Parameters
+        ----------
+        output_num : int
+            Number of output probabilities (e.g., number of nodes/spins).
+        """
         super(simple, self).__init__()
-        self.lin = torch.nn.Linear(1,  output_num)
+
+        # Linear layer mapping a constant input to output probabilities
+        self.lin = torch.nn.Linear(1, output_num)
+
+        # Sigmoid activation to constrain outputs to (0, 1)
         self.sigmoid = torch.nn.Sigmoid()
 
     def reset_parameters(self):
+        """Reset learnable parameters of the linear layer."""
         self.lin.reset_parameters()
 
-    def forward(self, alpha = 0.1, start_samples=None, value=None, 
+    def forward(self, alpha=0.1, start_samples=None, value=None,
                 device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')):
+        """
+        Forward pass of the policy network.
+
+        Depending on whether `start_samples` is provided, this function
+        either:
+          - returns probabilities and regularization only (inference mode), or
+          - computes a policy-gradient loss (training mode).
+
+        Parameters
+        ----------
+        alpha : float
+            Regularization coefficient for entropy-like penalty.
+        start_samples : torch.Tensor or None
+            Initial samples used for policy gradient computation,
+            shape (num_nodes, num_chains).
+        value : torch.Tensor or None
+            Advantage or reward signal per chain, shape (num_chains,).
+        device : torch.device
+            Device for computation.
+
+        Returns
+        -------
+        dict
+            Dictionary containing model outputs, regularization, and loss.
+        """
+
+        # Constant input (dummy input)
         x = torch.ones(1).to(device)
+
+        # Linear transformation followed by sigmoid
         x = self.lin(x)
         x = self.sigmoid(x)
 
-        x = (x-0.5) * 0.6 + 0.5
-        probs = x
-        probs = probs.squeeze()
+        # Slightly restrict probability range to avoid numerical extremes
+        x = (x - 0.5) * 0.6 + 0.5
+        probs = x.squeeze()
+
         retdict = {}
-        reg = probs * torch.log(probs) + (1-probs) * torch.log(1-probs )
+
+        # Entropy-style regularization term
+        # Encourages exploration and avoids probability collapse
+        reg = probs * torch.log(probs) + (1 - probs) * torch.log(1 - probs)
         reg = torch.mean(reg)
-        if start_samples == None:
-            retdict["output"] = [probs.squeeze(-1), "hist"]  # output
+
+        # --------------------------------------------------
+        # Inference mode: no samples provided
+        # --------------------------------------------------
+        if start_samples is None:
+            retdict["output"] = [probs.squeeze(-1), "hist"]
             retdict["reg"] = [reg, "sequence"]
             retdict["loss"] = [alpha * reg, "sequence"]
             return retdict
 
+        # --------------------------------------------------
+        # Training mode: policy gradient loss
+        # --------------------------------------------------
+
+        # Detach reward/advantage from computation graph
         res_samples = value.t().detach()
 
-        start_samples_idx = start_samples * \
-            probs + (1 - start_samples) * (1 - probs)
+        # Probability of observing start_samples under Bernoulli policy
+        start_samples_idx = (
+            start_samples * probs + (1 - start_samples) * (1 - probs)
+        )
+
+        # Log-likelihood of each sampled configuration
         log_start_samples_idx = torch.log(start_samples_idx)
         log_start_samples = log_start_samples_idx.sum(dim=1)
+
+        # REINFORCE-style policy gradient loss
         loss_ls = torch.mean(log_start_samples * res_samples)
+
+        # Total loss = policy loss + regularization
         loss = loss_ls + alpha * reg
 
-        retdict["output"] = [probs.squeeze(-1), "hist"]  # output
+        retdict["output"] = [probs.squeeze(-1), "hist"]
         retdict["reg"] = [reg, "sequence"]
         retdict["loss"] = [loss, "sequence"]
         return retdict
 
     def __repr__(self):
+        """Return class name for clean printing."""
         return self.__class__.__name__
 
 '''
