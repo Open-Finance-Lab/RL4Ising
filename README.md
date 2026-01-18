@@ -98,9 +98,8 @@ Our benchmark suite consists of two integral components, a solver baseline and S
 ```
 
 ## Reference
-Lin, L., Wang, Z., Mac Entee, H., Zhao, X., & Liu, X.-Y.  
+[Lin, L., Wang, Z., Mac Entee, H., Zhao, X., & Liu, X.-Y.  
 *Reinforcement Learning for Ising Models: Datasets and Benchmark*,  
-NeurIPS ML4PS Workshop, 2025.  
-[PDF](https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_245.pdf)
+NeurIPS ML4PS Workshop, 2025.](https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_245.pdf)
 
 
