@@ -60,8 +60,6 @@ RL4Ising
 
    references/dataset_references
 
-References
-==========
 
 .. _rl4ising-reference:
 
