@@ -71,7 +71,7 @@ def multiple_shot_instance(file_names, time_limit):
         single_shot_instance(file_name, time_limit)
 
 if __name__ == "__main__":
-    file_name = "data/RL/spin_glass/4x4/GSRL_16_ID0.txt"
+    file_name = "../../data/DRL/2D/35/DRL_35_ID0.txt"
     time_limit = 3600
     single_shot_instance(file_name, time_limit)
 
