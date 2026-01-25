@@ -47,7 +47,7 @@ def gurobi_solve(graph, file_path, time_limit=3600):
 
     x = model.addVars(nodes, vtype=gp.GRB.BINARY)
     objective = gp.quicksum(
-        (-J[i, j] / math.sqrt(nodes) ) * (2 * x[i] - 1) * (2 * x[j] - 1)
+        -J[i, j] * (2 * x[i] - 1) * (2 * x[j] - 1)
         for i in range(nodes) for j in range(i+1, nodes) if J[i, j] != 0.0
     )
     model.setObjective(objective, gp.GRB.MINIMIZE)
@@ -73,7 +73,7 @@ def multiple_shot_instance(file_names, time_limit):
         single_shot_instance(file_name, time_limit)
 
 if __name__ == "__main__":
-    file_name = "data/vna/SK/100_SK_seed1.txt"
+    file_name = "../../data/DRL/2D/10/DRL_10_ID0.txt"
     time_limit = 3600
     single_shot_instance(file_name, time_limit)
 
