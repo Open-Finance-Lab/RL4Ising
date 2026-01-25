@@ -1,5 +1,5 @@
 # MCPG Quickstart
-Environment setup: We recommend conda for the most convenient installation.
+Environment setup: We recommend conda for the most convenient installation. Conda environment files are located at `src/envs`.
 
 ```
 conda env create -f envs/mcpg_environment.yaml
