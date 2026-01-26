@@ -1,4 +1,4 @@
-## ⚠️ Environment Notes (VNA Reproduction)
+## Environment Notes (VNA Reproduction)
 
 This project reproduces **Variational Neural Annealing (VNA)** using the **original legacy implementation**.  
 To ensure faithful reproduction and fair benchmarking, we intentionally preserve the original software stack.
