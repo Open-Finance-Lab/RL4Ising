@@ -39,13 +39,13 @@ Configuration of Wavefunction RNN and Simulated Annealing Samping procedure is l
 
 # Reference
 
-This algorithm located in `src/algorithms/vca` refers to the Variational Classical Annealing algorithm in (Cheng Chen et al., 2023).
+This algorithm located in `src/algorithms/vca` refers to the Variational Classical Annealing algorithm in (Mohamed Hibat-Allah et al., 2021).
 
 Github:
 
 https://github.com/VectorInstitute/VariationalNeuralAnnealing
 
-Citation: 
+Citation:
 
 Fan, C., Shen, M., Nussinov, Z. et al. Searching for spin glass ground states through deep reinforcement learning. Nat Commun 14, 725 (2023). https://doi.org/10.1038/s41467-023-36363-w
 
