@@ -25,20 +25,20 @@ A breakdown of the content of our datset is found as a table below.
 
 | Dimension  | Type of Ising Model | Instances |          Spins          |          Couplings          |           Coupling Strength           |
 | ---------- | ------------------- | :-------: | :---------------------: | :-------------------------: | :-----------------------------------: |
-| 1D         | Classic             |    75    |  32$\textbf{--}$ 128  |    31$\textbf{--}$ 127    |       0.00$\textbf{--}$ 1.00       |
-|            | Spin-Glass          |   4,000   |   3$\textbf{--}$ 10   |     6$\textbf{--}$ 55     |      -5.00$\textbf{--}$ -4.22      |
-| 2D         | Classic             |    100    |  16$\textbf{--}$ 64  |    28$\textbf{--}$ 120    |       -1.00$\textbf{--}$ 1.00       |
-|            | Spin-Glass          |   2,075   | 16$\textbf{--}$ 1,600 |   32$\textbf{--}$ 3,210   |       -5.09$\textbf{--}$ 4.66       |
-|            | Ferromagnetic       |  90,000  |          1,600          |   83$\textbf{--}$ 1,246   |                 -1.00                 |
-|            | Anti-Ferromagnetic  |  90,000  |          1,600          | 1,874$\textbf{--}$ 3,037 |                 1.00                 |
-|            | Synthetic           |     9     | 100$\textbf{--}$ 400 |   200$\textbf{--}$ 800   | -294,541.00$\textbf{--}$ 375,001.00 |
-| 3D         | Spin-Glass          |    666    | 24$\textbf{--}$ 8,000 |  38$\textbf{--}$ 40,279  |       -5.24$\textbf{--}$ 5.03       |
-|            | Synthetic           |     9     | 125$\textbf{--}$ 343 |  375$\textbf{--}$ 1,029  | -298,103.00$\textbf{--}$ 375,001.00 |
-|            | Diamond             |    60    |  18$\textbf{--}$ 50  |    24$\textbf{--}$ 80    |       -1.00$\textbf{--}$ 1.00       |
-| 4D         | Spin-Glass          |   1,450   | 81$\textbf{--}$ 4,096 |  324$\textbf{--}$ 16,384  |       -5.28$\textbf{--}$ 4.97       |
-| $\infty$ | Biclique            |    100    |  20$\textbf{--}$ 36  |    35$\textbf{--}$ 99    |       -2.00$\textbf{--}$ 0.89       |
-|            | Spin-Glass          |   5,440   |  3$\textbf{--}$ 900  |  6$\textbf{--}$ 319,600  |       -4.45$\textbf{--}$ 3.92       |
-|            | Synthetic           |    30    | 100$\textbf{--}$ 300 | 4,950$\textbf{--}$ 44,850 | -246,443.00$\textbf{--}$ 280,065.00 |
+| 1D         | Classic             |    75    |  32 $\textbf{--}$ 128  |    31 $\textbf{--}$ 127    |       0.00 $\textbf{--}$ 1.00       |
+|            | Spin-Glass          |   4,000   |   3 $\textbf{--}$ 10   |     6 $\textbf{--}$ 55     |      -5.00 $\textbf{--}$ -4.22      |
+| 2D         | Classic             |    100    |  16 $\textbf{--}$ 64  |    28 $\textbf{--}$ 120    |       -1.00 $\textbf{--}$ 1.00       |
+|            | Spin-Glass          |   2,075   | 16 $\textbf{--}$ 1,600 |   32 $\textbf{--}$ 3,210   |       -5.09 $\textbf{--}$ 4.66       |
+|            | Ferromagnetic       |  90,000  |          1,600          |   83 $\textbf{--}$ 1,246   |                 -1.00                 |
+|            | Anti-Ferromagnetic  |  90,000  |          1,600          | 1,874 $\textbf{--}$ 3,037 |                 1.00                 |
+|            | Synthetic           |     9     | 100 $\textbf{--}$ 400 |   200 $\textbf{--}$ 800   | -294,541.00 $\textbf{--}$ 375,001.00 |
+| 3D         | Spin-Glass          |    666    | 24 $\textbf{--}$ 8,000 |  38 $\textbf{--}$ 40,279  |       -5.24 $\textbf{--}$ 5.03       |
+|            | Synthetic           |     9     | 125 $\textbf{--}$ 343 |  375 $\textbf{--}$ 1,029  | -298,103.00 $\textbf{--}$ 375,001.00 |
+|            | Diamond             |    60    |  18 $\textbf{--}$ 50  |    24 $\textbf{--}$ 80    |       -1.00 $\textbf{--}$ 1.00       |
+| 4D         | Spin-Glass          |   1,450   | 81 $\textbf{--}$ 4,096 |  324 $\textbf{--}$ 16,384  |       -5.28 $\textbf{--}$ 4.97       |
+| $\infty$ | Biclique            |    100    |  20 $\textbf{--}$ 36  |    35 $\textbf{--}$ 99    |       -2.00 $\textbf{--}$ 0.89       |
+|            | Spin-Glass          |   5,440   |  3 $\textbf{--}$ 900  |  6 $\textbf{--}$ 319,600  |       -4.45 $\textbf{--}$ 3.92       |
+|            | Synthetic           |    30    | 100 $\textbf{--}$ 300 | 4,950 $\textbf{--}$ 44,850 | -246,443.00 $\textbf{--}$ 280,065.00 |
 
 Clone our dataset via the following command:
 
@@ -76,7 +76,7 @@ Our reinforcement learning benchmark suite consists of a mixed-integer programmi
 
 ## Tutorials
 
-We provide step-by-step tutorials for our solvers and algorithms. Each tutorial demostrates the method's usage, beckground, and key-concepts.
+We provide step-by-step tutorials for our solvers and algorithms. Each tutorial demostrates the method's usage, beckground, and	 key-concepts.
 
 Solver Tutorials:
 
