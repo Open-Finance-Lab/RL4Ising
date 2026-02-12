@@ -13,11 +13,11 @@ We curate a diverse collection of over 190,000 Ising models and rank Ising model
 - $\infty$: Systems where spin interacts with every other spin regardless of spatial boundaries. 
 
 Within each dimension rank we further specify Ising model instances into five main types of Ising models: Classic, Spin-Glass, Ferromagnetic, Anti-Ferromagnetic, and Synthetic.
-- Classic: The basic Ising model composed of neighboring spins interactions and a typical coupling strength of $J_ij \in [0, +1]$ or $J_ij \in [-1, +1]$.
-- Spin-Glass: A disordered and frustrated variant of the Classic Ising model caused by random coupling strengths, $J_ij$, typically gaussian distributed. 
-- Ferromagnetic: A variant of the Classic Ising model, where spins prefer to be aligned and coupling strengths are $J_ij > 0$.
-- Anti-Ferromagnetic: A variant of the Classic Ising model, where spins prefer to be anti-aligned and coupling strengths are $J_ij < 0$.
-- Synthetic: Artificial Ising models designed to model specific network or physical systems and embed artificial complexity via extremely large or small coupling strengths, $J_ij$.
+- Classic: The basic Ising model composed of neighboring spins interactions and a typical coupling strength of $J_{ij} \in [0, +1]$ or $J_{ij} \in [-1, +1]$.
+- Spin-Glass: A disordered and frustrated variant of the Classic Ising model caused by random coupling strengths, $J_{ij}$, typically gaussian distributed. 
+- Ferromagnetic: A variant of the Classic Ising model, where spins prefer to be aligned and coupling strengths are $J_{ij} > 0$.
+- Anti-Ferromagnetic: A variant of the Classic Ising model, where spins prefer to be anti-aligned and coupling strengths are $J_{ij} < 0$.
+- Synthetic: Artificial Ising models designed to model specific network or physical systems and embed artificial complexity via extremely large or small coupling strengths, $J_{ij}$.
 
 A breakdown of the content of our datset is found as a table below.
 
@@ -38,6 +38,11 @@ A breakdown of the content of our datset is found as a table below.
 |            | Spin-Glass          |   5,440   |  3 $\textbf{--}$ 900  |  6 $\textbf{--}$ 319,600  |       -4.45 $\textbf{--}$ 3.92       |
 |            | Synthetic           |    30     | 100 $\textbf{--}$ 300 | 4,950 $\textbf{--}$ 44,850 | -246,443.00 $\textbf{--}$ 280,065.00 |
 
+Clone our dataset via the following command:
+```
+git clone https://huggingface.co/datasets/SecureFinAI-Lab/Ising_Model_Instances
+```
+
 ## Reinforcement Learning Benchmark Suite
 
 Our reinforcement learning benchmark suite consists of a mixed-integer programming solver baseline and SOTA RL benchmark, allowing for the direct comparison of the heuristic methods against modern RL-based approaches.
@@ -45,25 +50,26 @@ Our reinforcement learning benchmark suite consists of a mixed-integer programmi
 - **Solver Baseline**: Offers transparent and provable optimal or near-optimal solutions while leveraging highly optimized, memory-efficient algorithms. Solvers also provide an quick high-quality approximation of the problem's lower bound enabling a simple but effective measurement of solutions between solvers vs RL algorithms and RL algorithms vs RL algorithms, via the mixed-integer programming gap metric.
 - **SOTA RL Benchmark**: Showcase the performance of current state-of-the-art RL algorithms against the NP-hard problem in Ising models. Using this benchmark suite we showcase the current gap in research by highlighting the gap between our current high quality approximations and the theorical lower bound on scaling Ising models.
 
-| Algorithm/Solver | Description | Reference                                                                     |
-| ---------------- | ----------- | ----------------------------------------------------------------------------- |
-| Gurobi           | ----------- | [1](https://www.gurobi.com)                                                      |
+| Solver | Description | Reference | 
+| ---------------- | ----------- | ----- |
+| Gurobi           | ----------- | [1](https://www.gurobi.com)|
 | IBM CPLEX        | ----------- | [2](https://www.ibm.com/docs/en/icos/22.1.1?topic=optimizers-users-manual-cplex) |
-| COPT             | ----------- | [3](https://arxiv.org/abs/2208.14314)                                            |
-<!-- | SCIP             | ----------- | [4](https://optimization-online.org/2024/02/the-scip-optimization-suite-9-0/)    | -->
+| COPT             | ----------- | [3](https://arxiv.org/abs/2208.14314)|
 
-### Solver Baseline
-
-| Solvers   | 1D Ising  | 2D Ising | 3D Ising | 4D Ising |
+| Solver    | 1D Ising  | 2D Ising | 3D Ising | 4D Ising |
 | --------- | :-------: | :------: | :------: | :------: |
 | Gurobi    | ✅    | ✅    | ❌    | ❌    |
 | IBM CPLEX | ❌    | ❌    | ❌    | ❌    |
 | COPT      | ✅    | ✅    | ❌    | ❌    |
 
-### Benchmarks
+| RL Algorithm | Description | Reference                                                                     |
+| ---------------- | ----------- | ----------------------------------------------------------------------------- |
+| Variational Classical Annealing (VCA) | ----------- | [1](https://www.gurobi.com)                                                      |
+| MCPG  | ----------- | [2](https://www.ibm.com/docs/en/icos/22.1.1?topic=optimizers-users-manual-cplex) |
+| L2A   | ----------- | [3](https://arxiv.org/abs/2208.14314)                                            |
 
-| Becnhmark | 1D Ising | 2D Ising | 3D Ising | 4D Ising |
-| --------- | :------: | :------: | :------: | :------: |x
+| Benchmark | 1D Ising | 2D Ising | 3D Ising | 4D Ising |
+| --------- | :------: | :------: | :------: | :------: |
 | L2A       |    ✅    |    ✅    |    ❌    |    ❌    |
 | VCA       |    ❌    |    ❌    |    ❌    |    ❌    |
 | MCPG      |    ✅    |    ✅    |    ❌    |    ❌    |
