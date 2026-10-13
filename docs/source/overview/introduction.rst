@@ -2,7 +2,7 @@
 Introduction
 ================================
 
-Welcome to `RL4Ising <https://github.com/YangletLiu/RL4Ising>`_!
+Welcome to `RL4Ising <https://github.com/Open-Finance-Lab/RL4Ising>`_!
 --------------------------------------------------------------------------------------------------
 
 RL4Ising, or Reinforcement Learning for Ising Model, is an open-source dataset and benchmark suite for Ising models. We aim to 
