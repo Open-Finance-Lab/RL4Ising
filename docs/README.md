@@ -1,4 +1,4 @@
-# Reinforcement Learning for Ising Problem Documentation
+# Reinforcement Learning for Ising Models Documentation
 
 ## Structure
 
@@ -13,19 +13,19 @@ Alternatively, you can clone this repository and build the documentation locally
 
 ```bash
 # Clone the repository
-git clone https://github.com/YangletLiu/RL4Ising.git
+git clone https://github.com/Open-Finance-Lab/RL4Ising.git
 
 # Navigate to the docs folder
-cd RL4Ising/docs
+cd docs
 
 # Install dependencies
-conda env create --name test --file environment.yml
+conda env create --file environment.yml
 
 # Activate environment  
-conda activate test
+conda activate rl4ising-docs
 
-# Build the documentation
-sphinx-build -b html -n source/ _build/
+# Build and preview the documentation
+sphinx-autobuild -n --open-browser source/ build/
 ```
 
-The output HTML files will be located in the `_build/` directory.
+The output HTML files will be located in the `build/` directory. The preview server automatically opens in your browser and reloads when documentation files change. Press `Ctrl+C` in the terminal to stop the server.

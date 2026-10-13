@@ -13,6 +13,8 @@ RL4Ising
    overview/introduction
    overview/key_concepts
    overview/content
+   overview/hardware_reqs
+
 
 .. toctree::
    :maxdepth: 2
