@@ -6,6 +6,7 @@
 | Gurobi    |
 | ILOG CPLEX|
 | COPT      |
+| SCIP      |
 
 ## Gurobi Tutorial
 
