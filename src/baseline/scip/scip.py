@@ -1,6 +1,8 @@
 import os
+import sys
 from pyscipopt import Model, quicksum
 
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils import read_nxgraph, base64_encode
 
 RESULTS_DIR = "results/scip"
