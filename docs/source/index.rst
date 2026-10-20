@@ -1,66 +1,55 @@
-.. Reinforcement Learning for Ising Problem documentation master file, created by
-   sphinx-quickstart on Tue Jan 21 19:38:31 2025.
+.. sphinx_press_theme documentation master file, created by
+   sphinx-quickstart on Mon Jul 30 11:44:38 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-==============================================================================================
-Welcome to `Reinforcement Learning for Ising Model <https://github.com/YangletLiu/RL4Ising>`_!
-==============================================================================================
-
-`Reinforcement Learning for Ising Model <https://github.com/YangletLiu/RL4Ising>`_ is an open-source dataset of Ising models and benchmark of SOTA ground state Reinforcement Learning methods. 
-Our goal is to document the progress of current and future RL methods at searching for the ground state of Ising model in different scale, dimensionality, and Ising model classifications
-
-Reinforcement Learning for Ising model provides a **collective dataset**, **solver baseline**, **SOTA RL tutorials**, and **RL benchmark** :
-
-   - **Collective Dataset**: Over 190,000 synthetic or real Ising model instances spanning 3 classifications.
-   - **Solver Baseline**: Industry-level commerical and open-source MIP solvers
-   - **SOTA RL Tutorials**: ...
-   - **RL Benchmark**: ... 
+RL4Ising
+==================
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Introduction
+   :maxdepth: 2
+   :caption: Overview
 
+   overview/introduction
    overview/key_concepts
-   overview/motivation
    overview/content
+   overview/hardware_reqs
+
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Datasets
 
-   datasets/classification
-   datasets/spin_glass
-   datasets/spin_ice
-   datasets/ferromagnetic
-   datasets/anti_ferromagnetic
+   datasets/datasets
+   datasets/dataset1
+   datasets/dataset2
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Baseline Solvers
 
-   solvers/gurobi
-   solvers/cplex
-   solvers/copt
-   solvers/scip
+   baseline_solvers/gurobi
+   baseline_solvers/cplex
+   baseline_solvers/copt
+   baseline_solvers/scip
 
 .. toctree::
-   :maxdepth: 1
-   :caption: RL Algorithms
+   :maxdepth: 2
+   :caption: Reinforcement Learning Algorithms
 
-   methods/s2v
-   methods/vca
-   methods/mcpg
-   methods/reinforce
+   rl_algorithms/s2v
+   rl_algorithms/vca
+   rl_algorithms/mcpg
+   rl_algorithms/reinforce
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Benchmarks
+   :maxdepth: 2
+   :caption: Benchmark
 
    benchmark/results
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: RL4Ising Competition 2025
 
    competition/overview
@@ -68,9 +57,15 @@ Reinforcement Learning for Ising model provides a **collective dataset**, **solv
    competition/rl4ising
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: References
 
    references/dataset_references
 
 
+.. _rl4ising-reference:
+
+`Levy Lin, Zhiyuan Wang, Holden Mac Entee, Xingjian Zhao, and Xiao-Yang Liu.
+Reinforcement Learning for Ising Models: Datasets and Benchmark.
+NeurIPS 2025 Workshop on Machine Learning for the Physical Sciences (ML4PS). 
+<https://ml4physicalsciences.github.io/2025/files/NeurIPS_ML4PS_2025_245.pdf>`_
