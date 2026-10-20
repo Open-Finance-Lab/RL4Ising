@@ -1,0 +1,7 @@
+Instance,\# of Instances,\# of Spins,Complexity,Graph Geometry,Reference
+Spin Glass,100,"4,096",Complex,EA,[2]_
+Spin Glass,100,"2,041",Complex,EA,[2]_
+Spin Glass,100,"1,296",Complex,EA,[2]_
+Spin Glass,100,625,Intermediate,EA,[2]_
+Spin Glass,50,256,Intermediate,EA,[2]_
+Spin Glass,"1,000",81,Simple,EA,[2]_
