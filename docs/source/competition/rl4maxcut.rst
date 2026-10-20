@@ -2,6 +2,11 @@
 Task 1: RL4MaxCut
 ==========================================
 
+.. toctree::
+   :maxdepth: 1
+
+   Benchmark Results <rl4maxcut_benchmark>
+
 RL4Maxcut is a task that challenges you to build agents capable of solving the MaxCut problem on unseen graphs drawn from diverse distributions, while surpassing industry-level MIP solvers in performance and scalability.  
 Your mission: train agents to effectively explore the vast discrete space of graph partitions and generalize beyond the training set to new, previously unseen graph instances.  
 This task emphasizes distribution-wise generalization — encouraging the development of agents that learn robust, transferable policies applicable to a wide range of graph types (e.g., ER, BA, PowerLaw), rather than overfitting to specific training graphs.
