@@ -18,7 +18,7 @@ def read_nxgraph(filename: str) -> nx.Graph(): # type: ignore
                     is_first_line = False
                 else:
                     node1, node2, weight = line.split()
-                    graph.add_edge(int(node1), int(node2), weight=weight)
+                    graph.add_edge(int(node1) - 1, int(node2) - 1, weight=weight)
             line = file.readline()
     return graph
 
