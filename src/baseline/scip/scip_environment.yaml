@@ -1,9 +1,0 @@
-name: scip
-channels:
-  - conda-forge
-  - nodefaults
-dependencies:
-  - python=3.14
-  - pyscipopt=6.2.1
-  - networkx=3.7
-  - ipykernel

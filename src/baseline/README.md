@@ -8,6 +8,17 @@
 | COPT      |
 | SCIP      |
 
+## Shared baseline environment
+
+All four solvers and the baseline notebooks use `environment.yml`. From the
+repository root:
+
+```shell
+conda env create -f src/baseline/environment.yml
+conda activate rl4ising-baseline
+python -m ipykernel install --user --name rl4ising-baseline --display-name "RL4Ising Baseline"
+```
+
 ## Gurobi Tutorial
 
 A basic tutorial for processing files can be found gurobi_qubo.ipynb 

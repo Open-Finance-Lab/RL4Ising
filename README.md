@@ -105,7 +105,7 @@ Algorithm Tutorials:
         |   ├── gurobi.py  : Gurobi MIP Solver for Ising model.
         |   ├── cplex.py   : IBM ILOG CPLEX MIP Solver for Ising model.
         |   ├── copt.py    : COPT Cardinal MIP Solver for Ising model.
-        |   └── scip/      : SCIP MIP Solver for Ising model.
+        |   └── scip.py    : SCIP MIP Solver for Ising model.
         |
         ├── tutorials/
         |   ├── VCA/       : VCA tutorial for EA Ising models.
