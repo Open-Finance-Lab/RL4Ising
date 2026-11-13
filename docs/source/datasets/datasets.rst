@@ -2,14 +2,12 @@
 Datasets
 ================
 
-**Dataset Introduction**
-
-
-
-
+Dataset Introduction
+********************
 
 Classification of Ising Models
-===================================
+******************************
+
 
 Spin Glass Ising Model
 ===============================
