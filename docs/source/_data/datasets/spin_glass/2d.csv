@@ -1,0 +1,23 @@
+Instance,\# of Instances,\# of Spins,Complexity,Graph Geometry,Reference
+Spin Glass,25,"1,600",Complex,EA,[1]_
+Spin Glass,50,"1,225",Complex,EA,[2]_
+Spin Glass,3,20,Complex,Toroidal,[11]_
+Spin Glass,3,15,Complex,Toroidal,[11]_
+Spin Glass,3,10,Complex,Toroidal,[11]_
+Spin Glass,50,900,Intermediate,EA,[2]_
+Spin Glass,50,625,Intermediate,EA,[2]_
+Spin Glass,100,256,Intermediate,Random,[3]_
+Spin Glass,50,400,Simple,EA,[2]_
+Spin Glass,50,225,Simple,EA,[2]_
+Spin Glass,100,196,Simple,Random,[3]_
+Spin Glass,100,144,Simple,Random,[3]_
+Spin Glass,"1,000",100,Simple,EA,[2]_
+Spin Glass,100,100,Simple,Random,[3]_
+Spin Glass,100,64,Simple,Random,[3]_
+Spin Glass,20,64,Simple,Cylindrical,[8]_
+Spin Glass,20,49,Simple,Cylindrical,[8]_
+Spin Glass,100,36,Simple,Random,[3]_
+Spin Glass,20,36,Simple,Cylindrical,[8]_
+Spin Glass,20,25,Simple,Cylindrical,[8]_
+Spin Glass,100,16,Simple,Random,[3]_
+Spin Glass,20,16,Simple,Cylindrical,[8]_

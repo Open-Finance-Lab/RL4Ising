@@ -1,0 +1,4 @@
+Instance,\# of Instances,\# of Spins,\# of Couplings,Coupling Strength,Url,Reference
+EA,3,"1,600","3,120",-0.9997712503653102 --- 0.9997515751485249,`https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file <https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file>`_,[1]_
+EA,3,900,"1,800",-3.768221414584132 --- 3.146263619470661,`https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_,[2]_
+Spin-Glass,3,256,512,-4.108692623805201 --- 2.79308500014654,`https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_,[3]_
