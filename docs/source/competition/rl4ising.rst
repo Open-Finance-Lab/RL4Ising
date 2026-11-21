@@ -30,136 +30,24 @@ Here we curate a **challenging** instance-wise Spin Glass dataset featuring geom
 
 1D Spin Glass Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. list-table:: 
+.. csv-table::
+   :file: ../_data/competition/ising/instances/spin_glass_1d.csv
    :widths: 25 25 25 45 45 75 25
    :header-rows: 1
-
-   * - Instance
-     - \# of Instances
-     - \# of Spins
-     - \# of Couplings
-     - Coupling Strength
-     - Url
-     - Reference
-   * - Chain
-     - 6
-     - 300
-     - 44,850
-     - -244104.0 --- 210331.0
-     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_
-     - [4]_
-   * - Chain
-     - 6
-     - 250
-     - 31,125
-     - -193801.0 --- 277406.0
-     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_
-     - [4]_
-   * - Chain
-     - 6
-     - 200
-     - 19,900
-     - -231636.0 --- 239764.0
-     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_ 
-     - [4]_
-   * - Chain
-     - 6
-     - 150
-     - 11,175
-     - -219729.0 --- 182372.0
-     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_ 
-     - [4]_
-   * - Chain
-     - 6
-     - 100
-     - 4,950
-     - -212231.0 --- 239752.0
-     - `https://biqmac.aau.at/library/mac/ising/ <https://biqmac.aau.at/library/mac/ising/>`_ 
-     - [4]_
 
 2D Spin Glass Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. list-table:: 
+.. csv-table::
+   :file: ../_data/competition/ising/instances/spin_glass_2d.csv
    :widths: 25 25 25 45 45 75 25
    :header-rows: 1
-
-   * - Instance
-     - \# of Instances
-     - \# of Spins
-     - \# of Couplings
-     - Coupling Strength
-     - Url
-     - Reference
-   * - EA
-     - 3
-     - 1,600
-     - 3,120
-     - -0.9997712503653102 --- 0.9997515751485249
-     - `https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file <https://github.com/VectorInstitute/VariationalNeuralAnnealing?tab=readme-ov-file>`_
-     - [1]_
-   * - EA
-     - 3
-     - 900
-     - 1,800
-     - -3.768221414584132 --- 3.146263619470661
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
-   * - Spin-Glass
-     - 3
-     - 256
-     - 512
-     - -4.108692623805201 --- 2.79308500014654
-     - `https://zenodo.org/records/3897413 <https://zenodo.org/records/3897413>`_
-     - [3]_
 
 3D Spin Glass Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. list-table:: 
+.. csv-table::
+   :file: ../_data/competition/ising/instances/spin_glass_3d.csv
    :widths: 25 25 25 45 45 75 25
    :header-rows: 1
-
-   * - Instance
-     - \# of Instances
-     - \# of Spins
-     - \# of Couplings
-     - Coupling Strength
-     - Url
-     - Reference
-   * - EA
-     - 3
-     - 8,000
-     - 24,000
-     - -3.7393814023844407 --- 4.35465860153889
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
-   * - EA
-     - 1
-     - 5,730
-     - 40,279
-     - -0.9999756464799796 --- 0.9999029159721005
-     - `https://zenodo.org/records/14578166 <https://zenodo.org/records/14578166>`_
-     - [5]_
-   * - EA
-     - 1
-     - 4,644
-     - 14,503
-     - -0.9998457617927303 --- 0.9997514748439584
-     - `https://zenodo.org/records/14578166 <https://zenodo.org/records/14578166>`_
-     - [5]_
-   * - EA
-     - 3
-     - 3,375
-     - 10,125
-     - -3.785011625763501 --- 4.119680031623885
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
-   * - EA
-     - 3
-     - 1,000
-     - 3,000
-     - -4.324181919314443 --- 3.473301731916228
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
 ..
     * - EA
     - 1
@@ -178,45 +66,10 @@ Here we curate a **challenging** instance-wise Spin Glass dataset featuring geom
 
 4D Spin Glass Dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. list-table:: 
+.. csv-table::
+   :file: ../_data/competition/ising/instances/spin_glass_4d.csv
    :widths: 25 25 25 45 45 75 25
    :header-rows: 1
-
-   * - Instance
-     - \# of Instances
-     - \# of Spins
-     - \# of Couplings
-     - Coupling Strength
-     - Url
-     - Reference
-   * - EA
-     - 3
-     - 4,096
-     - 16,384
-     - -3.974500095603923 --- 4.07455276849542
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
-   * - EA
-     - 3
-     - 2,041
-     - 9,604
-     - -4.570368670534508 --- 3.942823083195053
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
-   * - EA
-     - 3
-     - 1,296
-     - 5,184
-     - -5.094655883484119 --- 3.8885579774279107
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
-   * - EA
-     - 3
-     - 625
-     - 2,500
-     - -3.824305097349775 --- 3.525499579857149
-     - `https://zenodo.org/records/7562380 <https://zenodo.org/records/7562380>`_
-     - [2]_
 
 Starter Kit 
 ----------------------------------------
