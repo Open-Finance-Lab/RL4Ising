@@ -1,11 +1,23 @@
+name: rl4ising-baseline
 channels:
-  - gurobi
-  - anaconda
-  - defaults
+  - conda-forge
+  - nodefaults
 dependencies:
   - python=3.14
-  - natsort=8.4.0 
-  - networkx=3.6.1  
-  - gurobi=13.0.1 
-  - jupyterlab=4.5.3 
-  - numpy=2.4.2
+  - pip
+  - pip:
+      # Shared dependencies
+      - numpy==2.4.2
+      - networkx==3.6.1
+      - natsort==8.4.0
+
+      # Solvers
+      - gurobipy==13.0.3
+      - pyscipopt==6.3.0
+      - cplex==22.2.0.1
+      - docplex==2.32.264
+      - coptpy==8.0.7
+
+      # Notebooks
+      - jupyterlab==4.5.3
+      - ipykernel==7.2.0
